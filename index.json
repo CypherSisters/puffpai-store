@@ -135,26 +135,6 @@
       ]
     },
     {
-      "id": "look-clean",
-      "kind": "look",
-      "name": "Clean",
-      "description": "Clean: square corners, flat colours, thin 1px rules and dense spacing, with JetBrains Mono headings. Near-black at night, off-white by day, one blue accent. No glow, no clouds.",
-      "version": "1.0.0",
-      "author": "Cypher Sisters",
-      "license": "Apache-2.0",
-      "repo": "https://github.com/CypherSisters/puffpai-packages",
-      "path": "look-clean",
-      "commit": "21abf3e1a45ba604babedeb2f99697614f2d922c",
-      "tier": "verified",
-      "icon": "https://raw.githubusercontent.com/CypherSisters/puffpai-packages/21abf3e1a45ba604babedeb2f99697614f2d922c/look-clean/preview.svg",
-      "verified_by": "Cypher Sisters (own package)",
-      "levels": [
-        1,
-        2,
-        3
-      ]
-    },
-    {
       "id": "look-contrast",
       "kind": "look",
       "name": "High contrast",
