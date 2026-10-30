@@ -56,17 +56,22 @@ def fetch(repo: str, commit: str, local: dict[str, str], cache: dict, work: Path
     """A checkout of exactly ``commit``; one per repo and commit."""
     key = (repo, commit)
     if key not in cache:
-        dst = work / f"r{len(cache)}"
-        dst.mkdir()
+        dst = Path(tempfile.mkdtemp(prefix="r", dir=work))           # fresh each try, even after a failed one
         git("init", "-q", cwd=dst)
         source = local.get(repo, repo)
         try:
             git("fetch", "-q", "--depth", "1", source, commit, cwd=dst)
-        except RuntimeError:
+        except RuntimeError as e:
+            if "Username" in str(e) or "not found" in str(e) or "Could not resolve host" in str(e):
+                raise Unreachable(str(e)) from None
             git("fetch", "-q", source, cwd=dst)                       # a server that won't serve one commit
         git("-c", "advice.detachedHead=false", "checkout", "-q", commit, cwd=dst)
         cache[key] = dst
     return cache[key]
+
+
+class Unreachable(RuntimeError):
+    """The repo could not be read (private, gone, or no network)."""
 
 
 def row_problems(name: str, row: object) -> list[str]:
@@ -110,7 +115,8 @@ def puffpai_check(folder: Path) -> tuple[int, list[str], list[str]]:
     return level, unchecked, lines
 
 
-def check_row(file: Path, local: dict[str, str], cache: dict, work: Path, run_check: bool) -> tuple[dict | None, list[str]]:
+def check_row(file: Path, local: dict[str, str], cache: dict, work: Path, run_check: bool,
+              unreachable_ok: bool = False) -> tuple[dict | None, list[str]]:
     try:
         row = json.loads(file.read_text(encoding="utf-8"))
     except ValueError as e:
@@ -120,6 +126,11 @@ def check_row(file: Path, local: dict[str, str], cache: dict, work: Path, run_ch
         return None, problems
     try:
         folder = fetch(row["repo"], row["commit"], local, cache, work) / row.get("path", "")
+    except Unreachable as e:
+        if unreachable_ok:
+            print(f"::warning::{row['id']}: {row['repo']} is not reachable from here (private?); row not checked")
+            return None, []
+        return None, [f"could not fetch {row['repo']} at {row['commit'][:12]}: {e}"]
     except RuntimeError as e:
         return None, [f"could not fetch {row['repo']} at {row['commit'][:12]}: {e}"]
     try:
@@ -180,6 +191,8 @@ def main(argv: list[str] | None = None) -> int:
     ap.add_argument("--local", action="append", default=[], metavar="URL=PATH",
                     help="fetch this repo URL from a folder on this computer (before it is on GitHub)")
     ap.add_argument("--no-puffpai-check", action="store_true", help="skip puffpai check (levels left out)")
+    ap.add_argument("--unreachable-ok", action="store_true",
+                    help="warn, not fail, on a repo this machine can't read (CI while the repos are private)")
     args = ap.parse_args(argv)
     local = dict(pair.split("=", 1) for pair in args.local)
     files = sorted(INDEX_DIR.glob("*.json"))
@@ -192,8 +205,8 @@ def main(argv: list[str] | None = None) -> int:
             if not file.is_file():
                 bad.append(f"{file.name}: no such row")
                 continue
-            row, problems = check_row(file, local, cache, Path(tmp), not args.no_puffpai_check)
-            status = "FAIL" if problems else "PASS"
+            row, problems = check_row(file, local, cache, Path(tmp), not args.no_puffpai_check, args.unreachable_ok)
+            status = "FAIL" if problems else ("PASS" if row else "SKIP")
             levels = "" if not row or "levels" not in row else f"  Level {len(row['levels'])}"
             print(f"{status}  {file.stem}{levels}")
             for p in problems:
@@ -201,6 +214,8 @@ def main(argv: list[str] | None = None) -> int:
             bad += [f"{file.stem}: {p}" for p in problems]
             if row:
                 rows.append(row)
+            elif not problems and args.action == "build":
+                bad.append(f"{file.stem}: not reachable, so index.json can't include it")
     if args.action == "build" and not bad:
         OUT.write_text(json.dumps({"schema": "puffpai-store-index/1", "name": "PuffPAI Store", "packages": rows,
                                    "yanked": json.loads(YANKED.read_text(encoding="utf-8"))},

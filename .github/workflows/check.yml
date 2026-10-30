@@ -4,7 +4,7 @@ name: Store check
 # Uses pull_request (never pull_request_target): a contributor's package runs during `puffpai check`,
 # so it must run with no secrets and a read-only token.
 #
-# While the Core repo is private, Actions can't install it, so `puffpai check` is skipped with a warning:
+# While the Core repo is private (until the v2 release), Actions can't install it, so `puffpai check` is skipped with a warning:
 # the rows are still checked against each package's puffpai.json, a maintainer runs
 # `python scripts/store.py check <id>` locally before merging, and index.json is rebuilt locally.
 
@@ -18,6 +18,9 @@ env:
   # The PuffPAI Core whose `puffpai check` judges packages. Bump on purpose, not by branch.
   CORE_REPO: CypherSisters/BuildBotv2
   CORE_REF: 3a7ffa95cd1da899a8b507de5ee7fea353baef47
+  # Until the v2 release the package repos are private too: a row this runner can't read is a warning, not a
+  # FAIL. Remove this flag at the release, when the repos go public.
+  UNREACHABLE_OK: "--unreachable-ok"
 
 jobs:
   check:
@@ -49,11 +52,11 @@ jobs:
         run: |
           skip=""; [ "${{ steps.core.outputs.core }}" = "yes" ] || skip="--no-puffpai-check"
           ids=$(git diff --name-only "origin/${{ github.base_ref }}...HEAD" -- index | sed -n 's#^index/\(.*\)\.json$#\1#p')
-          if [ -z "$ids" ]; then python scripts/store.py check --no-puffpai-check; else python scripts/store.py check $skip $ids; fi
+          if [ -z "$ids" ]; then python scripts/store.py check --no-puffpai-check $UNREACHABLE_OK; else python scripts/store.py check $skip $UNREACHABLE_OK $ids; fi
       - name: Check every row
         if: github.event_name == 'push' && steps.core.outputs.core != 'yes'
         shell: bash
-        run: python scripts/store.py check --no-puffpai-check
+        run: python scripts/store.py check --no-puffpai-check $UNREACHABLE_OK
       - name: Check every row and build index.json
         if: github.event_name == 'push' && steps.core.outputs.core == 'yes'
         shell: bash
