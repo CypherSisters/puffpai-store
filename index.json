@@ -12,9 +12,9 @@
       "license": "Apache-2.0",
       "repo": "https://github.com/CypherSisters/puffpai-packages",
       "path": "adguard",
-      "commit": "6274826715f61d10662f02c91f41bd49f46b92cc",
+      "commit": "3c90ea6b4a98382d2e9980abf310582f3e39750d",
       "tier": "verified",
-      "icon": "https://raw.githubusercontent.com/CypherSisters/puffpai-packages/6274826715f61d10662f02c91f41bd49f46b92cc/adguard/icons/shield.svg",
+      "icon": "https://raw.githubusercontent.com/CypherSisters/puffpai-packages/3c90ea6b4a98382d2e9980abf310582f3e39750d/adguard/icons/shield.svg",
       "abilities": {
         "tools": {
           "set_address": "Save where the owner's AdGuard Home is, like http://192.168.1.2:3000. Only an address on this computer or the home network is taken. Without a port it tries 3000, then 80.",
@@ -79,9 +79,9 @@
       "license": "Apache-2.0",
       "repo": "https://github.com/CypherSisters/puffpai-packages",
       "path": "alarmflow",
-      "commit": "6274826715f61d10662f02c91f41bd49f46b92cc",
+      "commit": "3c90ea6b4a98382d2e9980abf310582f3e39750d",
       "tier": "verified",
-      "icon": "https://raw.githubusercontent.com/CypherSisters/puffpai-packages/6274826715f61d10662f02c91f41bd49f46b92cc/alarmflow/icons/alarm.svg",
+      "icon": "https://raw.githubusercontent.com/CypherSisters/puffpai-packages/3c90ea6b4a98382d2e9980abf310582f3e39750d/alarmflow/icons/alarm.svg",
       "abilities": {
         "tools": {
           "create_timer": "Start a countdown timer, like 20 minutes or an hour and a half, up to 7 days. It rings on this computer.",
@@ -152,9 +152,9 @@
       "license": "Apache-2.0",
       "repo": "https://github.com/CypherSisters/puffpai-packages",
       "path": "avatar-block",
-      "commit": "6274826715f61d10662f02c91f41bd49f46b92cc",
+      "commit": "3c90ea6b4a98382d2e9980abf310582f3e39750d",
       "tier": "verified",
-      "icon": "https://raw.githubusercontent.com/CypherSisters/puffpai-packages/6274826715f61d10662f02c91f41bd49f46b92cc/avatar-block/face.svg",
+      "icon": "https://raw.githubusercontent.com/CypherSisters/puffpai-packages/3c90ea6b4a98382d2e9980abf310582f3e39750d/avatar-block/face.svg",
       "verified_by": "Cypher Sisters (own package)",
       "levels": [
         1,
@@ -172,9 +172,9 @@
       "license": "Apache-2.0",
       "repo": "https://github.com/CypherSisters/puffpai-packages",
       "path": "avatar-pebble",
-      "commit": "6274826715f61d10662f02c91f41bd49f46b92cc",
+      "commit": "3c90ea6b4a98382d2e9980abf310582f3e39750d",
       "tier": "verified",
-      "icon": "https://raw.githubusercontent.com/CypherSisters/puffpai-packages/6274826715f61d10662f02c91f41bd49f46b92cc/avatar-pebble/face.svg",
+      "icon": "https://raw.githubusercontent.com/CypherSisters/puffpai-packages/3c90ea6b4a98382d2e9980abf310582f3e39750d/avatar-pebble/face.svg",
       "verified_by": "Cypher Sisters (own package)",
       "levels": [
         1,
@@ -192,9 +192,9 @@
       "license": "Apache-2.0",
       "repo": "https://github.com/CypherSisters/puffpai-packages",
       "path": "book-shelves",
-      "commit": "6274826715f61d10662f02c91f41bd49f46b92cc",
+      "commit": "3c90ea6b4a98382d2e9980abf310582f3e39750d",
       "tier": "verified",
-      "icon": "https://raw.githubusercontent.com/CypherSisters/puffpai-packages/6274826715f61d10662f02c91f41bd49f46b92cc/book-shelves/icons/book.svg",
+      "icon": "https://raw.githubusercontent.com/CypherSisters/puffpai-packages/3c90ea6b4a98382d2e9980abf310582f3e39750d/book-shelves/icons/book.svg",
       "abilities": {
         "tools": {
           "set_library": "Set the Calibre library folder to read books from (the folder that holds metadata.db). It is only read, never changed.",
@@ -255,9 +255,9 @@
       "license": "Apache-2.0",
       "repo": "https://github.com/CypherSisters/puffpai-packages",
       "path": "calculator",
-      "commit": "6274826715f61d10662f02c91f41bd49f46b92cc",
+      "commit": "3c90ea6b4a98382d2e9980abf310582f3e39750d",
       "tier": "verified",
-      "icon": "https://raw.githubusercontent.com/CypherSisters/puffpai-packages/6274826715f61d10662f02c91f41bd49f46b92cc/calculator/icons/equals.svg",
+      "icon": "https://raw.githubusercontent.com/CypherSisters/puffpai-packages/3c90ea6b4a98382d2e9980abf310582f3e39750d/calculator/icons/equals.svg",
       "abilities": {
         "tools": {
           "calculate": "Work out arithmetic exactly: + - * / // % ** and brackets, sqrt, abs, round, min, max, pi and e, and percentages like 15% of 80 or 80 + 15%. Answers in a plain sentence.",
@@ -298,9 +298,9 @@
       "license": "Apache-2.0",
       "repo": "https://github.com/CypherSisters/puffpai-packages",
       "path": "calendar",
-      "commit": "6274826715f61d10662f02c91f41bd49f46b92cc",
+      "commit": "3c90ea6b4a98382d2e9980abf310582f3e39750d",
       "tier": "verified",
-      "icon": "https://raw.githubusercontent.com/CypherSisters/puffpai-packages/6274826715f61d10662f02c91f41bd49f46b92cc/calendar/icons/calendar.svg",
+      "icon": "https://raw.githubusercontent.com/CypherSisters/puffpai-packages/3c90ea6b4a98382d2e9980abf310582f3e39750d/calendar/icons/calendar.svg",
       "abilities": {
         "tools": {
           "add_event": "Add an event or appointment to the calendar, once or repeating.",
@@ -406,9 +406,9 @@
       "license": "Apache-2.0",
       "repo": "https://github.com/CypherSisters/puffpai-packages",
       "path": "code-writer",
-      "commit": "6274826715f61d10662f02c91f41bd49f46b92cc",
+      "commit": "3c90ea6b4a98382d2e9980abf310582f3e39750d",
       "tier": "verified",
-      "icon": "https://raw.githubusercontent.com/CypherSisters/puffpai-packages/6274826715f61d10662f02c91f41bd49f46b92cc/code-writer/icons/code.svg",
+      "icon": "https://raw.githubusercontent.com/CypherSisters/puffpai-packages/3c90ea6b4a98382d2e9980abf310582f3e39750d/code-writer/icons/code.svg",
       "abilities": {
         "tools": {
           "write_script": "Have the brain write a script or small program from a plain request and save it as a file. It is never run. Answers the file path and the first lines.",
@@ -452,9 +452,9 @@
       "license": "Apache-2.0",
       "repo": "https://github.com/CypherSisters/puffpai-packages",
       "path": "daily-briefing",
-      "commit": "6274826715f61d10662f02c91f41bd49f46b92cc",
+      "commit": "3c90ea6b4a98382d2e9980abf310582f3e39750d",
       "tier": "verified",
-      "icon": "https://raw.githubusercontent.com/CypherSisters/puffpai-packages/6274826715f61d10662f02c91f41bd49f46b92cc/daily-briefing/icons/sunrise.svg",
+      "icon": "https://raw.githubusercontent.com/CypherSisters/puffpai-packages/3c90ea6b4a98382d2e9980abf310582f3e39750d/daily-briefing/icons/sunrise.svg",
       "verified_by": "Cypher Sisters (own package)",
       "levels": [
         1,
@@ -472,9 +472,9 @@
       "license": "Apache-2.0",
       "repo": "https://github.com/CypherSisters/puffpai-packages",
       "path": "document-convert",
-      "commit": "6274826715f61d10662f02c91f41bd49f46b92cc",
+      "commit": "3c90ea6b4a98382d2e9980abf310582f3e39750d",
       "tier": "verified",
-      "icon": "https://raw.githubusercontent.com/CypherSisters/puffpai-packages/6274826715f61d10662f02c91f41bd49f46b92cc/document-convert/icons/page-arrow.svg",
+      "icon": "https://raw.githubusercontent.com/CypherSisters/puffpai-packages/3c90ea6b4a98382d2e9980abf310582f3e39750d/document-convert/icons/page-arrow.svg",
       "abilities": {
         "tools": {
           "convert_to_pdf": "Turn a document (Word .docx, Excel .xlsx, PowerPoint .pptx, .odt, .ods, .odp, .txt or .md) into a PDF with LibreOffice on this computer, and say where the PDF is.",
@@ -515,9 +515,9 @@
       "license": "Apache-2.0",
       "repo": "https://github.com/CypherSisters/puffpai-packages",
       "path": "document-search",
-      "commit": "6274826715f61d10662f02c91f41bd49f46b92cc",
+      "commit": "3c90ea6b4a98382d2e9980abf310582f3e39750d",
       "tier": "verified",
-      "icon": "https://raw.githubusercontent.com/CypherSisters/puffpai-packages/6274826715f61d10662f02c91f41bd49f46b92cc/document-search/icons/page-magnifier.svg",
+      "icon": "https://raw.githubusercontent.com/CypherSisters/puffpai-packages/3c90ea6b4a98382d2e9980abf310582f3e39750d/document-search/icons/page-magnifier.svg",
       "abilities": {
         "tools": {
           "add_document": "Keep a document (.txt, .md, .csv, .json, .docx, .html or another text file) on this computer and index its words so it can be searched.",
@@ -566,9 +566,9 @@
       "license": "Apache-2.0",
       "repo": "https://github.com/CypherSisters/puffpai-packages",
       "path": "fitfam",
-      "commit": "6274826715f61d10662f02c91f41bd49f46b92cc",
+      "commit": "3c90ea6b4a98382d2e9980abf310582f3e39750d",
       "tier": "verified",
-      "icon": "https://raw.githubusercontent.com/CypherSisters/puffpai-packages/6274826715f61d10662f02c91f41bd49f46b92cc/fitfam/icons/fire.svg",
+      "icon": "https://raw.githubusercontent.com/CypherSisters/puffpai-packages/3c90ea6b4a98382d2e9980abf310582f3e39750d/fitfam/icons/fire.svg",
       "abilities": {
         "tools": {
           "log_workout": "Log a workout someone did: what kind, how many minutes and, if they say, how far. Updates their streak.",
@@ -651,29 +651,29 @@
       "license": "Apache-2.0",
       "repo": "https://github.com/CypherSisters/puffpai-packages",
       "path": "freshtable",
-      "commit": "6274826715f61d10662f02c91f41bd49f46b92cc",
+      "commit": "3c90ea6b4a98382d2e9980abf310582f3e39750d",
       "tier": "verified",
-      "icon": "https://raw.githubusercontent.com/CypherSisters/puffpai-packages/6274826715f61d10662f02c91f41bd49f46b92cc/freshtable/icons/pot.svg",
+      "icon": "https://raw.githubusercontent.com/CypherSisters/puffpai-packages/3c90ea6b4a98382d2e9980abf310582f3e39750d/freshtable/icons/pot.svg",
       "abilities": {
         "tools": {
           "add_pantry": "Add a food item to the pantry (food at home), or add to its count if it is already there.",
-          "list_pantry": "List what is in the pantry. Filter by a food name, a category, or \"low\" for items running low.",
-          "use_pantry": "Use up some of a pantry item, or all of it. When none is left it goes on the shopping list.",
+          "list_pantry": "List what is in the pantry. Filter by a food name (\"do we have rice\"), a category, or use \"low\" for items running low.",
+          "use_pantry": "Use up some of a pantry item, or all of it (\"we ran out of milk\"). With no quantity it is all gone. When none is left it goes on the shopping list.",
           "remove_pantry": "Take an item out of the pantry list altogether.",
-          "add_shopping": "Put an item on the shopping list, with an amount and unit if given.",
+          "add_shopping": "Put an item on the shopping list. An amount and unit are kept if given, and adding the same item again adds to its amount.",
           "list_shopping": "List what is still on the shopping list.",
           "check_off_shopping": "Tick an item off the shopping list (bought).",
           "remove_shopping": "Take an item off the shopping list.",
           "clear_bought_shopping": "Clear the ticked-off (bought) items from the shopping list.",
-          "add_ingredients_to_shopping": "Put a recipe's or the meal plan's ingredients on the shopping list, skipping what is already there or in the pantry.",
+          "add_ingredients_to_shopping": "Put a recipe's or a planned meal's ingredients on the shopping list, skipping what is already on it or well stocked in the pantry. Leave recipe out for the whole meal plan.",
           "list_meal_plan": "List the meals planned for the week.",
-          "add_meal": "Plan a meal for a day of the week. A saved recipe of the same name brings its ingredients.",
-          "remove_meal": "Take a meal off the plan, by day or by name.",
-          "plan_week": "Plan dinners for the week from the saved recipes, with the brain or, without it, by taking turns. Keeps days already planned unless told to replace them.",
+          "add_meal": "Plan a meal for a day of the week. A saved recipe of the same name brings its ingredients and steps.",
+          "remove_meal": "Take a meal off the plan: by day, by name, or both.",
+          "plan_week": "Plan dinners for the week, favouring the saved recipes. Days that already have a meal are kept unless replace is true; only set replace when the owner said to replace the plan.",
           "add_recipe": "Save a recipe: its name, ingredients and instructions.",
-          "list_recipes": "List the saved recipes, or show one recipe with its instructions.",
+          "list_recipes": "List the saved recipes with their ingredients. Name one recipe to get its instructions too.",
           "remove_recipe": "Delete a saved recipe.",
-          "import_recipes": "Read recipes from a file the owner sent (text or a photo of a recipe, not PDF) and save them. A text file comes as file_name, mime and text; any other file as file_name, mime and content_b64."
+          "import_recipes": "Read recipes from a file the owner sent (text or a photo of a recipe; not PDF) and save them. A text file comes as file_name, mime and text; any other file as file_name, mime and content_b64."
         },
         "examples": {
           "add_shopping": [
@@ -757,9 +757,9 @@
       "license": "Apache-2.0",
       "repo": "https://github.com/CypherSisters/puffpai-packages",
       "path": "home-assistant",
-      "commit": "6274826715f61d10662f02c91f41bd49f46b92cc",
+      "commit": "3c90ea6b4a98382d2e9980abf310582f3e39750d",
       "tier": "verified",
-      "icon": "https://raw.githubusercontent.com/CypherSisters/puffpai-packages/6274826715f61d10662f02c91f41bd49f46b92cc/home-assistant/icons/house.svg",
+      "icon": "https://raw.githubusercontent.com/CypherSisters/puffpai-packages/3c90ea6b4a98382d2e9980abf310582f3e39750d/home-assistant/icons/house.svg",
       "abilities": {
         "tools": {
           "set_address": "Save the address of your Home Assistant on your home network, like homeassistant.local:8123.",
@@ -833,9 +833,9 @@
       "license": "Apache-2.0",
       "repo": "https://github.com/CypherSisters/puffpai-packages",
       "path": "iss-position",
-      "commit": "6274826715f61d10662f02c91f41bd49f46b92cc",
+      "commit": "3c90ea6b4a98382d2e9980abf310582f3e39750d",
       "tier": "verified",
-      "icon": "https://raw.githubusercontent.com/CypherSisters/puffpai-packages/6274826715f61d10662f02c91f41bd49f46b92cc/iss-position/icons/satellite.svg",
+      "icon": "https://raw.githubusercontent.com/CypherSisters/puffpai-packages/3c90ea6b4a98382d2e9980abf310582f3e39750d/iss-position/icons/satellite.svg",
       "abilities": {
         "tools": {
           "iss_position": "Where the International Space Station is right now: latitude, longitude, height in km, speed in km/h, and a plain place such as over the Pacific Ocean, west of Peru."
@@ -867,9 +867,9 @@
       "license": "Apache-2.0",
       "repo": "https://github.com/CypherSisters/puffpai-packages",
       "path": "jellyfin",
-      "commit": "6274826715f61d10662f02c91f41bd49f46b92cc",
+      "commit": "3c90ea6b4a98382d2e9980abf310582f3e39750d",
       "tier": "verified",
-      "icon": "https://raw.githubusercontent.com/CypherSisters/puffpai-packages/6274826715f61d10662f02c91f41bd49f46b92cc/jellyfin/icons/play.svg",
+      "icon": "https://raw.githubusercontent.com/CypherSisters/puffpai-packages/3c90ea6b4a98382d2e9980abf310582f3e39750d/jellyfin/icons/play.svg",
       "abilities": {
         "tools": {
           "set_address": "Save the address of your Jellyfin server on your home network, like http://192.168.1.20:8096.",
@@ -935,9 +935,9 @@
       "license": "Apache-2.0",
       "repo": "https://github.com/CypherSisters/puffpai-packages",
       "path": "look-contrast",
-      "commit": "6274826715f61d10662f02c91f41bd49f46b92cc",
+      "commit": "3c90ea6b4a98382d2e9980abf310582f3e39750d",
       "tier": "verified",
-      "icon": "https://raw.githubusercontent.com/CypherSisters/puffpai-packages/6274826715f61d10662f02c91f41bd49f46b92cc/look-contrast/preview.svg",
+      "icon": "https://raw.githubusercontent.com/CypherSisters/puffpai-packages/3c90ea6b4a98382d2e9980abf310582f3e39750d/look-contrast/preview.svg",
       "verified_by": "Cypher Sisters (own package)",
       "levels": [
         1,
@@ -955,9 +955,9 @@
       "license": "Apache-2.0",
       "repo": "https://github.com/CypherSisters/puffpai-packages",
       "path": "look-paper",
-      "commit": "6274826715f61d10662f02c91f41bd49f46b92cc",
+      "commit": "3c90ea6b4a98382d2e9980abf310582f3e39750d",
       "tier": "verified",
-      "icon": "https://raw.githubusercontent.com/CypherSisters/puffpai-packages/6274826715f61d10662f02c91f41bd49f46b92cc/look-paper/preview.svg",
+      "icon": "https://raw.githubusercontent.com/CypherSisters/puffpai-packages/3c90ea6b4a98382d2e9980abf310582f3e39750d/look-paper/preview.svg",
       "verified_by": "Cypher Sisters (own package)",
       "levels": [
         1,
@@ -975,9 +975,9 @@
       "license": "Apache-2.0",
       "repo": "https://github.com/CypherSisters/puffpai-packages",
       "path": "look-slate",
-      "commit": "6274826715f61d10662f02c91f41bd49f46b92cc",
+      "commit": "3c90ea6b4a98382d2e9980abf310582f3e39750d",
       "tier": "verified",
-      "icon": "https://raw.githubusercontent.com/CypherSisters/puffpai-packages/6274826715f61d10662f02c91f41bd49f46b92cc/look-slate/preview.svg",
+      "icon": "https://raw.githubusercontent.com/CypherSisters/puffpai-packages/3c90ea6b4a98382d2e9980abf310582f3e39750d/look-slate/preview.svg",
       "verified_by": "Cypher Sisters (own package)",
       "levels": [
         1,
@@ -995,9 +995,9 @@
       "license": "Apache-2.0",
       "repo": "https://github.com/CypherSisters/puffpai-packages",
       "path": "network-devices",
-      "commit": "6274826715f61d10662f02c91f41bd49f46b92cc",
+      "commit": "3c90ea6b4a98382d2e9980abf310582f3e39750d",
       "tier": "verified",
-      "icon": "https://raw.githubusercontent.com/CypherSisters/puffpai-packages/6274826715f61d10662f02c91f41bd49f46b92cc/network-devices/icons/network-dots.svg",
+      "icon": "https://raw.githubusercontent.com/CypherSisters/puffpai-packages/3c90ea6b4a98382d2e9980abf310582f3e39750d/network-devices/icons/network-dots.svg",
       "abilities": {
         "tools": {
           "scan": "Read this computer's own list of devices it has talked to on the home network and save it: addresses, hardware addresses, names where known and a maker guess. Sends nothing to the devices.",
@@ -1046,9 +1046,9 @@
       "license": "Apache-2.0",
       "repo": "https://github.com/CypherSisters/puffpai-packages",
       "path": "news-headlines",
-      "commit": "6274826715f61d10662f02c91f41bd49f46b92cc",
+      "commit": "3c90ea6b4a98382d2e9980abf310582f3e39750d",
       "tier": "verified",
-      "icon": "https://raw.githubusercontent.com/CypherSisters/puffpai-packages/6274826715f61d10662f02c91f41bd49f46b92cc/news-headlines/icons/newspaper.svg",
+      "icon": "https://raw.githubusercontent.com/CypherSisters/puffpai-packages/3c90ea6b4a98382d2e9980abf310582f3e39750d/news-headlines/icons/newspaper.svg",
       "abilities": {
         "tools": {
           "add_feed": "Add a news feed (an RSS or Atom address) with a short name. Its host must then be allowed on the Bridge before its headlines load.",
@@ -1092,9 +1092,9 @@
       "license": "Apache-2.0",
       "repo": "https://github.com/CypherSisters/puffpai-packages",
       "path": "node-red-flows",
-      "commit": "6274826715f61d10662f02c91f41bd49f46b92cc",
+      "commit": "3c90ea6b4a98382d2e9980abf310582f3e39750d",
       "tier": "verified",
-      "icon": "https://raw.githubusercontent.com/CypherSisters/puffpai-packages/6274826715f61d10662f02c91f41bd49f46b92cc/node-red-flows/icons/node-wire.svg",
+      "icon": "https://raw.githubusercontent.com/CypherSisters/puffpai-packages/3c90ea6b4a98382d2e9980abf310582f3e39750d/node-red-flows/icons/node-wire.svg",
       "abilities": {
         "tools": {
           "list_flows": "List the flows in your Node-RED: each flow's name, id, whether it is on or off, and the web paths it answers.",
@@ -1146,9 +1146,9 @@
       "license": "Apache-2.0",
       "repo": "https://github.com/CypherSisters/puffpai-packages",
       "path": "prep-supplies",
-      "commit": "6274826715f61d10662f02c91f41bd49f46b92cc",
+      "commit": "3c90ea6b4a98382d2e9980abf310582f3e39750d",
       "tier": "verified",
-      "icon": "https://raw.githubusercontent.com/CypherSisters/puffpai-packages/6274826715f61d10662f02c91f41bd49f46b92cc/prep-supplies/icons/lantern.svg",
+      "icon": "https://raw.githubusercontent.com/CypherSisters/puffpai-packages/3c90ea6b4a98382d2e9980abf310582f3e39750d/prep-supplies/icons/lantern.svg",
       "abilities": {
         "tools": {
           "add_supply": "Add an emergency supply (food, water, medicine, batteries, fuel, first aid and so on) with its quantity, unit and expiry date.",
@@ -1200,9 +1200,9 @@
       "license": "Apache-2.0",
       "repo": "https://github.com/CypherSisters/puffpai-packages",
       "path": "radio",
-      "commit": "6274826715f61d10662f02c91f41bd49f46b92cc",
+      "commit": "3c90ea6b4a98382d2e9980abf310582f3e39750d",
       "tier": "verified",
-      "icon": "https://raw.githubusercontent.com/CypherSisters/puffpai-packages/6274826715f61d10662f02c91f41bd49f46b92cc/radio/icons/radio.svg",
+      "icon": "https://raw.githubusercontent.com/CypherSisters/puffpai-packages/3c90ea6b4a98382d2e9980abf310582f3e39750d/radio/icons/radio.svg",
       "abilities": {
         "tools": {
           "find_stations": "Find internet radio stations by name, country, genre or language, without playing one. Gives the top 15, numbered, with country, bitrate and stream address.",
@@ -1259,9 +1259,9 @@
       "license": "Apache-2.0",
       "repo": "https://github.com/CypherSisters/puffpai-packages",
       "path": "trivia",
-      "commit": "6274826715f61d10662f02c91f41bd49f46b92cc",
+      "commit": "3c90ea6b4a98382d2e9980abf310582f3e39750d",
       "tier": "verified",
-      "icon": "https://raw.githubusercontent.com/CypherSisters/puffpai-packages/6274826715f61d10662f02c91f41bd49f46b92cc/trivia/icons/question.svg",
+      "icon": "https://raw.githubusercontent.com/CypherSisters/puffpai-packages/3c90ea6b4a98382d2e9980abf310582f3e39750d/trivia/icons/question.svg",
       "abilities": {
         "tools": {
           "stats": "Trivia scores so far: games played, the average score, the best score, the last game, and the score of a round going in chat.",
@@ -1322,9 +1322,9 @@
       "license": "Apache-2.0",
       "repo": "https://github.com/CypherSisters/puffpai-packages",
       "path": "weather",
-      "commit": "6274826715f61d10662f02c91f41bd49f46b92cc",
+      "commit": "3c90ea6b4a98382d2e9980abf310582f3e39750d",
       "tier": "verified",
-      "icon": "https://raw.githubusercontent.com/CypherSisters/puffpai-packages/6274826715f61d10662f02c91f41bd49f46b92cc/weather/icons/sun-cloud.svg",
+      "icon": "https://raw.githubusercontent.com/CypherSisters/puffpai-packages/3c90ea6b4a98382d2e9980abf310582f3e39750d/weather/icons/sun-cloud.svg",
       "abilities": {
         "tools": {
           "set_location": "Save the place to give weather for: a town name, or coordinates like 40.71,-74.01, and the temperature unit. A town name is looked up once to get its coordinates.",
@@ -1369,9 +1369,9 @@
       "license": "Apache-2.0",
       "repo": "https://github.com/CypherSisters/puffpai-packages",
       "path": "web-search",
-      "commit": "6274826715f61d10662f02c91f41bd49f46b92cc",
+      "commit": "3c90ea6b4a98382d2e9980abf310582f3e39750d",
       "tier": "verified",
-      "icon": "https://raw.githubusercontent.com/CypherSisters/puffpai-packages/6274826715f61d10662f02c91f41bd49f46b92cc/web-search/icons/magnifier.svg",
+      "icon": "https://raw.githubusercontent.com/CypherSisters/puffpai-packages/3c90ea6b4a98382d2e9980abf310582f3e39750d/web-search/icons/magnifier.svg",
       "abilities": {
         "tools": {
           "web_search": "Search the web through the owner's own SearXNG and get the top 8 results: the title, a one-line snippet, the address and the engine that found it. Good for news, prices, opening hours and anything that changes.",
