@@ -3,6 +3,10 @@ name: Store check
 # Checks every changed row on a pull request; on main, checks every row and rebuilds index.json.
 # Uses pull_request (never pull_request_target): a contributor's package runs during `puffpai check`,
 # so it must run with no secrets and a read-only token.
+#
+# While the Core repo is private, Actions can't install it, so `puffpai check` is skipped with a warning:
+# the rows are still checked against each package's puffpai.json, a maintainer runs
+# `python scripts/store.py check <id>` locally before merging, and index.json is rebuilt locally.
 
 on:
   pull_request:
@@ -20,6 +24,8 @@ jobs:
     runs-on: windows-latest          # puffpai check uses the Core's Windows sandbox (Job Objects, Bridge)
     permissions:
       contents: read
+    outputs:
+      core: ${{ steps.core.outputs.core }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -27,28 +33,40 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - name: Install the PuffPAI Core
+      - name: Install the PuffPAI Core (if reachable)
+        id: core
         shell: bash
-        run: python -m pip install "git+https://github.com/${CORE_REPO}@${CORE_REF}"
+        run: |
+          if python -m pip install -q "git+https://github.com/${CORE_REPO}@${CORE_REF}"; then
+            echo "core=yes" >> "$GITHUB_OUTPUT"
+          else
+            echo "core=no" >> "$GITHUB_OUTPUT"
+            echo "::warning::The PuffPAI Core (${CORE_REPO}) is not reachable from Actions, so puffpai check was skipped. A maintainer runs 'python scripts/store.py check <id>' locally before merging."
+          fi
       - name: Check changed rows
         if: github.event_name == 'pull_request'
         shell: bash
         run: |
+          skip=""; [ "${{ steps.core.outputs.core }}" = "yes" ] || skip="--no-puffpai-check"
           ids=$(git diff --name-only "origin/${{ github.base_ref }}...HEAD" -- index | sed -n 's#^index/\(.*\)\.json$#\1#p')
-          if [ -z "$ids" ]; then python scripts/store.py check --no-puffpai-check; else python scripts/store.py check $ids; fi
+          if [ -z "$ids" ]; then python scripts/store.py check --no-puffpai-check; else python scripts/store.py check $skip $ids; fi
+      - name: Check every row
+        if: github.event_name == 'push' && steps.core.outputs.core != 'yes'
+        shell: bash
+        run: python scripts/store.py check --no-puffpai-check
       - name: Check every row and build index.json
-        if: github.event_name == 'push'
+        if: github.event_name == 'push' && steps.core.outputs.core == 'yes'
         shell: bash
         run: python scripts/store.py build
       - uses: actions/upload-artifact@v4
-        if: github.event_name == 'push'
+        if: github.event_name == 'push' && steps.core.outputs.core == 'yes'
         with:
           name: index
           path: index.json
 
   publish:
     needs: check
-    if: github.event_name == 'push'
+    if: github.event_name == 'push' && needs.check.outputs.core == 'yes'
     runs-on: ubuntu-latest
     permissions:
       contents: write

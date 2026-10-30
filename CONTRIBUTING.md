@@ -38,7 +38,7 @@ Fork this repo and add `index/<id>.json`:
 - `tier` is always `community`. Only PuffPAI sets `verified`.
 - Name, description, version, license and icon come from your `puffpai.json`, so they are not repeated here.
 
-Then open a pull request. The store check fetches your commit, compares it with the row, and runs `puffpai check`. It posts what passed and what did not. A maintainer reads it and merges.
+Then open a pull request. The store check fetches your commit, compares it with the row, and runs `puffpai check`. It posts what passed and what did not. A maintainer reads it, runs `puffpai check` on it too, and merges. (For now the online check compares the row only; `puffpai check` runs on the maintainer's computer.)
 
 ## 4. Updates
 
