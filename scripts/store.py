@@ -153,6 +153,11 @@ def check_row(file: Path, local: dict[str, str], cache: dict, work: Path, run_ch
     if isinstance(icon, str) and (folder / icon).is_file():
         base = "/".join(p for p in (row.get("path", ""), icon) if p)
         out["icon"] = f"{row['repo'].replace('github.com', 'raw.githubusercontent.com')}/{row['commit']}/{base}"
+    # What the package's tools do: Toolsmith reads this to suggest a package that isn't installed yet.
+    abilities = m.get("abilities") if isinstance(m.get("abilities"), dict) else {}
+    told = {k: abilities[k] for k in ("tools", "examples") if isinstance(abilities.get(k), dict) and abilities[k]}
+    if told:
+        out["abilities"] = told
     if row["tier"] == "verified":
         out["verified_by"] = row["verified_by"]
     if run_check:
