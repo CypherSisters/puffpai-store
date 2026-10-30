@@ -1,0 +1,10 @@
+{
+  "id": "code-writer",
+  "kind": "tool",
+  "repo": "https://github.com/CypherSisters/puffpai-packages",
+  "path": "code-writer",
+  "commit": "6274826715f61d10662f02c91f41bd49f46b92cc",
+  "tier": "verified",
+  "verified_by": "Cypher Sisters (own package)",
+  "verified_commit": "6274826715f61d10662f02c91f41bd49f46b92cc"
+}

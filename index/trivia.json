@@ -3,8 +3,8 @@
   "kind": "app",
   "repo": "https://github.com/CypherSisters/puffpai-packages",
   "path": "trivia",
-  "commit": "21abf3e1a45ba604babedeb2f99697614f2d922c",
+  "commit": "6274826715f61d10662f02c91f41bd49f46b92cc",
   "tier": "verified",
   "verified_by": "Cypher Sisters (own package)",
-  "verified_commit": "21abf3e1a45ba604babedeb2f99697614f2d922c"
+  "verified_commit": "6274826715f61d10662f02c91f41bd49f46b92cc"
 }

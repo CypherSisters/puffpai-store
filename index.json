@@ -3,18 +3,135 @@
   "name": "PuffPAI Store",
   "packages": [
     {
+      "id": "adguard",
+      "kind": "tool",
+      "name": "AdGuard Home",
+      "description": "Read and change your own AdGuard Home: whether protection is on, how many lookups were blocked, the most blocked domains, the latest lookups per device, the devices it knows, and blocking or unblocking a domain, turning protection on or off, or pausing it. It only works with an AdGuard Home you already run on this computer or your home network. It does not install or set up AdGuard Home, edit filter lists, change per-device settings, or remove rules it did not add.",
+      "version": "1.0.0",
+      "author": "Cypher Sisters",
+      "license": "Apache-2.0",
+      "repo": "https://github.com/CypherSisters/puffpai-packages",
+      "path": "adguard",
+      "commit": "6274826715f61d10662f02c91f41bd49f46b92cc",
+      "tier": "verified",
+      "icon": "https://raw.githubusercontent.com/CypherSisters/puffpai-packages/6274826715f61d10662f02c91f41bd49f46b92cc/adguard/icons/shield.svg",
+      "abilities": {
+        "tools": {
+          "set_address": "Save where the owner's AdGuard Home is, like http://192.168.1.2:3000. Only an address on this computer or the home network is taken. Without a port it tries 3000, then 80.",
+          "status": "AdGuard Home's state: protection on or off, DNS lookups and blocked lookups in its stats period, and how many filter lists and rules it has.",
+          "top_blocked": "The most blocked domains and the busiest devices, from AdGuard Home's stats.",
+          "query_log": "The latest DNS lookups from AdGuard Home's log: which device asked for which domain, and whether it was blocked. Optional filter by device address or name.",
+          "list_clients": "The devices AdGuard Home knows: the ones named in it and the ones it found on its own.",
+          "block_domain": "Block a domain and its sub-domains in AdGuard Home by adding the rule ||domain^.",
+          "unblock_domain": "Unblock a domain: take off the rule PuffPAI added, or add an allow rule @@||domain^.",
+          "protection": "Turn AdGuard Home's protection on or off for the whole home network.",
+          "pause_protection": "Turn AdGuard Home's protection off for some minutes; it comes back on by itself."
+        },
+        "examples": {
+          "set_address": [
+            "set my AdGuard address to http://192.168.1.2:3000"
+          ],
+          "status": [
+            "is AdGuard blocking ads right now",
+            "how many lookups did AdGuard block today"
+          ],
+          "top_blocked": [
+            "what is AdGuard blocking the most"
+          ],
+          "query_log": [
+            "what has the TV been looking up",
+            "show the last 20 DNS lookups"
+          ],
+          "list_clients": [
+            "which devices does AdGuard know about"
+          ],
+          "block_domain": [
+            "block ads.example.com in AdGuard"
+          ],
+          "unblock_domain": [
+            "unblock example.com, it broke a site"
+          ],
+          "protection": [
+            "turn AdGuard protection back on"
+          ],
+          "pause_protection": [
+            "pause AdGuard for 15 minutes"
+          ]
+        }
+      },
+      "verified_by": "Cypher Sisters (own package)",
+      "levels": [
+        1,
+        2,
+        3
+      ],
+      "not_checked": [
+        "12"
+      ]
+    },
+    {
       "id": "alarmflow",
       "kind": "app",
       "name": "AlarmFlow",
-      "description": "Timers and alarms. They ring on this computer while BuildBot runs, even with no page open.",
-      "version": "2.0.0",
+      "description": "Timers and alarms. While BuildBot runs they ring here even with no page open: a notice card, and on Windows a beep through the speakers.",
+      "version": "2.1.0",
       "author": "Cypher Sisters",
       "license": "Apache-2.0",
       "repo": "https://github.com/CypherSisters/puffpai-packages",
       "path": "alarmflow",
-      "commit": "21abf3e1a45ba604babedeb2f99697614f2d922c",
+      "commit": "6274826715f61d10662f02c91f41bd49f46b92cc",
       "tier": "verified",
-      "icon": "https://raw.githubusercontent.com/CypherSisters/puffpai-packages/21abf3e1a45ba604babedeb2f99697614f2d922c/alarmflow/icons/alarm.svg",
+      "icon": "https://raw.githubusercontent.com/CypherSisters/puffpai-packages/6274826715f61d10662f02c91f41bd49f46b92cc/alarmflow/icons/alarm.svg",
+      "abilities": {
+        "tools": {
+          "create_timer": "Start a countdown timer, like 20 minutes or an hour and a half, up to 7 days. It rings on this computer.",
+          "create_alarm": "Set an alarm for a time of day, like 6:30 AM, once or repeating daily, on weekdays, on weekends or weekly.",
+          "list": "List the timers and alarms that are set, with the time left on each.",
+          "snooze": "Snooze a ringing timer or alarm for some minutes, up to 24 hours.",
+          "add_time": "Add minutes to a running timer or alarm, or take some off with a negative number, up to 24 hours either way.",
+          "pause": "Pause a running timer.",
+          "resume": "Start a paused timer again.",
+          "dismiss": "Stop a ringing timer or alarm, or cancel one that is set. A ringing repeating alarm moves to its next day.",
+          "dismiss_all": "Stop and cancel every timer and alarm.",
+          "delete": "Delete a timer or alarm for good, by its name."
+        },
+        "examples": {
+          "create_timer": [
+            "set a timer for ten minutes for the pasta",
+            "set a timer for an hour and a half for the roast"
+          ],
+          "create_alarm": [
+            "set an alarm for 6:30 in the morning to wake up",
+            "wake me at 7 every weekday",
+            "remind me with an alarm at 5pm every Sunday"
+          ],
+          "list": [
+            "what timers are running right now"
+          ],
+          "snooze": [
+            "snooze the wake up alarm for ten minutes"
+          ],
+          "add_time": [
+            "add five more minutes to the pasta timer"
+          ],
+          "pause": [
+            "pause the pasta timer"
+          ],
+          "resume": [
+            "resume the pasta timer"
+          ],
+          "dismiss": [
+            "stop the pasta timer",
+            "turn off the alarm"
+          ],
+          "dismiss_all": [
+            "cancel all my timers and alarms"
+          ],
+          "delete": [
+            "delete the wake up alarm for good"
+          ]
+        }
+      },
       "verified_by": "Cypher Sisters (own package)",
       "levels": [
         1,
@@ -30,14 +147,14 @@
       "kind": "avatar",
       "name": "Block",
       "description": "Block, a square terminal face with two square eyes and a cursor, as the bot's face. Flat colours that go with the Clean look.",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "author": "Cypher Sisters",
       "license": "Apache-2.0",
       "repo": "https://github.com/CypherSisters/puffpai-packages",
       "path": "avatar-block",
-      "commit": "21abf3e1a45ba604babedeb2f99697614f2d922c",
+      "commit": "6274826715f61d10662f02c91f41bd49f46b92cc",
       "tier": "verified",
-      "icon": "https://raw.githubusercontent.com/CypherSisters/puffpai-packages/21abf3e1a45ba604babedeb2f99697614f2d922c/avatar-block/face.svg",
+      "icon": "https://raw.githubusercontent.com/CypherSisters/puffpai-packages/6274826715f61d10662f02c91f41bd49f46b92cc/avatar-block/face.svg",
       "verified_by": "Cypher Sisters (own package)",
       "levels": [
         1,
@@ -50,14 +167,14 @@
       "kind": "avatar",
       "name": "Pebble",
       "description": "Pebble, a round coral stone with a small smile, as the bot's face. Flat colours that go with the Paper look.",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "author": "Cypher Sisters",
       "license": "Apache-2.0",
       "repo": "https://github.com/CypherSisters/puffpai-packages",
       "path": "avatar-pebble",
-      "commit": "21abf3e1a45ba604babedeb2f99697614f2d922c",
+      "commit": "6274826715f61d10662f02c91f41bd49f46b92cc",
       "tier": "verified",
-      "icon": "https://raw.githubusercontent.com/CypherSisters/puffpai-packages/21abf3e1a45ba604babedeb2f99697614f2d922c/avatar-pebble/face.svg",
+      "icon": "https://raw.githubusercontent.com/CypherSisters/puffpai-packages/6274826715f61d10662f02c91f41bd49f46b92cc/avatar-pebble/face.svg",
       "verified_by": "Cypher Sisters (own package)",
       "levels": [
         1,
@@ -66,18 +183,369 @@
       ]
     },
     {
+      "id": "book-shelves",
+      "kind": "tool",
+      "name": "Book shelves",
+      "description": "Find books in your Calibre library by title, author, series or tag, see one book's details, keep your own named shelves, and get a few plain suggestions of what to read next. It only reads the Calibre library; it does not open, convert or change books, does not change Calibre's own shelves or tags, and its suggestions follow plain rules, not the brain.",
+      "version": "1.0.0",
+      "author": "Cypher Sisters",
+      "license": "Apache-2.0",
+      "repo": "https://github.com/CypherSisters/puffpai-packages",
+      "path": "book-shelves",
+      "commit": "6274826715f61d10662f02c91f41bd49f46b92cc",
+      "tier": "verified",
+      "icon": "https://raw.githubusercontent.com/CypherSisters/puffpai-packages/6274826715f61d10662f02c91f41bd49f46b92cc/book-shelves/icons/book.svg",
+      "abilities": {
+        "tools": {
+          "set_library": "Set the Calibre library folder to read books from (the folder that holds metadata.db). It is only read, never changed.",
+          "find_books": "Search the Calibre book library by title words, author, series or tag. Shows up to 20 books with authors, series, year and formats.",
+          "book_details": "Everything the library knows about one book: authors, series, year, formats, tags, the description, and which of your shelves it is on.",
+          "shelves": "List your book shelves, or the books on one shelf.",
+          "shelf_add": "Put a book from the library on one of your shelves. Makes the shelf if it is new.",
+          "shelf_remove": "Take a book off one of your shelves.",
+          "recommend": "Suggest a few books to read from the library: the newest added, by a tag or an author, that are not on a Read shelf. Plain rules, not the brain.",
+          "library_stats": "How big the Calibre library is: books, authors, series, tags, formats and the newest book."
+        },
+        "examples": {
+          "set_library": [
+            "my Calibre library is in D:\\Books\\Calibre Library"
+          ],
+          "find_books": [
+            "do we have any books by Agatha Christie",
+            "find books tagged cooking"
+          ],
+          "book_details": [
+            "tell me about the book Dracula"
+          ],
+          "shelves": [
+            "what is on my to-read shelf",
+            "which book shelves do I have"
+          ],
+          "shelf_add": [
+            "put Dracula on my to-read shelf"
+          ],
+          "shelf_remove": [
+            "take Dracula off my to-read shelf"
+          ],
+          "recommend": [
+            "recommend a mystery to read"
+          ],
+          "library_stats": [
+            "how many books are in our library"
+          ]
+        }
+      },
+      "verified_by": "Cypher Sisters (own package)",
+      "levels": [
+        1,
+        2,
+        3
+      ],
+      "not_checked": [
+        "12"
+      ]
+    },
+    {
+      "id": "calculator",
+      "kind": "tool",
+      "name": "Calculator",
+      "description": "Exact arithmetic for the bot: sums, percentages like 15% of 80, tips split between people, and unit conversions for length, weight, volume, temperature and speed. It only works out numbers; it does not solve equations, do algebra or convert currencies, and it stores nothing.",
+      "version": "1.0.0",
+      "author": "Cypher Sisters",
+      "license": "Apache-2.0",
+      "repo": "https://github.com/CypherSisters/puffpai-packages",
+      "path": "calculator",
+      "commit": "6274826715f61d10662f02c91f41bd49f46b92cc",
+      "tier": "verified",
+      "icon": "https://raw.githubusercontent.com/CypherSisters/puffpai-packages/6274826715f61d10662f02c91f41bd49f46b92cc/calculator/icons/equals.svg",
+      "abilities": {
+        "tools": {
+          "calculate": "Work out arithmetic exactly: + - * / // % ** and brackets, sqrt, abs, round, min, max, pi and e, and percentages like 15% of 80 or 80 + 15%. Answers in a plain sentence.",
+          "tip": "Work out a tip on a bill and the total, and what each person pays when the bill is split.",
+          "convert": "Convert a number between units of length, weight, volume (US cups, pints, gallons), temperature or speed, like 5 miles to km or 350 F to C."
+        },
+        "examples": {
+          "calculate": [
+            "what's 847 times 62",
+            "what is 15% of 80"
+          ],
+          "tip": [
+            "what's an 18 percent tip on 64 dollars split four ways"
+          ],
+          "convert": [
+            "how many kilometres is 5 miles",
+            "convert 350 fahrenheit to celsius"
+          ]
+        }
+      },
+      "verified_by": "Cypher Sisters (own package)",
+      "levels": [
+        1,
+        2,
+        3
+      ],
+      "not_checked": [
+        "12"
+      ]
+    },
+    {
       "id": "calendar",
       "kind": "app",
       "name": "Calendar",
       "description": "Events, tasks, medicines and bills for your household on one month view. Kept on this computer, never synced to an outside calendar.",
-      "version": "2.0.0",
+      "version": "2.1.0",
       "author": "Cypher Sisters",
       "license": "Apache-2.0",
       "repo": "https://github.com/CypherSisters/puffpai-packages",
       "path": "calendar",
-      "commit": "21abf3e1a45ba604babedeb2f99697614f2d922c",
+      "commit": "6274826715f61d10662f02c91f41bd49f46b92cc",
       "tier": "verified",
-      "icon": "https://raw.githubusercontent.com/CypherSisters/puffpai-packages/21abf3e1a45ba604babedeb2f99697614f2d922c/calendar/icons/calendar.svg",
+      "icon": "https://raw.githubusercontent.com/CypherSisters/puffpai-packages/6274826715f61d10662f02c91f41bd49f46b92cc/calendar/icons/calendar.svg",
+      "abilities": {
+        "tools": {
+          "add_event": "Add an event or appointment to the calendar, once or repeating.",
+          "add_task": "Add a to-do task with a due date. It shows on the calendar on that day.",
+          "add_med": "Track a medicine to take: its dose, how often and when.",
+          "add_bill": "Track a bill to pay: its amount and due date. It shows on the calendar on that day.",
+          "whats_on": "What is on today or this week, all in one answer: events, tasks and bills due, medicines still to take today, and anything overdue.",
+          "list_overdue": "List the to-do tasks and unpaid bills that are past their due date.",
+          "list_events": "List what is on the calendar: one day, or today and the next few days.",
+          "list_tasks": "List the to-do tasks: open ones by default, or done ones.",
+          "list_meds": "List the medicines being tracked and whether each was taken today.",
+          "list_bills": "List the bills: unpaid ones by default, with the total.",
+          "edit_event": "Change an event: move it, rename it, or change who, where or how often. Name the event, then only what changes.",
+          "edit_task": "Change a task: rename it, move its due date, or change who or its priority.",
+          "complete_task": "Mark a to-do task as done.",
+          "delete_event": "Delete an event from the calendar.",
+          "delete_task": "Delete a to-do task.",
+          "take_med": "Log a dose of a medicine as taken, with the time: now, or when it was taken.",
+          "delete_med": "Stop tracking a medicine and delete it, with its dose log.",
+          "pay_bill": "Mark a bill as paid.",
+          "delete_bill": "Delete a bill so it is no longer tracked."
+        },
+        "examples": {
+          "add_event": [
+            "add a dentist appointment on friday at 10am to my calendar"
+          ],
+          "add_task": [
+            "add taking the bins out to my to-do tasks, due tomorrow"
+          ],
+          "add_med": [
+            "track my vitamin D medicine, one tablet daily at 8 AM"
+          ],
+          "add_bill": [
+            "track the electric bill, $84.50, due November 5"
+          ],
+          "whats_on": [
+            "what's on today",
+            "what do we have going on this week"
+          ],
+          "list_overdue": [
+            "is anything overdue",
+            "which bills are past due"
+          ],
+          "list_events": [
+            "what is on my calendar tomorrow"
+          ],
+          "list_tasks": [
+            "what tasks are still on my to-do list"
+          ],
+          "list_meds": [
+            "which medicines am I tracking"
+          ],
+          "list_bills": [
+            "which bills are still unpaid"
+          ],
+          "edit_event": [
+            "move the dentist appointment to monday at 2pm"
+          ],
+          "edit_task": [
+            "change the bins task to be due on saturday"
+          ],
+          "complete_task": [
+            "I took the bins out, mark that task done"
+          ],
+          "delete_event": [
+            "delete the dentist appointment from my calendar"
+          ],
+          "delete_task": [
+            "delete the bins task from my to-do list"
+          ],
+          "take_med": [
+            "I took my vitamin D",
+            "I took my blood pressure pill at 8am"
+          ],
+          "delete_med": [
+            "stop tracking my vitamin D, delete it"
+          ],
+          "pay_bill": [
+            "I paid the electric bill"
+          ],
+          "delete_bill": [
+            "stop tracking the electric bill, delete it"
+          ]
+        }
+      },
+      "verified_by": "Cypher Sisters (own package)",
+      "levels": [
+        1,
+        2,
+        3
+      ],
+      "not_checked": [
+        "12"
+      ]
+    },
+    {
+      "id": "code-writer",
+      "kind": "tool",
+      "name": "Code writer",
+      "description": "Ask in plain words for a script in Python, PowerShell, Bash, JavaScript or HTML; the brain writes it and it is saved as a file you can read, list and delete. It never runs the code, never edits your own files, and never installs anything. Read a script before you use it.",
+      "version": "1.0.0",
+      "author": "Cypher Sisters",
+      "license": "Apache-2.0",
+      "repo": "https://github.com/CypherSisters/puffpai-packages",
+      "path": "code-writer",
+      "commit": "6274826715f61d10662f02c91f41bd49f46b92cc",
+      "tier": "verified",
+      "icon": "https://raw.githubusercontent.com/CypherSisters/puffpai-packages/6274826715f61d10662f02c91f41bd49f46b92cc/code-writer/icons/code.svg",
+      "abilities": {
+        "tools": {
+          "write_script": "Have the brain write a script or small program from a plain request and save it as a file. It is never run. Answers the file path and the first lines.",
+          "list_scripts": "List the scripts written so far, newest first.",
+          "read_script": "Show the whole text of one saved script.",
+          "delete_script": "Delete one saved script."
+        },
+        "examples": {
+          "write_script": [
+            "write me a Python script that renames my photos by the date they were taken",
+            "I need a PowerShell script that lists the biggest files in my Downloads folder"
+          ],
+          "list_scripts": [
+            "which scripts have you written for me"
+          ],
+          "read_script": [
+            "show me the photo renaming script"
+          ],
+          "delete_script": [
+            "delete the script rename-photos.py"
+          ]
+        }
+      },
+      "verified_by": "Cypher Sisters (own package)",
+      "levels": [
+        1,
+        2,
+        3
+      ],
+      "not_checked": [
+        "12"
+      ]
+    },
+    {
+      "id": "daily-briefing",
+      "kind": "skill",
+      "name": "Daily briefing",
+      "description": "Teaches the brain to give a short good-morning briefing: the date, then weather, today's events, tasks, medicines and bills, the shopping list, headlines and timers, from whichever of the weather, calendar, freshtable, news-headlines and alarmflow packages are installed, then one line of encouragement. It adds no tools of its own and fetches nothing itself.",
+      "version": "1.0.0",
+      "author": "Cypher Sisters",
+      "license": "Apache-2.0",
+      "repo": "https://github.com/CypherSisters/puffpai-packages",
+      "path": "daily-briefing",
+      "commit": "6274826715f61d10662f02c91f41bd49f46b92cc",
+      "tier": "verified",
+      "icon": "https://raw.githubusercontent.com/CypherSisters/puffpai-packages/6274826715f61d10662f02c91f41bd49f46b92cc/daily-briefing/icons/sunrise.svg",
+      "verified_by": "Cypher Sisters (own package)",
+      "levels": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "id": "document-convert",
+      "kind": "tool",
+      "name": "Document convert",
+      "description": "Turns Word, Excel, PowerPoint and OpenDocument files into PDFs with LibreOffice on this computer, and reads the plain text out of a .docx, .xlsx or .pptx without it. It does not edit documents, convert to any format but PDF, or read PDFs, and making a PDF needs LibreOffice installed.",
+      "version": "1.0.0",
+      "author": "Cypher Sisters",
+      "license": "Apache-2.0",
+      "repo": "https://github.com/CypherSisters/puffpai-packages",
+      "path": "document-convert",
+      "commit": "6274826715f61d10662f02c91f41bd49f46b92cc",
+      "tier": "verified",
+      "icon": "https://raw.githubusercontent.com/CypherSisters/puffpai-packages/6274826715f61d10662f02c91f41bd49f46b92cc/document-convert/icons/page-arrow.svg",
+      "abilities": {
+        "tools": {
+          "convert_to_pdf": "Turn a document (Word .docx, Excel .xlsx, PowerPoint .pptx, .odt, .ods, .odp, .txt or .md) into a PDF with LibreOffice on this computer, and say where the PDF is.",
+          "read_document_text": "Read the plain text out of a Word .docx, Excel .xlsx or PowerPoint .pptx (or a .txt or .md) without changing it.",
+          "list_converted": "List the PDFs this tool has made, newest first."
+        },
+        "examples": {
+          "convert_to_pdf": [
+            "turn this Word document into a PDF",
+            "make a PDF of my spreadsheet"
+          ],
+          "read_document_text": [
+            "read me what is in this Word doc",
+            "what does this PowerPoint say"
+          ],
+          "list_converted": [
+            "which PDFs have you made"
+          ]
+        }
+      },
+      "verified_by": "Cypher Sisters (own package)",
+      "levels": [
+        1,
+        2,
+        3
+      ],
+      "not_checked": [
+        "12"
+      ]
+    },
+    {
+      "id": "document-search",
+      "kind": "tool",
+      "name": "Document search",
+      "description": "Keeps the owner's documents (.txt, .md, .csv, .json, .docx, .html and other text files) on this computer and searches their words, so the bot can find and read them back. It matches words, not meanings (no embedding model), and it does not read PDFs, pictures or spreadsheets.",
+      "version": "1.0.0",
+      "author": "Cypher Sisters",
+      "license": "Apache-2.0",
+      "repo": "https://github.com/CypherSisters/puffpai-packages",
+      "path": "document-search",
+      "commit": "6274826715f61d10662f02c91f41bd49f46b92cc",
+      "tier": "verified",
+      "icon": "https://raw.githubusercontent.com/CypherSisters/puffpai-packages/6274826715f61d10662f02c91f41bd49f46b92cc/document-search/icons/page-magnifier.svg",
+      "abilities": {
+        "tools": {
+          "add_document": "Keep a document (.txt, .md, .csv, .json, .docx, .html or another text file) on this computer and index its words so it can be searched.",
+          "search_documents": "Search the owner's kept documents for words, and get the ten best matches with a short snippet and each document's id.",
+          "read_document": "Read the full text of one kept document by its id.",
+          "list_documents": "List the kept documents, newest first, with their ids.",
+          "remove_document": "Remove one kept document and its words from the index, by its id."
+        },
+        "examples": {
+          "add_document": [
+            "keep this document so I can search it later",
+            "add my roof warranty to my documents"
+          ],
+          "search_documents": [
+            "what did I save about the roof warranty",
+            "find my lasagna recipe in my documents"
+          ],
+          "read_document": [
+            "read me the whole of document 3"
+          ],
+          "list_documents": [
+            "what documents have I saved"
+          ],
+          "remove_document": [
+            "remove document 4 from my documents"
+          ]
+        }
+      },
       "verified_by": "Cypher Sisters (own package)",
       "levels": [
         1,
@@ -93,14 +561,76 @@
       "kind": "app",
       "name": "FitFam",
       "description": "Workouts for each person in the household, with streaks, goals and a history that stays on this computer.",
-      "version": "2.0.0",
+      "version": "2.1.0",
       "author": "Cypher Sisters",
       "license": "Apache-2.0",
       "repo": "https://github.com/CypherSisters/puffpai-packages",
       "path": "fitfam",
-      "commit": "21abf3e1a45ba604babedeb2f99697614f2d922c",
+      "commit": "6274826715f61d10662f02c91f41bd49f46b92cc",
       "tier": "verified",
-      "icon": "https://raw.githubusercontent.com/CypherSisters/puffpai-packages/21abf3e1a45ba604babedeb2f99697614f2d922c/fitfam/icons/fire.svg",
+      "icon": "https://raw.githubusercontent.com/CypherSisters/puffpai-packages/6274826715f61d10662f02c91f41bd49f46b92cc/fitfam/icons/fire.svg",
+      "abilities": {
+        "tools": {
+          "log_workout": "Log a workout someone did: what kind, how many minutes and, if they say, how far. Updates their streak.",
+          "log_set": "Log one strength set: the exercise, the reps, and the weight lifted in lb or kg.",
+          "status": "Workout streaks and totals: how many days in a row, workouts this week and in all, and the last one.",
+          "history": "List someone's recent workouts and strength sets, newest first.",
+          "personal_records": "Personal records: the best set for each exercise, with an estimated one-rep max.",
+          "remove_workout": "Remove a workout logged by mistake: the newest one, or the newest of one kind.",
+          "remove_set": "Remove a strength set logged by mistake: the newest one, or the newest of one exercise.",
+          "list_exercises": "List the exercises in FitFam's library by muscle group, like chest, legs, back or core.",
+          "suggest_workout": "Make a workout plan from the exercise library: a list of exercises with sets and reps. Nothing is logged.",
+          "list_goals": "List someone's fitness goals and how close they are.",
+          "add_goal": "Add a fitness goal with a target, like 20 push-ups in a row or a 2-minute plank.",
+          "update_goal": "Set the progress on a fitness goal: the number reached so far.",
+          "remove_goal": "Remove a fitness goal someone no longer wants."
+        },
+        "examples": {
+          "log_workout": [
+            "log a 30 minute run for me",
+            "log a 45 minute run for Sam, 5 km"
+          ],
+          "log_set": [
+            "log a set of bench press: 135 pounds for 5 reps",
+            "log a goblet squat set, 16 kg for 10"
+          ],
+          "status": [
+            "how long is my workout streak"
+          ],
+          "history": [
+            "what workouts did I do lately"
+          ],
+          "personal_records": [
+            "what are my personal records",
+            "what's my best bench press"
+          ],
+          "remove_workout": [
+            "remove that run, I logged it by mistake"
+          ],
+          "remove_set": [
+            "delete the last bench press set"
+          ],
+          "list_exercises": [
+            "what exercises work the legs",
+            "list the kettlebell exercises"
+          ],
+          "suggest_workout": [
+            "make me a 30 minute kettlebell workout"
+          ],
+          "list_goals": [
+            "what are my fitness goals"
+          ],
+          "add_goal": [
+            "add a fitness goal: 20 push-ups in a row"
+          ],
+          "update_goal": [
+            "update my plank goal: I held it for 90 seconds"
+          ],
+          "remove_goal": [
+            "remove my plank goal"
+          ]
+        }
+      },
       "verified_by": "Cypher Sisters (own package)",
       "levels": [
         1,
@@ -116,14 +646,275 @@
       "kind": "app",
       "name": "FreshTable",
       "description": "Pantry, shopping list, meal plan and the recipes behind them.",
-      "version": "2.0.0",
+      "version": "2.1.0",
       "author": "Cypher Sisters",
       "license": "Apache-2.0",
       "repo": "https://github.com/CypherSisters/puffpai-packages",
       "path": "freshtable",
-      "commit": "21abf3e1a45ba604babedeb2f99697614f2d922c",
+      "commit": "6274826715f61d10662f02c91f41bd49f46b92cc",
       "tier": "verified",
-      "icon": "https://raw.githubusercontent.com/CypherSisters/puffpai-packages/21abf3e1a45ba604babedeb2f99697614f2d922c/freshtable/icons/pot.svg",
+      "icon": "https://raw.githubusercontent.com/CypherSisters/puffpai-packages/6274826715f61d10662f02c91f41bd49f46b92cc/freshtable/icons/pot.svg",
+      "abilities": {
+        "tools": {
+          "add_pantry": "Add a food item to the pantry (food at home), or add to its count if it is already there.",
+          "list_pantry": "List what is in the pantry. Filter by a food name, a category, or \"low\" for items running low.",
+          "use_pantry": "Use up some of a pantry item, or all of it. When none is left it goes on the shopping list.",
+          "remove_pantry": "Take an item out of the pantry list altogether.",
+          "add_shopping": "Put an item on the shopping list, with an amount and unit if given.",
+          "list_shopping": "List what is still on the shopping list.",
+          "check_off_shopping": "Tick an item off the shopping list (bought).",
+          "remove_shopping": "Take an item off the shopping list.",
+          "clear_bought_shopping": "Clear the ticked-off (bought) items from the shopping list.",
+          "add_ingredients_to_shopping": "Put a recipe's or the meal plan's ingredients on the shopping list, skipping what is already there or in the pantry.",
+          "list_meal_plan": "List the meals planned for the week.",
+          "add_meal": "Plan a meal for a day of the week. A saved recipe of the same name brings its ingredients.",
+          "remove_meal": "Take a meal off the plan, by day or by name.",
+          "plan_week": "Plan dinners for the week from the saved recipes, with the brain or, without it, by taking turns. Keeps days already planned unless told to replace them.",
+          "add_recipe": "Save a recipe: its name, ingredients and instructions.",
+          "list_recipes": "List the saved recipes, or show one recipe with its instructions.",
+          "remove_recipe": "Delete a saved recipe.",
+          "import_recipes": "Read recipes from a file the owner sent (text or a photo of a recipe, not PDF) and save them. A text file comes as file_name, mime and text; any other file as file_name, mime and content_b64."
+        },
+        "examples": {
+          "add_shopping": [
+            "put milk on the shopping list",
+            "add 2 lbs of chicken to the shopping list"
+          ],
+          "list_shopping": [
+            "what is on the shopping list"
+          ],
+          "add_pantry": [
+            "add a bag of rice to the pantry"
+          ],
+          "list_pantry": [
+            "what is running low in the pantry",
+            "do we have any rice"
+          ],
+          "use_pantry": [
+            "we ran out of milk",
+            "I used 2 cans of beans"
+          ],
+          "remove_pantry": [
+            "take the old yogurt out of the pantry"
+          ],
+          "check_off_shopping": [
+            "I bought the eggs, tick them off"
+          ],
+          "remove_shopping": [
+            "take the bread off the shopping list"
+          ],
+          "clear_bought_shopping": [
+            "clear the bought things off the shopping list"
+          ],
+          "add_ingredients_to_shopping": [
+            "add what I need for the pancakes to the shopping list",
+            "shop for this week's dinners"
+          ],
+          "list_meal_plan": [
+            "what dinners are planned this week"
+          ],
+          "add_meal": [
+            "plan chicken fajitas for Tuesday dinner"
+          ],
+          "remove_meal": [
+            "take Thursday's dinner off the plan"
+          ],
+          "plan_week": [
+            "plan dinners for the week from my recipes"
+          ],
+          "add_recipe": [
+            "save my pancake recipe: flour, milk, eggs; whisk and fry"
+          ],
+          "list_recipes": [
+            "which recipes have I saved",
+            "how do I make the pancakes"
+          ],
+          "remove_recipe": [
+            "delete the meatloaf recipe"
+          ],
+          "import_recipes": [
+            "import the recipes in my file pancakes.txt: Pancakes. Flour, milk, eggs. Whisk and fry."
+          ]
+        }
+      },
+      "verified_by": "Cypher Sisters (own package)",
+      "levels": [
+        1,
+        2,
+        3
+      ],
+      "not_checked": [
+        "12"
+      ]
+    },
+    {
+      "id": "home-assistant",
+      "kind": "tool",
+      "name": "Home Assistant",
+      "description": "Reads and controls your own Home Assistant on your home network: list devices and their state, turn lights, switches, fans and media players on or off, open or close blinds, curtains and shades, set lights and thermostats, run scenes, list cameras and see which motion sensors changed lately. It does not lock or unlock doors, open garage doors or gates, arm or disarm alarms, run scripts or automations, or show camera pictures, and it never talks to anything on the internet.",
+      "version": "1.0.0",
+      "author": "Cypher Sisters",
+      "license": "Apache-2.0",
+      "repo": "https://github.com/CypherSisters/puffpai-packages",
+      "path": "home-assistant",
+      "commit": "6274826715f61d10662f02c91f41bd49f46b92cc",
+      "tier": "verified",
+      "icon": "https://raw.githubusercontent.com/CypherSisters/puffpai-packages/6274826715f61d10662f02c91f41bd49f46b92cc/home-assistant/icons/house.svg",
+      "abilities": {
+        "tools": {
+          "set_address": "Save the address of your Home Assistant on your home network, like homeassistant.local:8123.",
+          "list_devices": "List Home Assistant devices with their state, by kind (lights, switches, thermostats, sensors and more) or by name.",
+          "device_state": "The state of one Home Assistant device, with a few details like brightness or temperature.",
+          "turn_on": "Turn on a light, switch, fan or media player, or open a blind, curtain or shade. Never a lock, garage door or gate.",
+          "turn_off": "Turn off a light, switch, fan or media player, or close a blind, curtain or shade. Never a lock, garage door or gate.",
+          "set_light": "Set a light's brightness, colour or white colour temperature.",
+          "set_temperature": "Set a thermostat's target temperature and, if asked, its mode.",
+          "run_scene": "Run a Home Assistant scene by name. A scene that touches a lock, alarm, door or gate is not run.",
+          "list_cameras": "List the cameras Home Assistant has and their state. No pictures.",
+          "recent_motion": "Which motion or occupancy sensors changed in the last few minutes."
+        },
+        "examples": {
+          "set_address": [
+            "my Home Assistant is at homeassistant.local:8123"
+          ],
+          "list_devices": [
+            "what lights do I have",
+            "list my smart home devices"
+          ],
+          "device_state": [
+            "is the porch light on",
+            "what's the temperature in the living room"
+          ],
+          "turn_on": [
+            "turn on the kitchen light",
+            "open the bedroom blinds"
+          ],
+          "turn_off": [
+            "turn off the TV",
+            "switch off the fan"
+          ],
+          "set_light": [
+            "dim the living room lamp to 30 percent",
+            "make the bedroom light warm white"
+          ],
+          "set_temperature": [
+            "set the thermostat to 21",
+            "set the heat to 70 degrees"
+          ],
+          "run_scene": [
+            "run the movie night scene"
+          ],
+          "list_cameras": [
+            "list my cameras"
+          ],
+          "recent_motion": [
+            "any motion in the last half hour",
+            "did anyone walk past the hallway sensor"
+          ]
+        }
+      },
+      "verified_by": "Cypher Sisters (own package)",
+      "levels": [
+        1,
+        2,
+        3
+      ],
+      "not_checked": [
+        "12"
+      ]
+    },
+    {
+      "id": "iss-position",
+      "kind": "tool",
+      "name": "ISS position",
+      "description": "Where the International Space Station is right now: latitude, longitude, height, speed and a plain place like over the Pacific Ocean, west of Peru. It asks one public website for the position each time. It does not predict when the station passes over your house, and it stores nothing.",
+      "version": "1.0.0",
+      "author": "Cypher Sisters",
+      "license": "Apache-2.0",
+      "repo": "https://github.com/CypherSisters/puffpai-packages",
+      "path": "iss-position",
+      "commit": "6274826715f61d10662f02c91f41bd49f46b92cc",
+      "tier": "verified",
+      "icon": "https://raw.githubusercontent.com/CypherSisters/puffpai-packages/6274826715f61d10662f02c91f41bd49f46b92cc/iss-position/icons/satellite.svg",
+      "abilities": {
+        "tools": {
+          "iss_position": "Where the International Space Station is right now: latitude, longitude, height in km, speed in km/h, and a plain place such as over the Pacific Ocean, west of Peru."
+        },
+        "examples": {
+          "iss_position": [
+            "where is the space station right now",
+            "where is the ISS"
+          ]
+        }
+      },
+      "verified_by": "Cypher Sisters (own package)",
+      "levels": [
+        1,
+        2,
+        3
+      ],
+      "not_checked": [
+        "12"
+      ]
+    },
+    {
+      "id": "jellyfin",
+      "kind": "tool",
+      "name": "Jellyfin media",
+      "description": "Search your own Jellyfin library and play music, movies and shows on one of its players (a TV app, a phone, a browser tab): pause, skip, stop, volume, what is playing, and music playlists. It needs your Jellyfin address on your home network and a Jellyfin API key. It does not play on this computer's own speakers, and it does not handle books, favorites, radio or library scans.",
+      "version": "1.0.0",
+      "author": "Cypher Sisters",
+      "license": "Apache-2.0",
+      "repo": "https://github.com/CypherSisters/puffpai-packages",
+      "path": "jellyfin",
+      "commit": "6274826715f61d10662f02c91f41bd49f46b92cc",
+      "tier": "verified",
+      "icon": "https://raw.githubusercontent.com/CypherSisters/puffpai-packages/6274826715f61d10662f02c91f41bd49f46b92cc/jellyfin/icons/play.svg",
+      "abilities": {
+        "tools": {
+          "set_address": "Save the address of your Jellyfin server on your home network, like http://192.168.1.20:8096.",
+          "search_media": "Search your Jellyfin library for songs, albums, artists, movies or shows by words, with item ids.",
+          "list_players": "List the Jellyfin players that can be controlled: client, device, user and what each is playing.",
+          "play": "Play a song, album, playlist, movie or show from your Jellyfin library on one of its players.",
+          "control": "Pause, unpause, stop, skip to next or previous, or set the volume on a Jellyfin player.",
+          "now_playing": "Say what each Jellyfin player is playing now.",
+          "playlists": "List your Jellyfin playlists.",
+          "create_playlist": "Make a new Jellyfin music playlist, optionally with songs found by name.",
+          "add_to_playlist": "Add songs, found by name, to one of your Jellyfin playlists."
+        },
+        "examples": {
+          "set_address": [
+            "set my Jellyfin address to http://192.168.1.20:8096"
+          ],
+          "search_media": [
+            "do I have any Fleetwood Mac in Jellyfin",
+            "find the movie Arrival in my library"
+          ],
+          "list_players": [
+            "which Jellyfin players are on"
+          ],
+          "play": [
+            "play Abbey Road on the living room TV",
+            "put on the movie Paddington in Jellyfin"
+          ],
+          "control": [
+            "pause the music",
+            "turn the Jellyfin volume down to 30"
+          ],
+          "now_playing": [
+            "what is playing on Jellyfin"
+          ],
+          "playlists": [
+            "list my Jellyfin playlists"
+          ],
+          "create_playlist": [
+            "make a playlist called Road Trip with Dreams by Fleetwood Mac and Africa by Toto"
+          ],
+          "add_to_playlist": [
+            "add Here Comes the Sun to my Road Trip playlist"
+          ]
+        }
+      },
       "verified_by": "Cypher Sisters (own package)",
       "levels": [
         1,
@@ -139,14 +930,14 @@
       "kind": "look",
       "name": "High contrast",
       "description": "High contrast: black ground, white text, white lines and a yellow accent at night; white ground, black text and a dark blue accent by day. Square corners and larger text.",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "author": "Cypher Sisters",
       "license": "Apache-2.0",
       "repo": "https://github.com/CypherSisters/puffpai-packages",
       "path": "look-contrast",
-      "commit": "21abf3e1a45ba604babedeb2f99697614f2d922c",
+      "commit": "6274826715f61d10662f02c91f41bd49f46b92cc",
       "tier": "verified",
-      "icon": "https://raw.githubusercontent.com/CypherSisters/puffpai-packages/21abf3e1a45ba604babedeb2f99697614f2d922c/look-contrast/preview.svg",
+      "icon": "https://raw.githubusercontent.com/CypherSisters/puffpai-packages/6274826715f61d10662f02c91f41bd49f46b92cc/look-contrast/preview.svg",
       "verified_by": "Cypher Sisters (own package)",
       "levels": [
         1,
@@ -159,14 +950,14 @@
       "kind": "look",
       "name": "Paper",
       "description": "Paper: warm cream paper, dark ink and one coral accent, with serif headings and small corners. A dark sepia version at night. No glow, no clouds.",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "author": "Cypher Sisters",
       "license": "Apache-2.0",
       "repo": "https://github.com/CypherSisters/puffpai-packages",
       "path": "look-paper",
-      "commit": "21abf3e1a45ba604babedeb2f99697614f2d922c",
+      "commit": "6274826715f61d10662f02c91f41bd49f46b92cc",
       "tier": "verified",
-      "icon": "https://raw.githubusercontent.com/CypherSisters/puffpai-packages/21abf3e1a45ba604babedeb2f99697614f2d922c/look-paper/preview.svg",
+      "icon": "https://raw.githubusercontent.com/CypherSisters/puffpai-packages/6274826715f61d10662f02c91f41bd49f46b92cc/look-paper/preview.svg",
       "verified_by": "Cypher Sisters (own package)",
       "levels": [
         1,
@@ -179,14 +970,14 @@
       "kind": "look",
       "name": "Slate",
       "description": "Slate: calm blue-grey surfaces, a teal accent and soft small corners, in Nunito. Darker slate at night, light grey by day. No glow, no clouds, a little less rounded than Puff.",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "author": "Cypher Sisters",
       "license": "Apache-2.0",
       "repo": "https://github.com/CypherSisters/puffpai-packages",
       "path": "look-slate",
-      "commit": "21abf3e1a45ba604babedeb2f99697614f2d922c",
+      "commit": "6274826715f61d10662f02c91f41bd49f46b92cc",
       "tier": "verified",
-      "icon": "https://raw.githubusercontent.com/CypherSisters/puffpai-packages/21abf3e1a45ba604babedeb2f99697614f2d922c/look-slate/preview.svg",
+      "icon": "https://raw.githubusercontent.com/CypherSisters/puffpai-packages/6274826715f61d10662f02c91f41bd49f46b92cc/look-slate/preview.svg",
       "verified_by": "Cypher Sisters (own package)",
       "levels": [
         1,
@@ -195,18 +986,417 @@
       ]
     },
     {
+      "id": "network-devices",
+      "kind": "tool",
+      "name": "Network devices",
+      "description": "A list of the devices on your home network that this computer has talked to: address, hardware address, name if known, a maker guess, when each was first and last seen, and labels you give them. It reads this computer's own neighbour table and asks your home network's usual name lookup for names. It does not scan or ping the network, check ports, watch traffic, or block anything.",
+      "version": "1.0.0",
+      "author": "Cypher Sisters",
+      "license": "Apache-2.0",
+      "repo": "https://github.com/CypherSisters/puffpai-packages",
+      "path": "network-devices",
+      "commit": "6274826715f61d10662f02c91f41bd49f46b92cc",
+      "tier": "verified",
+      "icon": "https://raw.githubusercontent.com/CypherSisters/puffpai-packages/6274826715f61d10662f02c91f41bd49f46b92cc/network-devices/icons/network-dots.svg",
+      "abilities": {
+        "tools": {
+          "scan": "Read this computer's own list of devices it has talked to on the home network and save it: addresses, hardware addresses, names where known and a maker guess. Sends nothing to the devices.",
+          "list_devices": "List the saved devices: address, hardware address, name if known, maker guess, first seen, last seen and the owner's label. Optional filter word.",
+          "new_devices": "Scan now, then list the devices that first showed up since the owner last asked.",
+          "name_device": "Give a device a label the owner chooses, like the kitchen tablet.",
+          "forget_device": "Take a device off the saved list. It comes back as new if this computer sees it again."
+        },
+        "examples": {
+          "scan": [
+            "scan my home network for devices",
+            "refresh the device list"
+          ],
+          "list_devices": [
+            "what devices are on my network",
+            "list the Apple devices on my network"
+          ],
+          "new_devices": [
+            "any new devices on my network since I last asked"
+          ],
+          "name_device": [
+            "call the device at 192.168.1.23 the kitchen tablet"
+          ],
+          "forget_device": [
+            "forget the device called old printer"
+          ]
+        }
+      },
+      "verified_by": "Cypher Sisters (own package)",
+      "levels": [
+        1,
+        2,
+        3
+      ],
+      "not_checked": [
+        "12"
+      ]
+    },
+    {
+      "id": "news-headlines",
+      "kind": "tool",
+      "name": "News headlines",
+      "description": "Reads the news feeds you add (RSS or Atom) and gives the latest headlines: title, source, time and link. It comes with no feeds, does not fetch or summarize articles, and each feed's site must be allowed on the Bridge before it loads.",
+      "version": "1.0.0",
+      "author": "Cypher Sisters",
+      "license": "Apache-2.0",
+      "repo": "https://github.com/CypherSisters/puffpai-packages",
+      "path": "news-headlines",
+      "commit": "6274826715f61d10662f02c91f41bd49f46b92cc",
+      "tier": "verified",
+      "icon": "https://raw.githubusercontent.com/CypherSisters/puffpai-packages/6274826715f61d10662f02c91f41bd49f46b92cc/news-headlines/icons/newspaper.svg",
+      "abilities": {
+        "tools": {
+          "add_feed": "Add a news feed (an RSS or Atom address) with a short name. Its host must then be allowed on the Bridge before its headlines load.",
+          "remove_feed": "Remove a news feed by its name or address.",
+          "list_feeds": "List the news feeds that have been added, with their addresses.",
+          "headlines": "The latest news headlines from the added feeds, or from one feed: title, source, time and link. No article text."
+        },
+        "examples": {
+          "add_feed": [
+            "add the news feed at https://www.example.org/news/rss.xml and call it Local Paper"
+          ],
+          "remove_feed": [
+            "remove the Local Paper news feed"
+          ],
+          "list_feeds": [
+            "which news feeds do I have"
+          ],
+          "headlines": [
+            "what are the latest headlines",
+            "give me five headlines from Local Paper"
+          ]
+        }
+      },
+      "verified_by": "Cypher Sisters (own package)",
+      "levels": [
+        1,
+        2,
+        3
+      ],
+      "not_checked": [
+        "12"
+      ]
+    },
+    {
+      "id": "node-red-flows",
+      "kind": "tool",
+      "name": "Node-RED flows",
+      "description": "Lists, runs, and turns on or off the flows in the Node-RED you already run, on this computer or your home network, and ships 14 ready-made home flows (news, weather, a daily briefing, Home Assistant routines and more) for you to import by hand. It does not install or start Node-RED, does not import or change the flows' contents for you, and runs a flow only through a web path that flow itself defines. Several shipped flows were written for the HomeBot and need editing before they work elsewhere.",
+      "version": "1.0.0",
+      "author": "Cypher Sisters",
+      "license": "Apache-2.0",
+      "repo": "https://github.com/CypherSisters/puffpai-packages",
+      "path": "node-red-flows",
+      "commit": "6274826715f61d10662f02c91f41bd49f46b92cc",
+      "tier": "verified",
+      "icon": "https://raw.githubusercontent.com/CypherSisters/puffpai-packages/6274826715f61d10662f02c91f41bd49f46b92cc/node-red-flows/icons/node-wire.svg",
+      "abilities": {
+        "tools": {
+          "list_flows": "List the flows in your Node-RED: each flow's name, id, whether it is on or off, and the web paths it answers.",
+          "run_flow": "Run one Node-RED flow by calling one of its own web paths (GET or POST), with an optional small JSON body. Only paths your flows define are called.",
+          "enable_flow": "Turn one Node-RED flow on, by its name or id.",
+          "disable_flow": "Turn one Node-RED flow off, by its name or id.",
+          "node_red_status": "Say whether Node-RED is running at the saved address, and its version.",
+          "set_address": "Save the address of your Node-RED (on this computer or your home network), like http://192.168.1.20:1880. Port 1880 if none is given."
+        },
+        "examples": {
+          "list_flows": [
+            "which Node-RED flows do I have",
+            "list my Node-RED flows"
+          ],
+          "run_flow": [
+            "run the daily news flow in Node-RED"
+          ],
+          "enable_flow": [
+            "turn on the weather alerts flow in Node-RED"
+          ],
+          "disable_flow": [
+            "turn off the health check flow in Node-RED"
+          ],
+          "node_red_status": [
+            "is Node-RED running"
+          ],
+          "set_address": [
+            "my Node-RED is at 192.168.1.20 port 1880"
+          ]
+        }
+      },
+      "verified_by": "Cypher Sisters (own package)",
+      "levels": [
+        1,
+        2,
+        3
+      ],
+      "not_checked": [
+        "12"
+      ]
+    },
+    {
+      "id": "prep-supplies",
+      "kind": "app",
+      "name": "Prep Supplies",
+      "description": "Track your emergency supplies (food, water, medicine, first aid, batteries, fuel and more) with quantities and expiry dates, see how many days the water and food would last your household, and what a basic 72-hour kit still lacks. It does not check weather alerts (the weather package does that), does not order anything, and does not remind you on its own; you ask, or look at the page.",
+      "version": "1.0.0",
+      "author": "Cypher Sisters",
+      "license": "Apache-2.0",
+      "repo": "https://github.com/CypherSisters/puffpai-packages",
+      "path": "prep-supplies",
+      "commit": "6274826715f61d10662f02c91f41bd49f46b92cc",
+      "tier": "verified",
+      "icon": "https://raw.githubusercontent.com/CypherSisters/puffpai-packages/6274826715f61d10662f02c91f41bd49f46b92cc/prep-supplies/icons/lantern.svg",
+      "abilities": {
+        "tools": {
+          "add_supply": "Add an emergency supply (food, water, medicine, batteries, fuel, first aid and so on) with its quantity, unit and expiry date.",
+          "update_supply": "Change an emergency supply: its quantity, unit, expiry date, name, category or daily use.",
+          "remove_supply": "Take an emergency supply off the list.",
+          "list_supplies": "List the emergency supplies: all, one category, or only those expired or expiring in the next 30 days.",
+          "days_remaining": "How many days the stored water and food would last the household, with the assumptions used.",
+          "checklist": "What a basic 72-hour emergency kit still lacks, compared with the supplies stocked."
+        },
+        "examples": {
+          "add_supply": [
+            "add 10 gallons of bottled water to the emergency supplies, expiring 2027-06-01"
+          ],
+          "update_supply": [
+            "we have 6 gallons of bottled water left in the emergency supplies now"
+          ],
+          "remove_supply": [
+            "take the old flashlight off the emergency supplies"
+          ],
+          "list_supplies": [
+            "which emergency supplies are expiring soon",
+            "what first aid supplies do we have"
+          ],
+          "days_remaining": [
+            "how many days would our emergency water and food last"
+          ],
+          "checklist": [
+            "what is our 72-hour emergency kit still missing"
+          ]
+        }
+      },
+      "verified_by": "Cypher Sisters (own package)",
+      "levels": [
+        1,
+        2,
+        3
+      ],
+      "not_checked": [
+        "12"
+      ]
+    },
+    {
+      "id": "radio",
+      "kind": "app",
+      "name": "World Radio",
+      "description": "Internet radio: find stations by name, country, genre or language and play them on the World Radio page, with favorites. Sound plays only while that page is open in the Desktop; it does not play on a speaker by itself, and it has no podcasts or recording.",
+      "version": "1.0.0",
+      "author": "Cypher Sisters",
+      "license": "Apache-2.0",
+      "repo": "https://github.com/CypherSisters/puffpai-packages",
+      "path": "radio",
+      "commit": "6274826715f61d10662f02c91f41bd49f46b92cc",
+      "tier": "verified",
+      "icon": "https://raw.githubusercontent.com/CypherSisters/puffpai-packages/6274826715f61d10662f02c91f41bd49f46b92cc/radio/icons/radio.svg",
+      "abilities": {
+        "tools": {
+          "find_stations": "Find internet radio stations by name, country, genre or language, without playing one. Gives the top 15, numbered, with country, bitrate and stream address.",
+          "play_station": "Play an internet radio station on the World Radio page. The page must be open in the Desktop to hear it.",
+          "stop": "Stop the internet radio on the World Radio page.",
+          "now_playing": "Say which radio station World Radio is set to, and whether its page is open.",
+          "favorites": "List the saved favorite radio stations.",
+          "add_favorite": "Save a radio station to the favorites. With no station, saves the one playing now.",
+          "remove_favorite": "Remove a radio station from the favorites, by its name or number."
+        },
+        "examples": {
+          "find_stations": [
+            "what jazz radio stations are there",
+            "find radio stations from Ireland"
+          ],
+          "play_station": [
+            "play KEXP on the radio",
+            "play the second station"
+          ],
+          "stop": [
+            "stop the radio"
+          ],
+          "now_playing": [
+            "what radio station is playing"
+          ],
+          "favorites": [
+            "what are my favorite radio stations"
+          ],
+          "add_favorite": [
+            "save this radio station to my favorites"
+          ],
+          "remove_favorite": [
+            "remove KEXP from my radio favorites"
+          ]
+        }
+      },
+      "verified_by": "Cypher Sisters (own package)",
+      "levels": [
+        1,
+        2,
+        3
+      ],
+      "not_checked": [
+        "12"
+      ]
+    },
+    {
       "id": "trivia",
       "kind": "app",
       "name": "Trivia",
-      "description": "Quiz rounds with scores: play AeroTrivia on its page, or ask the bot to quiz you in chat.",
-      "version": "2.0.0",
+      "description": "Quiz rounds with scores: play AeroTrivia on its page, or ask the bot to quiz you in chat. Kids mode, and room for questions of your own.",
+      "version": "2.1.0",
       "author": "Cypher Sisters",
       "license": "Apache-2.0",
       "repo": "https://github.com/CypherSisters/puffpai-packages",
       "path": "trivia",
-      "commit": "21abf3e1a45ba604babedeb2f99697614f2d922c",
+      "commit": "6274826715f61d10662f02c91f41bd49f46b92cc",
       "tier": "verified",
-      "icon": "https://raw.githubusercontent.com/CypherSisters/puffpai-packages/21abf3e1a45ba604babedeb2f99697614f2d922c/trivia/icons/question.svg",
+      "icon": "https://raw.githubusercontent.com/CypherSisters/puffpai-packages/6274826715f61d10662f02c91f41bd49f46b92cc/trivia/icons/question.svg",
+      "abilities": {
+        "tools": {
+          "stats": "Trivia scores so far: games played, the average score, the best score, the last game, and the score of a round going in chat.",
+          "list_categories": "List the trivia question categories and how many questions each has.",
+          "ask_question": "Ask the next multiple-choice trivia question of a round in chat: the question and options A to D. The answer is kept back until check_answer. A round does not repeat a question until the category runs out.",
+          "check_answer": "Check a guess at the question just asked: says if it is right, gives the answer, and keeps each player's score for the round.",
+          "end_round": "End the trivia round played in chat and save each player's score.",
+          "record_result": "Save the score of a trivia round played some other way: how many answers were right out of how many.",
+          "add_question": "Add a question of your own to the trivia bank, for the game page and for chat. A category that is not on the list becomes a new category.",
+          "remove_question": "Remove a question you added to the trivia bank."
+        },
+        "examples": {
+          "stats": [
+            "what are the trivia scores"
+          ],
+          "list_categories": [
+            "which trivia categories are there"
+          ],
+          "ask_question": [
+            "quiz me on science",
+            "ask the kids an easy trivia question"
+          ],
+          "check_answer": [
+            "is it B",
+            "I think it's Mars"
+          ],
+          "end_round": [
+            "that's enough trivia, save our scores"
+          ],
+          "record_result": [
+            "save our trivia round: we got 7 out of 10 right in history"
+          ],
+          "add_question": [
+            "add a trivia question: what is our dog's name, the answer is Biscuit"
+          ],
+          "remove_question": [
+            "take my question about the dog out of trivia"
+          ]
+        }
+      },
+      "verified_by": "Cypher Sisters (own package)",
+      "levels": [
+        1,
+        2,
+        3
+      ],
+      "not_checked": [
+        "12"
+      ]
+    },
+    {
+      "id": "weather",
+      "kind": "tool",
+      "name": "Weather",
+      "description": "The weather where you live: right now, a forecast for up to 7 days, and severe weather alerts in the United States. It asks free public weather services, with no account or key. It does not read Home Assistant sensors, give air quality or pollen, or check alerts outside the United States.",
+      "version": "1.0.0",
+      "author": "Cypher Sisters",
+      "license": "Apache-2.0",
+      "repo": "https://github.com/CypherSisters/puffpai-packages",
+      "path": "weather",
+      "commit": "6274826715f61d10662f02c91f41bd49f46b92cc",
+      "tier": "verified",
+      "icon": "https://raw.githubusercontent.com/CypherSisters/puffpai-packages/6274826715f61d10662f02c91f41bd49f46b92cc/weather/icons/sun-cloud.svg",
+      "abilities": {
+        "tools": {
+          "set_location": "Save the place to give weather for: a town name, or coordinates like 40.71,-74.01, and the temperature unit. A town name is looked up once to get its coordinates.",
+          "current_weather": "The weather right now at the saved place: temperature, sky, feels-like, humidity and wind.",
+          "forecast": "The forecast at the saved place for today and the next days: sky, high and low, and the chance of rain or snow.",
+          "severe_alerts": "Active severe weather alerts (storms, floods, heat advisories) at the saved place, from the US National Weather Service. Outside the United States there are none to check."
+        },
+        "examples": {
+          "set_location": [
+            "set my weather location to Asheville, North Carolina",
+            "use Celsius for the weather"
+          ],
+          "current_weather": [
+            "what's the weather like right now"
+          ],
+          "forecast": [
+            "what's the forecast for the next five days",
+            "will it rain tomorrow"
+          ],
+          "severe_alerts": [
+            "are there any severe weather alerts"
+          ]
+        }
+      },
+      "verified_by": "Cypher Sisters (own package)",
+      "levels": [
+        1,
+        2,
+        3
+      ],
+      "not_checked": [
+        "12"
+      ]
+    },
+    {
+      "id": "web-search",
+      "kind": "tool",
+      "name": "Web search",
+      "description": "Searches the web through a SearXNG you run yourself, on this computer or your home network: web results and news, the top 8 each, with the title, a one-line snippet, the address and the engine that found it. It does not use a public SearXNG or ask any search company directly, does not search images, does not open or read the pages it finds, and does not install or run SearXNG for you.",
+      "version": "1.0.0",
+      "author": "Cypher Sisters",
+      "license": "Apache-2.0",
+      "repo": "https://github.com/CypherSisters/puffpai-packages",
+      "path": "web-search",
+      "commit": "6274826715f61d10662f02c91f41bd49f46b92cc",
+      "tier": "verified",
+      "icon": "https://raw.githubusercontent.com/CypherSisters/puffpai-packages/6274826715f61d10662f02c91f41bd49f46b92cc/web-search/icons/magnifier.svg",
+      "abilities": {
+        "tools": {
+          "web_search": "Search the web through the owner's own SearXNG and get the top 8 results: the title, a one-line snippet, the address and the engine that found it. Good for news, prices, opening hours and anything that changes.",
+          "news_search": "Search recent news through the owner's own SearXNG and get the top 8 stories: the title, a one-line snippet, the address and the engine that found it.",
+          "search_settings": "Which SearXNG address web search uses, and whether it answers right now.",
+          "set_address": "Save the address of the owner's own SearXNG, like http://192.168.1.20:8888 or http://127.0.0.1:8888. Only an address on this computer or the home network is taken; a public SearXNG is refused."
+        },
+        "examples": {
+          "web_search": [
+            "search the web for how to store fresh basil",
+            "look up what time the hardware store on Main Street closes"
+          ],
+          "news_search": [
+            "what's in the news about the Mars mission",
+            "search the news for storm damage in our county"
+          ],
+          "search_settings": [
+            "is web search set up",
+            "which search box does web search use"
+          ],
+          "set_address": [
+            "set my SearXNG address to http://192.168.1.20:8888"
+          ]
+        }
+      },
       "verified_by": "Cypher Sisters (own package)",
       "levels": [
         1,
