@@ -1,0 +1,67 @@
+name: Store check
+
+# Checks every changed row on a pull request; on main, checks every row and rebuilds index.json.
+# Uses pull_request (never pull_request_target): a contributor's package runs during `puffpai check`,
+# so it must run with no secrets and a read-only token.
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+    paths: ["index/**", "yanked.json", "scripts/**", ".github/workflows/**"]
+
+env:
+  # The PuffPAI Core whose `puffpai check` judges packages. Bump on purpose, not by branch.
+  CORE_REPO: CypherSisters/BuildBotv2
+  CORE_REF: 3a7ffa95cd1da899a8b507de5ee7fea353baef47
+
+jobs:
+  check:
+    runs-on: windows-latest          # puffpai check uses the Core's Windows sandbox (Job Objects, Bridge)
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install the PuffPAI Core
+        shell: bash
+        run: python -m pip install "git+https://github.com/${CORE_REPO}@${CORE_REF}"
+      - name: Check changed rows
+        if: github.event_name == 'pull_request'
+        shell: bash
+        run: |
+          ids=$(git diff --name-only "origin/${{ github.base_ref }}...HEAD" -- index | sed -n 's#^index/\(.*\)\.json$#\1#p')
+          if [ -z "$ids" ]; then python scripts/store.py check --no-puffpai-check; else python scripts/store.py check $ids; fi
+      - name: Check every row and build index.json
+        if: github.event_name == 'push'
+        shell: bash
+        run: python scripts/store.py build
+      - uses: actions/upload-artifact@v4
+        if: github.event_name == 'push'
+        with:
+          name: index
+          path: index.json
+
+  publish:
+    needs: check
+    if: github.event_name == 'push'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          name: index
+      - name: Commit index.json if it changed
+        run: |
+          if git diff --quiet -- index.json; then echo "index.json unchanged"; exit 0; fi
+          git config user.name "Cypher Sisters"
+          git config user.email "307375596+CypherSisters@users.noreply.github.com"
+          git add index.json
+          git commit -m "index.json: rebuilt by the store check"
+          git push

@@ -1,0 +1,242 @@
+{
+  "schema": "puffpai-store-index/1",
+  "name": "PuffPAI Store",
+  "packages": [
+    {
+      "id": "alarmflow",
+      "kind": "app",
+      "name": "AlarmFlow",
+      "description": "Timers and alarms. They ring on this computer while BuildBot runs, even with no page open.",
+      "version": "2.0.0",
+      "author": "Cypher Sisters",
+      "license": "Apache-2.0",
+      "repo": "https://github.com/CypherSisters/puffpai-packages",
+      "path": "alarmflow",
+      "commit": "21abf3e1a45ba604babedeb2f99697614f2d922c",
+      "tier": "verified",
+      "icon": "https://raw.githubusercontent.com/CypherSisters/puffpai-packages/21abf3e1a45ba604babedeb2f99697614f2d922c/alarmflow/icons/alarm.svg",
+      "verified_by": "Cypher Sisters (own package)",
+      "levels": [
+        1,
+        2,
+        3
+      ],
+      "not_checked": [
+        "12"
+      ]
+    },
+    {
+      "id": "avatar-block",
+      "kind": "avatar",
+      "name": "Block",
+      "description": "Block, a square terminal face with two square eyes and a cursor, as the bot's face. Flat colours that go with the Clean look.",
+      "version": "1.0.0",
+      "author": "Cypher Sisters",
+      "license": "Apache-2.0",
+      "repo": "https://github.com/CypherSisters/puffpai-packages",
+      "path": "avatar-block",
+      "commit": "21abf3e1a45ba604babedeb2f99697614f2d922c",
+      "tier": "verified",
+      "icon": "https://raw.githubusercontent.com/CypherSisters/puffpai-packages/21abf3e1a45ba604babedeb2f99697614f2d922c/avatar-block/face.svg",
+      "verified_by": "Cypher Sisters (own package)",
+      "levels": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "id": "avatar-pebble",
+      "kind": "avatar",
+      "name": "Pebble",
+      "description": "Pebble, a round coral stone with a small smile, as the bot's face. Flat colours that go with the Paper look.",
+      "version": "1.0.0",
+      "author": "Cypher Sisters",
+      "license": "Apache-2.0",
+      "repo": "https://github.com/CypherSisters/puffpai-packages",
+      "path": "avatar-pebble",
+      "commit": "21abf3e1a45ba604babedeb2f99697614f2d922c",
+      "tier": "verified",
+      "icon": "https://raw.githubusercontent.com/CypherSisters/puffpai-packages/21abf3e1a45ba604babedeb2f99697614f2d922c/avatar-pebble/face.svg",
+      "verified_by": "Cypher Sisters (own package)",
+      "levels": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "id": "calendar",
+      "kind": "app",
+      "name": "Calendar",
+      "description": "Events, tasks, medicines and bills for your household on one month view. Kept on this computer, never synced to an outside calendar.",
+      "version": "2.0.0",
+      "author": "Cypher Sisters",
+      "license": "Apache-2.0",
+      "repo": "https://github.com/CypherSisters/puffpai-packages",
+      "path": "calendar",
+      "commit": "21abf3e1a45ba604babedeb2f99697614f2d922c",
+      "tier": "verified",
+      "icon": "https://raw.githubusercontent.com/CypherSisters/puffpai-packages/21abf3e1a45ba604babedeb2f99697614f2d922c/calendar/icons/calendar.svg",
+      "verified_by": "Cypher Sisters (own package)",
+      "levels": [
+        1,
+        2,
+        3
+      ],
+      "not_checked": [
+        "12"
+      ]
+    },
+    {
+      "id": "fitfam",
+      "kind": "app",
+      "name": "FitFam",
+      "description": "Workouts for each person in the household, with streaks, goals and a history that stays on this computer.",
+      "version": "2.0.0",
+      "author": "Cypher Sisters",
+      "license": "Apache-2.0",
+      "repo": "https://github.com/CypherSisters/puffpai-packages",
+      "path": "fitfam",
+      "commit": "21abf3e1a45ba604babedeb2f99697614f2d922c",
+      "tier": "verified",
+      "icon": "https://raw.githubusercontent.com/CypherSisters/puffpai-packages/21abf3e1a45ba604babedeb2f99697614f2d922c/fitfam/icons/fire.svg",
+      "verified_by": "Cypher Sisters (own package)",
+      "levels": [
+        1,
+        2,
+        3
+      ],
+      "not_checked": [
+        "12"
+      ]
+    },
+    {
+      "id": "freshtable",
+      "kind": "app",
+      "name": "FreshTable",
+      "description": "Pantry, shopping list, meal plan and the recipes behind them.",
+      "version": "2.0.0",
+      "author": "Cypher Sisters",
+      "license": "Apache-2.0",
+      "repo": "https://github.com/CypherSisters/puffpai-packages",
+      "path": "freshtable",
+      "commit": "21abf3e1a45ba604babedeb2f99697614f2d922c",
+      "tier": "verified",
+      "icon": "https://raw.githubusercontent.com/CypherSisters/puffpai-packages/21abf3e1a45ba604babedeb2f99697614f2d922c/freshtable/icons/pot.svg",
+      "verified_by": "Cypher Sisters (own package)",
+      "levels": [
+        1,
+        2,
+        3
+      ],
+      "not_checked": [
+        "12"
+      ]
+    },
+    {
+      "id": "look-clean",
+      "kind": "look",
+      "name": "Clean",
+      "description": "Clean: square corners, flat colours, thin 1px rules and dense spacing, with JetBrains Mono headings. Near-black at night, off-white by day, one blue accent. No glow, no clouds.",
+      "version": "1.0.0",
+      "author": "Cypher Sisters",
+      "license": "Apache-2.0",
+      "repo": "https://github.com/CypherSisters/puffpai-packages",
+      "path": "look-clean",
+      "commit": "21abf3e1a45ba604babedeb2f99697614f2d922c",
+      "tier": "verified",
+      "icon": "https://raw.githubusercontent.com/CypherSisters/puffpai-packages/21abf3e1a45ba604babedeb2f99697614f2d922c/look-clean/preview.svg",
+      "verified_by": "Cypher Sisters (own package)",
+      "levels": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "id": "look-contrast",
+      "kind": "look",
+      "name": "High contrast",
+      "description": "High contrast: black ground, white text, white lines and a yellow accent at night; white ground, black text and a dark blue accent by day. Square corners and larger text.",
+      "version": "1.0.0",
+      "author": "Cypher Sisters",
+      "license": "Apache-2.0",
+      "repo": "https://github.com/CypherSisters/puffpai-packages",
+      "path": "look-contrast",
+      "commit": "21abf3e1a45ba604babedeb2f99697614f2d922c",
+      "tier": "verified",
+      "icon": "https://raw.githubusercontent.com/CypherSisters/puffpai-packages/21abf3e1a45ba604babedeb2f99697614f2d922c/look-contrast/preview.svg",
+      "verified_by": "Cypher Sisters (own package)",
+      "levels": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "id": "look-paper",
+      "kind": "look",
+      "name": "Paper",
+      "description": "Paper: warm cream paper, dark ink and one coral accent, with serif headings and small corners. A dark sepia version at night. No glow, no clouds.",
+      "version": "1.0.0",
+      "author": "Cypher Sisters",
+      "license": "Apache-2.0",
+      "repo": "https://github.com/CypherSisters/puffpai-packages",
+      "path": "look-paper",
+      "commit": "21abf3e1a45ba604babedeb2f99697614f2d922c",
+      "tier": "verified",
+      "icon": "https://raw.githubusercontent.com/CypherSisters/puffpai-packages/21abf3e1a45ba604babedeb2f99697614f2d922c/look-paper/preview.svg",
+      "verified_by": "Cypher Sisters (own package)",
+      "levels": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "id": "look-slate",
+      "kind": "look",
+      "name": "Slate",
+      "description": "Slate: calm blue-grey surfaces, a teal accent and soft small corners, in Nunito. Darker slate at night, light grey by day. No glow, no clouds, a little less rounded than Puff.",
+      "version": "1.0.0",
+      "author": "Cypher Sisters",
+      "license": "Apache-2.0",
+      "repo": "https://github.com/CypherSisters/puffpai-packages",
+      "path": "look-slate",
+      "commit": "21abf3e1a45ba604babedeb2f99697614f2d922c",
+      "tier": "verified",
+      "icon": "https://raw.githubusercontent.com/CypherSisters/puffpai-packages/21abf3e1a45ba604babedeb2f99697614f2d922c/look-slate/preview.svg",
+      "verified_by": "Cypher Sisters (own package)",
+      "levels": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "id": "trivia",
+      "kind": "app",
+      "name": "Trivia",
+      "description": "Quiz rounds with scores: play AeroTrivia on its page, or ask the bot to quiz you in chat.",
+      "version": "2.0.0",
+      "author": "Cypher Sisters",
+      "license": "Apache-2.0",
+      "repo": "https://github.com/CypherSisters/puffpai-packages",
+      "path": "trivia",
+      "commit": "21abf3e1a45ba604babedeb2f99697614f2d922c",
+      "tier": "verified",
+      "icon": "https://raw.githubusercontent.com/CypherSisters/puffpai-packages/21abf3e1a45ba604babedeb2f99697614f2d922c/trivia/icons/question.svg",
+      "verified_by": "Cypher Sisters (own package)",
+      "levels": [
+        1,
+        2,
+        3
+      ],
+      "not_checked": [
+        "12"
+      ]
+    }
+  ],
+  "yanked": []
+}

@@ -1,0 +1,10 @@
+{
+  "id": "freshtable",
+  "kind": "app",
+  "repo": "https://github.com/CypherSisters/puffpai-packages",
+  "path": "freshtable",
+  "commit": "21abf3e1a45ba604babedeb2f99697614f2d922c",
+  "tier": "verified",
+  "verified_by": "Cypher Sisters (own package)",
+  "verified_commit": "21abf3e1a45ba604babedeb2f99697614f2d922c"
+}
