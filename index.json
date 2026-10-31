@@ -7,17 +7,17 @@
       "kind": "tool",
       "name": "AdGuard Home",
       "description": "Read and change your own AdGuard Home: whether protection is on, how many lookups were blocked, the most blocked domains, the latest lookups per device, the devices it knows, and blocking or unblocking a domain, turning protection on or off, or pausing it. It only works with an AdGuard Home you already run on this computer or your home network. It does not install or set up AdGuard Home, edit filter lists, change per-device settings, or remove rules it did not add.",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "author": "Cypher Sisters",
       "license": "Apache-2.0",
       "repo": "https://github.com/CypherSisters/puffpai-packages",
       "path": "adguard",
-      "commit": "3c90ea6b4a98382d2e9980abf310582f3e39750d",
+      "commit": "8e466946228d04a54ae3ee8ef77c64b74e6d265b",
       "tier": "verified",
-      "icon": "https://raw.githubusercontent.com/CypherSisters/puffpai-packages/3c90ea6b4a98382d2e9980abf310582f3e39750d/adguard/icons/shield.svg",
+      "icon": "https://raw.githubusercontent.com/CypherSisters/puffpai-packages/8e466946228d04a54ae3ee8ef77c64b74e6d265b/adguard/icons/shield.svg",
       "abilities": {
         "tools": {
-          "set_address": "Save where the owner's AdGuard Home is, like http://192.168.1.2:3000. Only an address on this computer or the home network is taken. Without a port it tries 3000, then 80.",
+          "set_address": "Save where the owner's AdGuard Home is, like http://192.168.1.2:3000. Only an address on this computer or the home network is taken. Without a port it tries 3000, then 80. For an address off this computer, the bot raises a Yes card for that address and port.",
           "status": "AdGuard Home's state: protection on or off, DNS lookups and blocked lookups in its stats period, and how many filter lists and rules it has.",
           "top_blocked": "The most blocked domains and the busiest devices, from AdGuard Home's stats.",
           "query_log": "The latest DNS lookups from AdGuard Home's log: which device asked for which domain, and whether it was blocked. Optional filter by device address or name.",
@@ -752,17 +752,17 @@
       "kind": "tool",
       "name": "Home Assistant",
       "description": "Reads and controls your own Home Assistant on your home network: list devices and their state, turn lights, switches, fans and media players on or off, open or close blinds, curtains and shades, set lights and thermostats, run scenes, list cameras and see which motion sensors changed lately. It does not lock or unlock doors, open garage doors or gates, arm or disarm alarms, run scripts or automations, or show camera pictures, and it never talks to anything on the internet.",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "author": "Cypher Sisters",
       "license": "Apache-2.0",
       "repo": "https://github.com/CypherSisters/puffpai-packages",
       "path": "home-assistant",
-      "commit": "3c90ea6b4a98382d2e9980abf310582f3e39750d",
+      "commit": "8e466946228d04a54ae3ee8ef77c64b74e6d265b",
       "tier": "verified",
-      "icon": "https://raw.githubusercontent.com/CypherSisters/puffpai-packages/3c90ea6b4a98382d2e9980abf310582f3e39750d/home-assistant/icons/house.svg",
+      "icon": "https://raw.githubusercontent.com/CypherSisters/puffpai-packages/8e466946228d04a54ae3ee8ef77c64b74e6d265b/home-assistant/icons/house.svg",
       "abilities": {
         "tools": {
-          "set_address": "Save the address of your Home Assistant on your home network, like homeassistant.local:8123.",
+          "set_address": "Save the address of your Home Assistant on your home network, like homeassistant.local:8123. For an address off this computer, the bot raises a Yes card for that address and port.",
           "list_devices": "List Home Assistant devices with their state, by kind (lights, switches, thermostats, sensors and more) or by name.",
           "device_state": "The state of one Home Assistant device, with a few details like brightness or temperature.",
           "turn_on": "Turn on a light, switch, fan or media player, or open a blind, curtain or shade. Never a lock, garage door or gate.",
@@ -862,17 +862,17 @@
       "kind": "tool",
       "name": "Jellyfin media",
       "description": "Search your own Jellyfin library and play music, movies and shows on one of its players (a TV app, a phone, a browser tab): pause, skip, stop, volume, what is playing, and music playlists. It needs your Jellyfin address on your home network and a Jellyfin API key. It does not play on this computer's own speakers, and it does not handle books, favorites, radio or library scans.",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "author": "Cypher Sisters",
       "license": "Apache-2.0",
       "repo": "https://github.com/CypherSisters/puffpai-packages",
       "path": "jellyfin",
-      "commit": "3c90ea6b4a98382d2e9980abf310582f3e39750d",
+      "commit": "8e466946228d04a54ae3ee8ef77c64b74e6d265b",
       "tier": "verified",
-      "icon": "https://raw.githubusercontent.com/CypherSisters/puffpai-packages/3c90ea6b4a98382d2e9980abf310582f3e39750d/jellyfin/icons/play.svg",
+      "icon": "https://raw.githubusercontent.com/CypherSisters/puffpai-packages/8e466946228d04a54ae3ee8ef77c64b74e6d265b/jellyfin/icons/play.svg",
       "abilities": {
         "tools": {
-          "set_address": "Save the address of your Jellyfin server on your home network, like http://192.168.1.20:8096.",
+          "set_address": "Save the address of your Jellyfin server on your home network, like http://192.168.1.20:8096. For an address off this computer, the bot raises a Yes card for that address and port.",
           "search_media": "Search your Jellyfin library for songs, albums, artists, movies or shows by words, with item ids.",
           "list_players": "List the Jellyfin players that can be controlled: client, device, user and what each is playing.",
           "play": "Play a song, album, playlist, movie or show from your Jellyfin library on one of its players.",
@@ -1040,18 +1040,18 @@
       "id": "news-headlines",
       "kind": "tool",
       "name": "News headlines",
-      "description": "Reads the news feeds you add (RSS or Atom) and gives the latest headlines: title, source, time and link. It comes with no feeds, does not fetch or summarize articles, and each feed's site must be allowed on the Bridge before it loads.",
-      "version": "1.0.0",
+      "description": "Reads the news feeds you add (RSS or Atom) and gives the latest headlines: title, source, time and link. It comes with no feeds, does not fetch or summarize articles, and each feed's site on the internet needs its own Yes before it loads.",
+      "version": "1.1.0",
       "author": "Cypher Sisters",
       "license": "Apache-2.0",
       "repo": "https://github.com/CypherSisters/puffpai-packages",
       "path": "news-headlines",
-      "commit": "3c90ea6b4a98382d2e9980abf310582f3e39750d",
+      "commit": "8e466946228d04a54ae3ee8ef77c64b74e6d265b",
       "tier": "verified",
-      "icon": "https://raw.githubusercontent.com/CypherSisters/puffpai-packages/3c90ea6b4a98382d2e9980abf310582f3e39750d/news-headlines/icons/newspaper.svg",
+      "icon": "https://raw.githubusercontent.com/CypherSisters/puffpai-packages/8e466946228d04a54ae3ee8ef77c64b74e6d265b/news-headlines/icons/newspaper.svg",
       "abilities": {
         "tools": {
-          "add_feed": "Add a news feed (an RSS or Atom address) with a short name. Its host must then be allowed on the Bridge before its headlines load.",
+          "add_feed": "Add a news feed (an RSS or Atom address) with a short name. The bot raises a Yes card for its site and port, and its headlines load after the owner's Yes. Adding a feed already on the list asks again.",
           "remove_feed": "Remove a news feed by its name or address.",
           "list_feeds": "List the news feeds that have been added, with their addresses.",
           "headlines": "The latest news headlines from the added feeds, or from one feed: title, source, time and link. No article text."
@@ -1087,14 +1087,14 @@
       "kind": "tool",
       "name": "Node-RED flows",
       "description": "Lists, runs, and turns on or off the flows in the Node-RED you already run, on this computer or your home network, and ships 14 ready-made home flows (news, weather, a daily briefing, Home Assistant routines and more) for you to import by hand. It does not install or start Node-RED, does not import or change the flows' contents for you, and runs a flow only through a web path that flow itself defines. Several shipped flows were written for the HomeBot and need editing before they work elsewhere.",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "author": "Cypher Sisters",
       "license": "Apache-2.0",
       "repo": "https://github.com/CypherSisters/puffpai-packages",
       "path": "node-red-flows",
-      "commit": "3c90ea6b4a98382d2e9980abf310582f3e39750d",
+      "commit": "8e466946228d04a54ae3ee8ef77c64b74e6d265b",
       "tier": "verified",
-      "icon": "https://raw.githubusercontent.com/CypherSisters/puffpai-packages/3c90ea6b4a98382d2e9980abf310582f3e39750d/node-red-flows/icons/node-wire.svg",
+      "icon": "https://raw.githubusercontent.com/CypherSisters/puffpai-packages/8e466946228d04a54ae3ee8ef77c64b74e6d265b/node-red-flows/icons/node-wire.svg",
       "abilities": {
         "tools": {
           "list_flows": "List the flows in your Node-RED: each flow's name, id, whether it is on or off, and the web paths it answers.",
@@ -1102,7 +1102,7 @@
           "enable_flow": "Turn one Node-RED flow on, by its name or id.",
           "disable_flow": "Turn one Node-RED flow off, by its name or id.",
           "node_red_status": "Say whether Node-RED is running at the saved address, and its version.",
-          "set_address": "Save the address of your Node-RED (on this computer or your home network), like http://192.168.1.20:1880. Port 1880 if none is given."
+          "set_address": "Save the address of your Node-RED (on this computer or your home network), like http://192.168.1.20:1880. Port 1880 if none is given. For an address off this computer, the bot raises a Yes card for that address and port."
         },
         "examples": {
           "list_flows": [
@@ -1364,20 +1364,20 @@
       "kind": "tool",
       "name": "Web search",
       "description": "Searches the web through a SearXNG you run yourself, on this computer or your home network: web results and news, the top 8 each, with the title, a one-line snippet, the address and the engine that found it. It does not use a public SearXNG or ask any search company directly, does not search images, does not open or read the pages it finds, and does not install or run SearXNG for you.",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "author": "Cypher Sisters",
       "license": "Apache-2.0",
       "repo": "https://github.com/CypherSisters/puffpai-packages",
       "path": "web-search",
-      "commit": "3c90ea6b4a98382d2e9980abf310582f3e39750d",
+      "commit": "8e466946228d04a54ae3ee8ef77c64b74e6d265b",
       "tier": "verified",
-      "icon": "https://raw.githubusercontent.com/CypherSisters/puffpai-packages/3c90ea6b4a98382d2e9980abf310582f3e39750d/web-search/icons/magnifier.svg",
+      "icon": "https://raw.githubusercontent.com/CypherSisters/puffpai-packages/8e466946228d04a54ae3ee8ef77c64b74e6d265b/web-search/icons/magnifier.svg",
       "abilities": {
         "tools": {
           "web_search": "Search the web through the owner's own SearXNG and get the top 8 results: the title, a one-line snippet, the address and the engine that found it. Good for news, prices, opening hours and anything that changes.",
           "news_search": "Search recent news through the owner's own SearXNG and get the top 8 stories: the title, a one-line snippet, the address and the engine that found it.",
           "search_settings": "Which SearXNG address web search uses, and whether it answers right now.",
-          "set_address": "Save the address of the owner's own SearXNG, like http://192.168.1.20:8888 or http://127.0.0.1:8888. Only an address on this computer or the home network is taken; a public SearXNG is refused."
+          "set_address": "Save the address of the owner's own SearXNG, like http://192.168.1.20:8888 or http://127.0.0.1:8888. Only an address on this computer or the home network is taken; a public SearXNG is refused. For an address off this computer, the bot raises a Yes card for that address and port."
         },
         "examples": {
           "web_search": [
