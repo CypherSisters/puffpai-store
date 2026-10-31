@@ -1195,14 +1195,14 @@
       "kind": "app",
       "name": "World Radio",
       "description": "Internet radio: find stations by name, country, genre or language and play them on the World Radio page, with favorites. Sound plays only while that page is open in the Desktop; it does not play on a speaker by itself, and it has no podcasts or recording.",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "author": "Cypher Sisters",
       "license": "Apache-2.0",
       "repo": "https://github.com/CypherSisters/puffpai-packages",
       "path": "radio",
-      "commit": "3c90ea6b4a98382d2e9980abf310582f3e39750d",
+      "commit": "4a8e072c072df4222e7853f75d107ce3b266581e",
       "tier": "verified",
-      "icon": "https://raw.githubusercontent.com/CypherSisters/puffpai-packages/3c90ea6b4a98382d2e9980abf310582f3e39750d/radio/icons/radio.svg",
+      "icon": "https://raw.githubusercontent.com/CypherSisters/puffpai-packages/4a8e072c072df4222e7853f75d107ce3b266581e/radio/icons/radio.svg",
       "abilities": {
         "tools": {
           "find_stations": "Find internet radio stations by name, country, genre or language, without playing one. Gives the top 15, numbered, with country, bitrate and stream address.",
