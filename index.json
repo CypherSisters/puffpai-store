@@ -1363,26 +1363,26 @@
       "id": "web-search",
       "kind": "tool",
       "name": "Web search",
-      "description": "Searches the web through a SearXNG you run yourself, on this computer or your home network: web results and news, the top 8 each, with the title, a one-line snippet, the address and the engine that found it. It does not use a public SearXNG or ask any search company directly, does not search images, does not open or read the pages it finds, and does not install or run SearXNG for you.",
-      "version": "1.1.0",
+      "description": "Searches with no setup and no key: with nothing saved it asks Wikipedia (the top 5 articles, each with its title, a one-line snippet and its address), which is not the whole web and has no news. With the address of a SearXNG you run yourself, on this computer or your home network, it searches the web and news through that instead, the top 8 each. It does not use a public SearXNG or ask any search company directly, does not search images, does not open or read the pages it finds, and does not install or run SearXNG for you.",
+      "version": "1.2.0",
       "author": "Cypher Sisters",
       "license": "Apache-2.0",
       "repo": "https://github.com/CypherSisters/puffpai-packages",
       "path": "web-search",
-      "commit": "8e466946228d04a54ae3ee8ef77c64b74e6d265b",
+      "commit": "2c589eefa84cd54c5d17ceff78516cafd5f111b2",
       "tier": "verified",
-      "icon": "https://raw.githubusercontent.com/CypherSisters/puffpai-packages/8e466946228d04a54ae3ee8ef77c64b74e6d265b/web-search/icons/magnifier.svg",
+      "icon": "https://raw.githubusercontent.com/CypherSisters/puffpai-packages/2c589eefa84cd54c5d17ceff78516cafd5f111b2/web-search/icons/magnifier.svg",
       "abilities": {
         "tools": {
-          "web_search": "Search the web through the owner's own SearXNG and get the top 8 results: the title, a one-line snippet, the address and the engine that found it. Good for news, prices, opening hours and anything that changes.",
-          "news_search": "Search recent news through the owner's own SearXNG and get the top 8 stories: the title, a one-line snippet, the address and the engine that found it.",
-          "search_settings": "Which SearXNG address web search uses, and whether it answers right now.",
+          "web_search": "Search Wikipedia, or the owner's own SearXNG if one is saved, and get the top results. With none saved: Wikipedia only, not the whole web, top 5, private details taken out of the words first. With one saved: the web through that SearXNG, top 8, never Wikipedia. Only the search words are sent.",
+          "news_search": "Search recent news through the owner's own SearXNG and get the top 8 stories: the title, a one-line snippet, the address and the engine that found it. With no SearXNG saved it says it needs one: Wikipedia has no news.",
+          "search_settings": "What web search asks: Wikipedia, or the saved SearXNG address and whether it answers right now.",
           "set_address": "Save the address of the owner's own SearXNG, like http://192.168.1.20:8888 or http://127.0.0.1:8888. Only an address on this computer or the home network is taken; a public SearXNG is refused. For an address off this computer, the bot raises a Yes card for that address and port."
         },
         "examples": {
           "web_search": [
             "search the web for how to store fresh basil",
-            "look up what time the hardware store on Main Street closes"
+            "look up when the Eiffel Tower was built"
           ],
           "news_search": [
             "what's in the news about the Mars mission",

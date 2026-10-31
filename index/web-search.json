@@ -3,8 +3,8 @@
   "kind": "tool",
   "repo": "https://github.com/CypherSisters/puffpai-packages",
   "path": "web-search",
-  "commit": "8e466946228d04a54ae3ee8ef77c64b74e6d265b",
+  "commit": "2c589eefa84cd54c5d17ceff78516cafd5f111b2",
   "tier": "verified",
   "verified_by": "Cypher Sisters (own package)",
-  "verified_commit": "8e466946228d04a54ae3ee8ef77c64b74e6d265b"
+  "verified_commit": "2c589eefa84cd54c5d17ceff78516cafd5f111b2"
 }
