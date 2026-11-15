@@ -3,8 +3,8 @@
   "kind": "app",
   "repo": "https://github.com/CypherSisters/puffpai-packages",
   "path": "radio-plan",
-  "commit": "5b3bb3982a73a8c02b40ea31b0a51c04d2f759ae",
+  "commit": "cc05ebdbae22e69b165bacd0152649e40bfdf2a3",
   "tier": "verified",
   "verified_by": "Cypher Sisters (own package)",
-  "verified_commit": "5b3bb3982a73a8c02b40ea31b0a51c04d2f759ae"
+  "verified_commit": "cc05ebdbae22e69b165bacd0152649e40bfdf2a3"
 }

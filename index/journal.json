@@ -1,0 +1,10 @@
+{
+  "id": "journal",
+  "kind": "app",
+  "repo": "https://github.com/CypherSisters/puffpai-packages",
+  "path": "journal",
+  "commit": "cc05ebdbae22e69b165bacd0152649e40bfdf2a3",
+  "tier": "verified",
+  "verified_by": "Cypher Sisters (own package)",
+  "verified_commit": "cc05ebdbae22e69b165bacd0152649e40bfdf2a3"
+}

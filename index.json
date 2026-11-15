@@ -401,14 +401,14 @@
       "kind": "app",
       "name": "Chore Board",
       "description": "A household chore board: the people in the household, chores that repeat once, daily, weekly or every few days, each assigned to one person or to a rotation that moves to the next person when it is done, what is due today and this week, and a tally of who did what in the last 7 and 30 days. It does not remind anyone on its own and does not send messages; you ask, or look at the page.",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "author": "Cypher Sisters",
       "license": "Apache-2.0",
       "repo": "https://github.com/CypherSisters/puffpai-packages",
       "path": "chore-board",
-      "commit": "5b3bb3982a73a8c02b40ea31b0a51c04d2f759ae",
+      "commit": "cc05ebdbae22e69b165bacd0152649e40bfdf2a3",
       "tier": "verified",
-      "icon": "https://raw.githubusercontent.com/CypherSisters/puffpai-packages/5b3bb3982a73a8c02b40ea31b0a51c04d2f759ae/chore-board/icons/clipboard.svg",
+      "icon": "https://raw.githubusercontent.com/CypherSisters/puffpai-packages/cc05ebdbae22e69b165bacd0152649e40bfdf2a3/chore-board/icons/clipboard.svg",
       "abilities": {
         "tools": {
           "list_due": "Use only to see what is due: the chores due today (with any that are late) or in the next 7 days, and who each one is on.",
@@ -466,14 +466,14 @@
       "kind": "app",
       "name": "Client Notes",
       "description": "Notes per client for a one-person practice (a counsellor, coach, tutor, tradesperson, carer, or a small law or accounts office), kept on this computer: each client with a private code like C-0001, contact details, status, tags and consent on file, and a timeline of session, call, email and visit notes with what was agreed, actions and the next contact date. It shows open actions, who is due for contact and this week, prints one record or one note, and exports to JSON or text. It does not encrypt the notes, does not send reminders, bills or messages, and writes no clinical or professional judgement: it stores what you type.",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "author": "Cypher Sisters",
       "license": "Apache-2.0",
       "repo": "https://github.com/CypherSisters/puffpai-packages",
       "path": "client-notes",
-      "commit": "5b3bb3982a73a8c02b40ea31b0a51c04d2f759ae",
+      "commit": "cc05ebdbae22e69b165bacd0152649e40bfdf2a3",
       "tier": "verified",
-      "icon": "https://raw.githubusercontent.com/CypherSisters/puffpai-packages/5b3bb3982a73a8c02b40ea31b0a51c04d2f759ae/client-notes/icons/client-notes.svg",
+      "icon": "https://raw.githubusercontent.com/CypherSisters/puffpai-packages/cc05ebdbae22e69b165bacd0152649e40bfdf2a3/client-notes/icons/client-notes.svg",
       "abilities": {
         "tools": {
           "find_client": "Use to look up which clients there are: by words in a name, code, tag or the about note, or by status (active, paused, closed). It lists each with the last note and next contact date.",
@@ -692,14 +692,14 @@
       "kind": "agent",
       "name": "Drill Coach",
       "description": "An agent that walks the household through an emergency practice and writes down what to fix. It has six practice scenarios (a winter power cut, a flood with an order to leave, a wildfire smoke week, an earthquake, a week with no running water, a medical emergency with phones down), each a set of timed what-now prompts. The household answers each prompt; the bot's own brain suggests a rating (ready, partly or not ready) that counts only once you confirm or change it, and writes a short summary at the end. What was not ready, or not confirmed, goes on a fix list. The drill runs and finishes with no brain at all if you rate it yourselves. It is practice only, and does not call or alert anyone. It checks whether your household is ready. It does not teach first aid: use a first aid course and the First Aid Basics pack for that.",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "author": "Cypher Sisters",
       "license": "Apache-2.0",
       "repo": "https://github.com/CypherSisters/puffpai-packages",
       "path": "drill-coach",
-      "commit": "5b3bb3982a73a8c02b40ea31b0a51c04d2f759ae",
+      "commit": "cc05ebdbae22e69b165bacd0152649e40bfdf2a3",
       "tier": "verified",
-      "icon": "https://raw.githubusercontent.com/CypherSisters/puffpai-packages/5b3bb3982a73a8c02b40ea31b0a51c04d2f759ae/drill-coach/icons/drill.svg",
+      "icon": "https://raw.githubusercontent.com/CypherSisters/puffpai-packages/cc05ebdbae22e69b165bacd0152649e40bfdf2a3/drill-coach/icons/drill.svg",
       "abilities": {
         "tools": {
           "list_scenarios": "When the household asks which emergencies it can practise: the practice scenarios, like a winter power cut, a flood with an order to leave, or an earthquake.",
@@ -777,14 +777,14 @@
       "kind": "app",
       "name": "Emergency Plan",
       "description": "The household's emergency plan, kept on this computer: who is in the household with their numbers and medical notes, an out-of-area contact and other people to call, meeting places, where the shutoffs, kit and papers are, how to leave and what to grab, pets, the hazards that apply here, and a log of drills and reviews. It scores how complete the plan is, prints the plan and wallet cards, and the bot can answer from it with no internet. It does not track supplies (Prep Supplies does that), does not send alerts or reminders, and has no maps.",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "author": "Cypher Sisters",
       "license": "Apache-2.0",
       "repo": "https://github.com/CypherSisters/puffpai-packages",
       "path": "emergency-plan",
-      "commit": "5b3bb3982a73a8c02b40ea31b0a51c04d2f759ae",
+      "commit": "cc05ebdbae22e69b165bacd0152649e40bfdf2a3",
       "tier": "verified",
-      "icon": "https://raw.githubusercontent.com/CypherSisters/puffpai-packages/5b3bb3982a73a8c02b40ea31b0a51c04d2f759ae/emergency-plan/icons/shield.svg",
+      "icon": "https://raw.githubusercontent.com/CypherSisters/puffpai-packages/cc05ebdbae22e69b165bacd0152649e40bfdf2a3/emergency-plan/icons/shield.svg",
       "abilities": {
         "tools": {
           "show_plan": "Read out the household emergency plan: the whole plan, or one section (people, contacts, meeting places, home, leaving, grab list, pets, hazards, practice).",
@@ -1030,6 +1030,66 @@
       ]
     },
     {
+      "id": "health-file",
+      "kind": "app",
+      "name": "Health File",
+      "description": "A household health record that stays on this computer: for each person, their conditions, medicines, allergies, test results (flagged only against the range printed on each result), doctor visits, vaccinations and the questions they want to ask at the next visit, with a one-page summary to print, and export and import as its own JSON or a standard FHIR R4 file. It keeps records; it is not a doctor and does not diagnose. It does not remind anyone on its own.",
+      "version": "1.0.0",
+      "author": "Cypher Sisters",
+      "license": "Apache-2.0",
+      "repo": "https://github.com/CypherSisters/puffpai-packages",
+      "path": "health-file",
+      "commit": "cc05ebdbae22e69b165bacd0152649e40bfdf2a3",
+      "tier": "verified",
+      "icon": "https://raw.githubusercontent.com/CypherSisters/puffpai-packages/cc05ebdbae22e69b165bacd0152649e40bfdf2a3/health-file/icons/health-file.svg",
+      "abilities": {
+        "tools": {
+          "person_summary": "Use only when the owner wants the whole picture of one person on one page, not one kind of record: allergies first, then active conditions, current medicines, latest results, coming follow-ups and vaccinations, and open questions.",
+          "list_records": "Use to see one kind of record for a person, such as their medicines, allergies or visits; for test results, give a test name to see how it changed over time. With one test's name it gives every result of that test, oldest first, each flagged only from its printed range; with words that fit several tests or a lab, every result they match; without, every result. It finds the person and the test by their plain names, so do not look anything up first.",
+          "add_record": "Add a health record for one person: a condition, medicine, allergy, test result, visit, vaccination or question, with its fields. A person not in Health File yet is added by that name, and the answer says so. To add only a person, use type person with just their name.",
+          "change_record": "Change a health record named in plain words, like Alex's ibuprofen; it finds the record itself, so do not look it up first. For example mark a medicine stopped, a condition resolved or a question asked with its answer.",
+          "add_question": "Write down a question one person wants to ask at their next doctor's visit. A person not in Health File yet is added by that name, and the answer says so.",
+          "prepare_for_visit": "Get one person ready for their next doctor's visit: open questions, what changed in the file since the last visit, current medicines and allergies.",
+          "remove_record": "Delete a health record named in plain words, like Jo's flu shot; it finds the record itself, so do not look it up first. This can not be undone."
+        },
+        "examples": {
+          "person_summary": [
+            "show Alex's health summary",
+            "what is in Jo's health file"
+          ],
+          "list_records": [
+            "list Alex's medicines",
+            "show how Alex's cholesterol changed over time"
+          ],
+          "add_record": [
+            "add a person called Alex to the health file",
+            "add to Sam's health file that she started ibuprofen 200 mg twice a day for her knee",
+            "Jo's cholesterol came back 5.4 mmol/L, range 3.0 to 5.0"
+          ],
+          "change_record": [
+            "mark Alex's ibuprofen as stopped",
+            "Sam's knee pain is resolved now, update her health file"
+          ],
+          "add_question": [
+            "add a question for Alex's next doctor visit: is the new rash related to the cream"
+          ],
+          "prepare_for_visit": [
+            "get Sam ready for the doctor tomorrow"
+          ],
+          "remove_record": [
+            "delete the flu shot from Jo's health file",
+            "remove the asthma record from Alex's health file"
+          ]
+        }
+      },
+      "verified_by": "Cypher Sisters (own package)",
+      "levels": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
       "id": "home-assistant",
       "kind": "tool",
       "name": "Home Assistant",
@@ -1228,6 +1288,73 @@
       ]
     },
     {
+      "id": "journal",
+      "kind": "app",
+      "name": "Journal",
+      "description": "A private journal that stays on this computer: write an entry with a mood, tags and a star, get a writing prompt when you are stuck, look back by timeline, calendar, search and \"on this day\", and see your writing streak. Each entry is a plain JSON file in its own folder, and you can import from jrnl or Day One and export to JSON or Markdown files. The files are not encrypted, and it does not remind you to write.",
+      "version": "1.0.0",
+      "author": "Cypher Sisters",
+      "license": "Apache-2.0",
+      "repo": "https://github.com/CypherSisters/puffpai-packages",
+      "path": "journal",
+      "commit": "cc05ebdbae22e69b165bacd0152649e40bfdf2a3",
+      "tier": "verified",
+      "icon": "https://raw.githubusercontent.com/CypherSisters/puffpai-packages/cc05ebdbae22e69b165bacd0152649e40bfdf2a3/journal/icons/journal.svg",
+      "abilities": {
+        "tools": {
+          "add_entry": "Write a new journal entry: the text, and if wanted a title, a mood from 1 (awful) to 5 (great), tags and a star. Words written as #word in the text become tags too.",
+          "search_entries": "Use only to find entries when the owner asks what they wrote: search the journal by words in the title, text or tags, by tag, by a date range, by mood or by star, newest first.",
+          "read_entry": "Use only when the owner asks to hear or see an entry's words, never as a first step before starring, changing or deleting one: read a journal entry in full by its date, words in its title, or latest. A date reads every entry written that day.",
+          "list_recent": "Use only when the owner asks to see a list, never as a first step before starring, changing or deleting an entry: list the newest journal entries with their date, title, mood, tags and first words.",
+          "on_this_day": "Show the journal entries written on this same date in earlier years.",
+          "journal_stats": "Show the writing streak (days in a row with an entry), how many entries there are, and the moods and tags over a period.",
+          "change_entry": "Star, unstar or change a journal entry in one step. Name the entry by latest, its date, or words in its title; this tool finds it itself, so call it straight away. It changes the title, the text (replace it or add to the end), the tags, the mood or the star.",
+          "remove_entry": "Delete a journal entry for good in one step. Name the entry by latest, its date, or words in its title; this tool finds it itself, so call it straight away. Its file is removed from this computer."
+        },
+        "examples": {
+          "add_entry": [
+            "write in my journal that Sam and I walked by the river today and I felt calm",
+            "add a journal entry about the job interview, mood 4, tag work"
+          ],
+          "search_entries": [
+            "find my journal entries about the garden",
+            "what did I write in March tagged family"
+          ],
+          "read_entry": [
+            "read me what I wrote yesterday in my journal",
+            "read me my journal entry about the river walk"
+          ],
+          "list_recent": [
+            "show my last five journal entries",
+            "list my recent journal entries"
+          ],
+          "on_this_day": [
+            "what did I write on this day in earlier years"
+          ],
+          "journal_stats": [
+            "what is my journal writing streak",
+            "how has my mood been this month"
+          ],
+          "change_entry": [
+            "star my latest journal entry",
+            "change the mood on my journal entry about the river walk to 4",
+            "add to yesterday's journal entry that Jo called later"
+          ],
+          "remove_entry": [
+            "delete my latest journal entry",
+            "delete the journal entry about the job interview",
+            "delete my journal entry from yesterday"
+          ]
+        }
+      },
+      "verified_by": "Cypher Sisters (own package)",
+      "levels": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
       "id": "letter-writer",
       "kind": "skill",
       "name": "Letter Writer",
@@ -1373,14 +1500,14 @@
       "kind": "app",
       "name": "My Papers",
       "description": "Household paperwork filing that stays on this computer: add a paper (with its file, or just a record of where the paper copy is), find it again by its words, type, person, tag or year, and see what is coming due, expiring or renewing. It keeps real due dates, expiry dates and renewals, suggests how long to keep tax papers, and exports everything as one zip. It does not read scans or photos (no OCR) and does not encrypt the files.",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "author": "Cypher Sisters",
       "license": "Apache-2.0",
       "repo": "https://github.com/CypherSisters/puffpai-packages",
       "path": "my-papers",
-      "commit": "5b3bb3982a73a8c02b40ea31b0a51c04d2f759ae",
+      "commit": "cc05ebdbae22e69b165bacd0152649e40bfdf2a3",
       "tier": "verified",
-      "icon": "https://raw.githubusercontent.com/CypherSisters/puffpai-packages/5b3bb3982a73a8c02b40ea31b0a51c04d2f759ae/my-papers/icons/papers.svg",
+      "icon": "https://raw.githubusercontent.com/CypherSisters/puffpai-packages/cc05ebdbae22e69b165bacd0152649e40bfdf2a3/my-papers/icons/papers.svg",
       "abilities": {
         "tools": {
           "find_papers": "Use only to search, when the owner asks if we have a paper, where one is, or what papers there are: finds papers by words in them and by type, person, tag or year, with each one's title, type, date and the line that matched.",
@@ -1421,7 +1548,7 @@
             "which papers can I shred now"
           ],
           "remove_paper": [
-            "delete the old gym contract from my papers"
+            "delete the paper called gym contract"
           ]
         }
       },
@@ -1588,14 +1715,14 @@
       "kind": "app",
       "name": "Notes",
       "description": "A plain notebook kept on this computer, one Markdown file per note, so your notes are files you can open and take anywhere. Pin notes, sort them into notebooks and tags, search them, and tick checklist lines on the page. The bot can find, read and add to your notes, like adding milk to the shopping note, with no internet. Export gives a zip of the files; import takes a zip or a file of Markdown notes from another tool. It does not sync between computers, does not encrypt, and has no reminders.",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "author": "Cypher Sisters",
       "license": "Apache-2.0",
       "repo": "https://github.com/CypherSisters/puffpai-packages",
       "path": "notes",
-      "commit": "5b3bb3982a73a8c02b40ea31b0a51c04d2f759ae",
+      "commit": "cc05ebdbae22e69b165bacd0152649e40bfdf2a3",
       "tier": "verified",
-      "icon": "https://raw.githubusercontent.com/CypherSisters/puffpai-packages/5b3bb3982a73a8c02b40ea31b0a51c04d2f759ae/notes/icons/notes.svg",
+      "icon": "https://raw.githubusercontent.com/CypherSisters/puffpai-packages/cc05ebdbae22e69b165bacd0152649e40bfdf2a3/notes/icons/notes.svg",
       "abilities": {
         "tools": {
           "find_notes": "Use to search the notes by words, tag or notebook: gives each matching note's title, notebook, tags and the line that matched, pinned notes first.",
@@ -1673,14 +1800,14 @@
       "kind": "agent",
       "name": "Plant Keeper",
       "description": "An agent that knows the household's plants and tells you what needs doing. It keeps each plant (kind, where it lives, pot, light, how often to water and feed) and a care log, and works out what is due today or this week from your own intervals. The bot's own brain suggests a starting care plan for a new plant, which you can accept or ignore, and answers questions about one plant from your description and its log. It does not identify plants from photos, does not send reminders on its own, and its advice is not checked by anyone.",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "author": "Cypher Sisters",
       "license": "Apache-2.0",
       "repo": "https://github.com/CypherSisters/puffpai-packages",
       "path": "plant-keeper",
-      "commit": "5b3bb3982a73a8c02b40ea31b0a51c04d2f759ae",
+      "commit": "cc05ebdbae22e69b165bacd0152649e40bfdf2a3",
       "tier": "verified",
-      "icon": "https://raw.githubusercontent.com/CypherSisters/puffpai-packages/5b3bb3982a73a8c02b40ea31b0a51c04d2f759ae/plant-keeper/icons/plant.svg",
+      "icon": "https://raw.githubusercontent.com/CypherSisters/puffpai-packages/cc05ebdbae22e69b165bacd0152649e40bfdf2a3/plant-keeper/icons/plant.svg",
       "abilities": {
         "tools": {
           "plants_due": "When the owner asks what the plants need: which plants are due for water or feed today, or this week, worked out from each plant's own interval and the care log.",
@@ -1854,14 +1981,14 @@
       "kind": "app",
       "name": "Radio Plan",
       "description": "The household's plan for staying in touch by radio when phones fail, kept on this computer: the radios you own, the channels and what each is for, each person's call sign, the check-in times and what to do if no one answers, the weather alert and broadcast stations to listen to, a message log and a practice log. It prints the plan and a pocket card for each person, shows when the next check-in is, and the bot can answer from it with no internet. It stores what you type: it ships no frequency lists, does not say what is legal to transmit where you live, and does not control a radio.",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "author": "Cypher Sisters",
       "license": "Apache-2.0",
       "repo": "https://github.com/CypherSisters/puffpai-packages",
       "path": "radio-plan",
-      "commit": "5b3bb3982a73a8c02b40ea31b0a51c04d2f759ae",
+      "commit": "cc05ebdbae22e69b165bacd0152649e40bfdf2a3",
       "tier": "verified",
-      "icon": "https://raw.githubusercontent.com/CypherSisters/puffpai-packages/5b3bb3982a73a8c02b40ea31b0a51c04d2f759ae/radio-plan/icons/radio.svg",
+      "icon": "https://raw.githubusercontent.com/CypherSisters/puffpai-packages/cc05ebdbae22e69b165bacd0152649e40bfdf2a3/radio-plan/icons/radio.svg",
       "abilities": {
         "tools": {
           "show_radio_plan": "Use to read out the household radio plan for when phones fail: the whole plan, or one section (radios, channels, people and call signs, check-in times, listen-only stations, practice). For the message log, use list_messages.",
@@ -1969,6 +2096,72 @@
       ],
       "not_checked": [
         "12"
+      ]
+    },
+    {
+      "id": "recipe-box",
+      "kind": "app",
+      "name": "Recipe Box",
+      "description": "The household's own recipes, kept on this computer. It finds them by words, tag or ingredient, scales them to any number of servings, converts kitchen units and oven temperatures, says what you can make from what is on hand, and reads a recipe out one step at a time for cooking along, with a large-text cook mode on the page. It imports recipes you paste in (written out, or the JSON-LD a recipe web page carries) and exports them. It never fetches a web page, never turns cups into grams (that depends on the ingredient), and does not plan meals or keep a pantry.",
+      "version": "1.0.0",
+      "author": "Cypher Sisters",
+      "license": "Apache-2.0",
+      "repo": "https://github.com/CypherSisters/puffpai-packages",
+      "path": "recipe-box",
+      "commit": "cc05ebdbae22e69b165bacd0152649e40bfdf2a3",
+      "tier": "verified",
+      "icon": "https://raw.githubusercontent.com/CypherSisters/puffpai-packages/cc05ebdbae22e69b165bacd0152649e40bfdf2a3/recipe-box/icons/recipe-box.svg",
+      "abilities": {
+        "tools": {
+          "find_recipes": "Use only when the owner asks which recipes there are: search the recipe box by words, a tag (like dessert, vegetarian or summer), an ingredient, or favorites.",
+          "read_recipe": "Use to read out one recipe, by name; no need to look it up first. It can scale the recipe to a number of servings, and give one step at a time by its number for cooking along.",
+          "what_can_i_make": "Use when the owner says what food is on hand and asks what to cook: it ranks the recipes by how many of their ingredients are on hand and lists what is missing.",
+          "add_recipe": "Use to save a new recipe the owner gives: a title with ingredients and steps, or one block of pasted text (a recipe written out, or a recipe web page's JSON-LD the owner pasted).",
+          "change_recipe": "Use to change a saved recipe, by name; no need to look it up first: rename it, set its servings, times, source, ingredients, steps, tags, notes, or make it a favorite.",
+          "scale_or_convert": "Use for a kitchen sum with no recipe named: turn an amount into another unit (cups, tablespoons, teaspoons, fluid ounces, milliliters, liters; ounces, pounds, grams, kilograms), an oven temperature between Fahrenheit and Celsius, or multiply an amount by a factor. It never turns volume into weight.",
+          "mark_made": "Use when the owner says they made or cooked a recipe: by name; no need to look it up first. It notes the day it was made (default today) and can rate it 1 to 5 stars.",
+          "remove_recipe": "Use only when the owner asks to delete a recipe, by name; no need to look it up first. It removes the recipe from this computer for good."
+        },
+        "examples": {
+          "find_recipes": [
+            "show me our vegetarian recipes",
+            "which of our recipes are tagged dessert"
+          ],
+          "read_recipe": [
+            "read me the banana bread recipe",
+            "read me step 3 of the lasagna recipe",
+            "read me the chili recipe for 8 people"
+          ],
+          "what_can_i_make": [
+            "what can I make with eggs, spinach and cheese",
+            "I have rice, chicken and onions, what can I cook"
+          ],
+          "add_recipe": [
+            "save a recipe for Jo's pancakes: 2 cups flour, 2 eggs, 1 1/2 cups milk; mix it all and fry spoonfuls in a hot pan",
+            "add a recipe called tomato soup to the recipe box"
+          ],
+          "change_recipe": [
+            "rename the banana bread recipe to Grandma's banana bread",
+            "make the lasagna recipe a favorite"
+          ],
+          "scale_or_convert": [
+            "how many grams is 8 ounces",
+            "what is 350 Fahrenheit in Celsius"
+          ],
+          "mark_made": [
+            "mark the chili as made tonight and give it 4 stars",
+            "we had the pancakes for breakfast today"
+          ],
+          "remove_recipe": [
+            "delete the tuna casserole recipe"
+          ]
+        }
+      },
+      "verified_by": "Cypher Sisters (own package)",
+      "levels": [
+        1,
+        2,
+        3
       ]
     },
     {
