@@ -1,0 +1,10 @@
+{
+  "id": "budget-ledger",
+  "kind": "app",
+  "repo": "https://github.com/CypherSisters/puffpai-packages",
+  "path": "budget-ledger",
+  "commit": "0dff08081f3c98c1feecba711a906b1e170c1a36",
+  "tier": "verified",
+  "verified_by": "Cypher Sisters (own package)",
+  "verified_commit": "0dff08081f3c98c1feecba711a906b1e170c1a36"
+}
