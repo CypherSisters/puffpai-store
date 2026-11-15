@@ -397,6 +397,137 @@
       ]
     },
     {
+      "id": "chore-board",
+      "kind": "app",
+      "name": "Chore Board",
+      "description": "A household chore board: the people in the household, chores that repeat once, daily, weekly or every few days, each assigned to one person or to a rotation that moves to the next person when it is done, what is due today and this week, and a tally of who did what in the last 7 and 30 days. It does not remind anyone on its own and does not send messages; you ask, or look at the page.",
+      "version": "1.0.0",
+      "author": "Cypher Sisters",
+      "license": "Apache-2.0",
+      "repo": "https://github.com/CypherSisters/puffpai-packages",
+      "path": "chore-board",
+      "commit": "5b3bb3982a73a8c02b40ea31b0a51c04d2f759ae",
+      "tier": "verified",
+      "icon": "https://raw.githubusercontent.com/CypherSisters/puffpai-packages/5b3bb3982a73a8c02b40ea31b0a51c04d2f759ae/chore-board/icons/clipboard.svg",
+      "abilities": {
+        "tools": {
+          "list_due": "Use only to see what is due: the chores due today (with any that are late) or in the next 7 days, and who each one is on.",
+          "add_chore": "Add a household chore: its name, how often it repeats (once, daily, weekly or every N days), when it is first due, and the person or rotation of people it is assigned to.",
+          "change_chore": "Change a chore by its name, no need to look it up first: its name, how often it repeats, its next due date, its notes, or who it is on (one person, a rotation, or nobody).",
+          "mark_done": "Mark a chore done by its name when someone did it, no need to look it up first. It sets the next due date and moves a rotation to the next person.",
+          "list_people": "Use only to see the household: the people, the chores each one is on now, and how many each did in the last 7 days.",
+          "add_person": "Add a person to the household so chores can be assigned to them.",
+          "show_tally": "Show who did which chores in the last 7 days and in the last 30 days.",
+          "remove_chore_or_person": "Remove a chore or a person by name, no need to look it up first. A person comes off every chore and rotation; the done tally keeps what was already done."
+        },
+        "examples": {
+          "list_due": [
+            "what chores are due today",
+            "what chores does Sam have this week"
+          ],
+          "add_chore": [
+            "add a weekly chore to take out the trash, rotating between Alex, Sam and Jo"
+          ],
+          "change_chore": [
+            "change the trash chore to every 3 days",
+            "move the dishes chore to Saturday",
+            "put Jo on the dishes chore from now on"
+          ],
+          "mark_done": [
+            "mark the dishes done",
+            "I just took out the trash, mark it done",
+            "Sam watered the plants yesterday"
+          ],
+          "list_people": [
+            "who is on which chores right now",
+            "who is in our household"
+          ],
+          "add_person": [
+            "add Jo to the chore board"
+          ],
+          "show_tally": [
+            "who did the most chores this month"
+          ],
+          "remove_chore_or_person": [
+            "take the window washing chore off the chore board",
+            "remove Jo from the chore board"
+          ]
+        }
+      },
+      "verified_by": "Cypher Sisters (own package)",
+      "levels": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "id": "client-notes",
+      "kind": "app",
+      "name": "Client Notes",
+      "description": "Notes per client for a one-person practice (a counsellor, coach, tutor, tradesperson, carer, or a small law or accounts office), kept on this computer: each client with a private code like C-0001, contact details, status, tags and consent on file, and a timeline of session, call, email and visit notes with what was agreed, actions and the next contact date. It shows open actions, who is due for contact and this week, prints one record or one note, and exports to JSON or text. It does not encrypt the notes, does not send reminders, bills or messages, and writes no clinical or professional judgement: it stores what you type.",
+      "version": "1.0.0",
+      "author": "Cypher Sisters",
+      "license": "Apache-2.0",
+      "repo": "https://github.com/CypherSisters/puffpai-packages",
+      "path": "client-notes",
+      "commit": "5b3bb3982a73a8c02b40ea31b0a51c04d2f759ae",
+      "tier": "verified",
+      "icon": "https://raw.githubusercontent.com/CypherSisters/puffpai-packages/5b3bb3982a73a8c02b40ea31b0a51c04d2f759ae/client-notes/icons/client-notes.svg",
+      "abilities": {
+        "tools": {
+          "find_client": "Use to look up which clients there are: by words in a name, code, tag or the about note, or by status (active, paused, closed). It lists each with the last note and next contact date.",
+          "client_summary": "Use to catch up on one client, by name or code; no need to look it up first: the latest notes, open actions, next contact date and consent on file.",
+          "add_client": "Use when the owner takes on a new client: a display name or initials, and if given the contact details, start date, status, tags, a short about note and consent on file. The app gives a private code like C-0001.",
+          "add_session_note": "Use to write down a session, call, email or visit with a client, by name or code; no need to look it up first: what was discussed, what was agreed, actions, the length and the next contact date.",
+          "list_open_actions": "Use to see the actions still open: across all clients, or for one client by name or code, soonest due first.",
+          "mark_action_done": "Use when the owner says an action from a note is done: it finds the action by its words, so no need to look it up first.",
+          "who_is_due": "Use when the owner asks which clients are due for contact or have not been seen lately: it lists clients whose next contact date is in the next 7 days or past, and active clients with no note in 30 days (or the number of days asked).",
+          "remove_note_or_client": "Use only when the owner asks to delete a client's note or a client, by name or code; no need to look it up first. It removes one note (by its date, or latest), or a client who has no notes left; a client with notes is removed only when confirm is that client's exact code."
+        },
+        "examples": {
+          "find_client": [
+            "which of my clients are paused",
+            "find my clients tagged tutoring"
+          ],
+          "client_summary": [
+            "catch me up on C-0002 before the session",
+            "give me a summary of Alex's file"
+          ],
+          "add_client": [
+            "add a new client Sam L, started today, consent on file",
+            "take on a new client, initials J.T., tag coaching"
+          ],
+          "add_session_note": [
+            "note for C-0001: 50 minute session today, we talked about sleep and agreed to keep a diary",
+            "log a 15 minute call with Jo about the invoice"
+          ],
+          "list_open_actions": [
+            "what actions are still open across all my clients",
+            "what do I still owe C-0003"
+          ],
+          "mark_action_done": [
+            "the send the worksheet action is done",
+            "I posted the invoice to Jo, tick that off"
+          ],
+          "who_is_due": [
+            "which clients am I due to contact in the next few days",
+            "which clients haven't I seen in 60 days"
+          ],
+          "remove_note_or_client": [
+            "delete the latest note for C-0002",
+            "remove client C-0005, they never started"
+          ]
+        }
+      },
+      "verified_by": "Cypher Sisters (own package)",
+      "levels": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
       "id": "code-writer",
       "kind": "tool",
       "name": "Code writer",
@@ -554,6 +685,157 @@
       ],
       "not_checked": [
         "12"
+      ]
+    },
+    {
+      "id": "drill-coach",
+      "kind": "agent",
+      "name": "Drill Coach",
+      "description": "An agent that walks the household through an emergency practice and writes down what to fix. It has six practice scenarios (a winter power cut, a flood with an order to leave, a wildfire smoke week, an earthquake, a week with no running water, a medical emergency with phones down), each a set of timed what-now prompts. The household answers each prompt; the bot's own brain suggests a rating (ready, partly or not ready) that counts only once you confirm or change it, and writes a short summary at the end. What was not ready, or not confirmed, goes on a fix list. The drill runs and finishes with no brain at all if you rate it yourselves. It is practice only, and does not call or alert anyone. It checks whether your household is ready. It does not teach first aid: use a first aid course and the First Aid Basics pack for that.",
+      "version": "1.0.0",
+      "author": "Cypher Sisters",
+      "license": "Apache-2.0",
+      "repo": "https://github.com/CypherSisters/puffpai-packages",
+      "path": "drill-coach",
+      "commit": "5b3bb3982a73a8c02b40ea31b0a51c04d2f759ae",
+      "tier": "verified",
+      "icon": "https://raw.githubusercontent.com/CypherSisters/puffpai-packages/5b3bb3982a73a8c02b40ea31b0a51c04d2f759ae/drill-coach/icons/drill.svg",
+      "abilities": {
+        "tools": {
+          "list_scenarios": "When the household asks which emergencies it can practise: the practice scenarios, like a winter power cut, a flood with an order to leave, or an earthquake.",
+          "start_drill": "When the household wants to practise for an emergency, start a drill by the scenario's name, no need to look it up first. It gives the first what-now prompt.",
+          "drill_answer": "When the household answers the drill's current prompt, or rates or confirms the last answer: records it, suggests a rating for the household to confirm, and gives the next prompt.",
+          "finish_drill": "When the household is done with the drill: finishes it, gives a short summary and adds what to fix to the fix list. It always finishes, with a plain summary when the brain does not answer.",
+          "fix_list": "When the household asks what is still to fix after its drills: the open items on the fix list. Marking an item fixed takes its words, so this is not needed first.",
+          "mark_fixed": "When the household has done something on its drill fix list, mark it fixed by a few of its words, no need to look it up first or show the list.",
+          "drill_history": "When the household asks how past drills went: each finished drill with its date and ratings, or one drill in full by its scenario or date. Removing a drill takes its scenario, so this is not needed first.",
+          "remove_drill": "When the household wants a past drill gone, remove it by its scenario or date, no need to look it up first: deletes that drill. Its fix list items stay."
+        },
+        "examples": {
+          "list_scenarios": [
+            "what emergency drills can we practise",
+            "which emergencies can we practise for"
+          ],
+          "start_drill": [
+            "let's practise the earthquake drill",
+            "start a power cut drill with Alex and Sam"
+          ],
+          "drill_answer": [
+            "our answer for the drill: we grab the flashlights from the kitchen drawer",
+            "rate that drill answer partly",
+            "confirm the drill rating"
+          ],
+          "finish_drill": [
+            "we are done, finish the drill",
+            "finish the drill with no summary"
+          ],
+          "fix_list": [
+            "what do we still need to fix from our drills",
+            "show our drill fix list"
+          ],
+          "mark_fixed": [
+            "mark the battery radio as fixed on our drill fix list"
+          ],
+          "drill_history": [
+            "how did our past drills go",
+            "show the last drill in full"
+          ],
+          "remove_drill": [
+            "delete the earthquake drill from our drill history"
+          ]
+        }
+      },
+      "verified_by": "Cypher Sisters (own package)",
+      "levels": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "id": "editor",
+      "kind": "skill",
+      "name": "Editor",
+      "description": "Teaches the brain to edit writing the owner pastes in at one of three levels (proofread, tidy, or reshape when asked), keeping the writer's own words and voice, adding no facts and no AI-sounding words, and listing each change as old -> new with the reason. It adds no tools of its own and fetches nothing.",
+      "version": "1.0.0",
+      "author": "Cypher Sisters",
+      "license": "Apache-2.0",
+      "repo": "https://github.com/CypherSisters/puffpai-packages",
+      "path": "editor",
+      "commit": "5b3bb3982a73a8c02b40ea31b0a51c04d2f759ae",
+      "tier": "verified",
+      "icon": "https://raw.githubusercontent.com/CypherSisters/puffpai-packages/5b3bb3982a73a8c02b40ea31b0a51c04d2f759ae/editor/icons/pencil.svg",
+      "verified_by": "Cypher Sisters (own package)",
+      "levels": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "id": "emergency-plan",
+      "kind": "app",
+      "name": "Emergency Plan",
+      "description": "The household's emergency plan, kept on this computer: who is in the household with their numbers and medical notes, an out-of-area contact and other people to call, meeting places, where the shutoffs, kit and papers are, how to leave and what to grab, pets, the hazards that apply here, and a log of drills and reviews. It scores how complete the plan is, prints the plan and wallet cards, and the bot can answer from it with no internet. It does not track supplies (Prep Supplies does that), does not send alerts or reminders, and has no maps.",
+      "version": "1.0.0",
+      "author": "Cypher Sisters",
+      "license": "Apache-2.0",
+      "repo": "https://github.com/CypherSisters/puffpai-packages",
+      "path": "emergency-plan",
+      "commit": "5b3bb3982a73a8c02b40ea31b0a51c04d2f759ae",
+      "tier": "verified",
+      "icon": "https://raw.githubusercontent.com/CypherSisters/puffpai-packages/5b3bb3982a73a8c02b40ea31b0a51c04d2f759ae/emergency-plan/icons/shield.svg",
+      "abilities": {
+        "tools": {
+          "show_plan": "Read out the household emergency plan: the whole plan, or one section (people, contacts, meeting places, home, leaving, grab list, pets, hazards, practice).",
+          "find_contact": "Find who to call from the emergency plan, by need: the out-of-area contact everyone checks in with, a nearby helper, the doctor, the vet, school, work, insurance, a utility, or a person in the household.",
+          "where_is": "Say where something is, from the emergency plan: the water, gas and power shutoffs and how to turn them off, fire extinguishers, first aid kit, go-bags, spare keys, important papers, safe spots, ways out, meeting places, pet carriers and routes out of the area.",
+          "update_plan": "Set or change one item in a section of the emergency plan: a person's details, a contact, a meeting place, a home detail, a leaving detail, a grab list item, a pet, or a hazard and what we do. An item that is not there yet is added. For the out-of-area contact, set kind to out_of_area.",
+          "readiness_check": "Score how complete the emergency plan is, out of 8 plain checks, and list what is missing.",
+          "grab_list": "Show the grab list of things to take when leaving home in a hurry, or tick or untick one item on it as packed.",
+          "log_practice": "Log a drill or a review of the emergency plan: the date, what was practiced and what to fix. A review also sets the plan's last reviewed date.",
+          "remove_item": "When the owner wants something taken out of the emergency plan, remove it by its name, no need to look it up first: a person's details, a contact, a meeting place, a home or leaving detail, a grab list item, a pet, a hazard note, or a practice log entry."
+        },
+        "examples": {
+          "show_plan": [
+            "read me our emergency plan",
+            "what does our emergency plan say about pets"
+          ],
+          "find_contact": [
+            "who is our out-of-area contact",
+            "what is the vet's number"
+          ],
+          "where_is": [
+            "where is the gas shutoff",
+            "where do we meet if we can't get home"
+          ],
+          "update_plan": [
+            "set Sam's mobile in the emergency plan to 555-0100",
+            "our meeting place in the neighborhood is the library on Elm Street"
+          ],
+          "readiness_check": [
+            "how ready is our emergency plan",
+            "what is our emergency plan missing"
+          ],
+          "grab_list": [
+            "what is on our grab list",
+            "tick the phone chargers on the grab list"
+          ],
+          "log_practice": [
+            "we did a fire drill today; next time Jo needs a flashlight by the bed",
+            "log a review of the emergency plan"
+          ],
+          "remove_item": [
+            "remove Biscuit from the pets in our emergency plan",
+            "take the old insurance contact out of the emergency plan"
+          ]
+        }
+      },
+      "verified_by": "Cypher Sisters (own package)",
+      "levels": [
+        1,
+        2,
+        3
       ]
     },
     {
@@ -824,6 +1106,26 @@
       ]
     },
     {
+      "id": "homework-helper",
+      "kind": "skill",
+      "name": "Homework Helper",
+      "description": "Teaches the brain to help a learner with schoolwork one step at a time: it asks what they tried, gives one step or hint, checks understanding with a small question, and shows a similar worked example after two hints. It does not hand over answers to graded work or write essays. It adds no tools of its own and fetches nothing; with Calculator installed it does sums with that.",
+      "version": "1.0.0",
+      "author": "Cypher Sisters",
+      "license": "Apache-2.0",
+      "repo": "https://github.com/CypherSisters/puffpai-packages",
+      "path": "homework-helper",
+      "commit": "5b3bb3982a73a8c02b40ea31b0a51c04d2f759ae",
+      "tier": "verified",
+      "icon": "https://raw.githubusercontent.com/CypherSisters/puffpai-packages/5b3bb3982a73a8c02b40ea31b0a51c04d2f759ae/homework-helper/icons/book.svg",
+      "verified_by": "Cypher Sisters (own package)",
+      "levels": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
       "id": "iss-position",
       "kind": "tool",
       "name": "ISS position",
@@ -926,6 +1228,87 @@
       ]
     },
     {
+      "id": "letter-writer",
+      "kind": "skill",
+      "name": "Letter Writer",
+      "description": "Teaches the brain to write a letter or email from scratch (a complaint, a request, a thank you, a cancellation, a note to a landlord, school or office) using only the facts you give, polite and firm, with every gap left [in square brackets] for you to fill. It does not send anything, make legal claims or add threats. It adds no tools of its own and fetches nothing.",
+      "version": "1.0.0",
+      "author": "Cypher Sisters",
+      "license": "Apache-2.0",
+      "repo": "https://github.com/CypherSisters/puffpai-packages",
+      "path": "letter-writer",
+      "commit": "5b3bb3982a73a8c02b40ea31b0a51c04d2f759ae",
+      "tier": "verified",
+      "icon": "https://raw.githubusercontent.com/CypherSisters/puffpai-packages/5b3bb3982a73a8c02b40ea31b0a51c04d2f759ae/letter-writer/icons/envelope.svg",
+      "verified_by": "Cypher Sisters (own package)",
+      "levels": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "id": "local-map",
+      "kind": "app",
+      "name": "Local Map",
+      "description": "An offline street map of one region you choose, with its emergency places from OpenStreetMap: fire stations, police, hospitals, clinics, pharmacies, shelters, food banks, drinking water, fuel and more. You pick the region and press Download once; after that the map, the list of places, straight-line distances from home and your own points (meeting places, water, a neighbor who can help) work with no internet. It does not give directions by road, does not update by itself, and OpenStreetMap does not list every shelter or food bank.",
+      "version": "1.0.0",
+      "author": "Cypher Sisters",
+      "license": "Apache-2.0",
+      "repo": "https://github.com/CypherSisters/puffpai-packages",
+      "path": "local-map",
+      "commit": "5b3bb3982a73a8c02b40ea31b0a51c04d2f759ae",
+      "tier": "verified",
+      "icon": "https://raw.githubusercontent.com/CypherSisters/puffpai-packages/5b3bb3982a73a8c02b40ea31b0a51c04d2f759ae/local-map/icons/map.svg",
+      "abilities": {
+        "tools": {
+          "nearest": "Use when asked for the nearest or closest place of a kind, like the nearest hospital or water: finds the nearest emergency places of one kind (or of any kind) from home or from a named point on the offline map, with name, kind, straight-line distance and direction, phone and address.",
+          "list_points": "Use only when asked to list every place of one kind on the offline map, like all the shelters or all the pharmacies: lists them, nearest home first. Never to put, move or rename a point, and never to look up one place before another tool: where_is, save_my_point and remove_my_point find a place by name themselves.",
+          "where_is": "Use when asked where one place is, or how far one place is from home, by name; no need to look it up first. Finds a point on the offline map (like City Hall or the library) or a town in the place list and says its coordinates and its straight-line distance and direction from home. Not to put, move or rename a point.",
+          "save_my_point": "Use when the owner wants a place of their own put on the map, moved or renamed, by its name: if a point with that name is already there it is changed, otherwise it is added. Works by name; no need to look it up first. Use it straight away with the name as said, like meeting place, water point or Sam next door.",
+          "remove_my_point": "Use when asked to take one of your own points off the map, remove it or delete it, by name; no need to look it up first. Removes that point.",
+          "set_home": "Use when asked to set or move home on the offline map to a latitude and longitude, like set home to 37.46, -122.43: it saves home there straight away, no need to look anything up first; distances are measured from there.",
+          "map_status": "Use only when asked about the downloaded map as a whole: which region it holds, its detail, its size on disk, when it was fetched, how many emergency points of each kind, and whether home is set. Not for one place, and not to put, move, rename or remove a point."
+        },
+        "examples": {
+          "nearest": [
+            "where is the nearest hospital",
+            "what are the three closest places to get drinking water"
+          ],
+          "list_points": [
+            "list the shelters on the map",
+            "which pharmacies are on the offline map"
+          ],
+          "where_is": [
+            "where is City Hall on the map",
+            "how far is the library from home"
+          ],
+          "save_my_point": [
+            "put our meeting place on the map at home: the library steps",
+            "rename the meeting place to North Gate",
+            "move our water point to 37.47, -122.43"
+          ],
+          "remove_my_point": [
+            "take the library steps off the map",
+            "delete our old water point"
+          ],
+          "set_home": [
+            "set home on the map to 37.46, -122.43"
+          ],
+          "map_status": [
+            "what region does the offline map have",
+            "when was the map downloaded"
+          ]
+        }
+      },
+      "verified_by": "Cypher Sisters (own package)",
+      "levels": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
       "id": "look-contrast",
       "kind": "look",
       "name": "High contrast",
@@ -978,6 +1361,70 @@
       "commit": "3c90ea6b4a98382d2e9980abf310582f3e39750d",
       "tier": "verified",
       "icon": "https://raw.githubusercontent.com/CypherSisters/puffpai-packages/3c90ea6b4a98382d2e9980abf310582f3e39750d/look-slate/preview.svg",
+      "verified_by": "Cypher Sisters (own package)",
+      "levels": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "id": "my-papers",
+      "kind": "app",
+      "name": "My Papers",
+      "description": "Household paperwork filing that stays on this computer: add a paper (with its file, or just a record of where the paper copy is), find it again by its words, type, person, tag or year, and see what is coming due, expiring or renewing. It keeps real due dates, expiry dates and renewals, suggests how long to keep tax papers, and exports everything as one zip. It does not read scans or photos (no OCR) and does not encrypt the files.",
+      "version": "1.0.0",
+      "author": "Cypher Sisters",
+      "license": "Apache-2.0",
+      "repo": "https://github.com/CypherSisters/puffpai-packages",
+      "path": "my-papers",
+      "commit": "5b3bb3982a73a8c02b40ea31b0a51c04d2f759ae",
+      "tier": "verified",
+      "icon": "https://raw.githubusercontent.com/CypherSisters/puffpai-packages/5b3bb3982a73a8c02b40ea31b0a51c04d2f759ae/my-papers/icons/papers.svg",
+      "abilities": {
+        "tools": {
+          "find_papers": "Use only to search, when the owner asks if we have a paper, where one is, or what papers there are: finds papers by words in them and by type, person, tag or year, with each one's title, type, date and the line that matched.",
+          "read_paper": "Read a paper named by its title; it finds the paper itself, so do not look it up first. It gives all its fields and up to 4000 characters of its text, so you can answer what it says and quote it.",
+          "coming_up": "List papers with a due date, expiry, renewal or follow-up date in the next days (60 unless asked), and anything overdue, soonest first.",
+          "add_paper_record": "File a new paper record whenever the owner says to file, note or keep track of a paper, like where a paper copy is kept. It saves the title, type, sender, dates, people, tags, amount and notes, without a file.",
+          "change_paper": "Change a paper named by its title; it finds the paper itself, so do not look it up first. It sets or clears its due date, its type, its tags, where the paper copy is, or its other fields.",
+          "list_types_and_counts": "Count the papers of each type, and say how many stored files had no text found.",
+          "keep_or_shred": "List the papers that are past their keep-until date. It is a list only and deletes nothing.",
+          "remove_paper": "Delete a paper named by its title; it finds the paper itself, so do not look it up first. Its stored file goes too when no other paper uses that file."
+        },
+        "examples": {
+          "find_papers": [
+            "do we have anything from City Water",
+            "list our tax papers",
+            "where is the car title"
+          ],
+          "read_paper": [
+            "read me the City Water bill",
+            "what does the lease say about pets"
+          ],
+          "coming_up": [
+            "what bills are due soon",
+            "what papers expire in the next 90 days"
+          ],
+          "add_paper_record": [
+            "file this: the car title is in the blue binder",
+            "keep track of Sam's new passport, it expires 2035-06-01"
+          ],
+          "change_paper": [
+            "set the due date on the City Water bill to 2027-04-15",
+            "the lease is in the green binder now, change it"
+          ],
+          "list_types_and_counts": [
+            "how many papers do I have of each kind"
+          ],
+          "keep_or_shred": [
+            "which papers can I shred now"
+          ],
+          "remove_paper": [
+            "delete the old gym contract from my papers"
+          ]
+        }
+      },
       "verified_by": "Cypher Sisters (own package)",
       "levels": [
         1,
@@ -1137,6 +1584,218 @@
       ]
     },
     {
+      "id": "notes",
+      "kind": "app",
+      "name": "Notes",
+      "description": "A plain notebook kept on this computer, one Markdown file per note, so your notes are files you can open and take anywhere. Pin notes, sort them into notebooks and tags, search them, and tick checklist lines on the page. The bot can find, read and add to your notes, like adding milk to the shopping note, with no internet. Export gives a zip of the files; import takes a zip or a file of Markdown notes from another tool. It does not sync between computers, does not encrypt, and has no reminders.",
+      "version": "1.0.0",
+      "author": "Cypher Sisters",
+      "license": "Apache-2.0",
+      "repo": "https://github.com/CypherSisters/puffpai-packages",
+      "path": "notes",
+      "commit": "5b3bb3982a73a8c02b40ea31b0a51c04d2f759ae",
+      "tier": "verified",
+      "icon": "https://raw.githubusercontent.com/CypherSisters/puffpai-packages/5b3bb3982a73a8c02b40ea31b0a51c04d2f759ae/notes/icons/notes.svg",
+      "abilities": {
+        "tools": {
+          "find_notes": "Use to search the notes by words, tag or notebook: gives each matching note's title, notebook, tags and the line that matched, pinned notes first.",
+          "read_note": "Use to read out one note in full, by its title or words in it; no need to look it up first.",
+          "add_note": "Use when the owner asks to write down a new note: its title, its text, and if wanted tags and a notebook. Lines that start with - [ ] become tick boxes.",
+          "add_to_note": "Use when the owner asks to add a line or an item to a note that is already there, by its title; no need to look it up first. In a note with tick boxes it goes in as a new tick box.",
+          "change_note": "Use to change a note by its title; no need to look it up first: rename it, replace its text, set its tags, pin or unpin it, or move it to another notebook.",
+          "tick_item": "Use when the owner says an item on a note's checklist is done or not done, by the note's title and the item's words; no need to look either up first.",
+          "list_notebooks_and_tags": "Use to see how the notes are sorted: every notebook and tag, with how many notes each has.",
+          "remove_note": "Use when the owner asks to delete a note, by its title as they said it; no need to look it up or search first, the app finds it. Its file is removed from this computer."
+        },
+        "examples": {
+          "find_notes": [
+            "find my notes about the garden",
+            "which notes are tagged recipes"
+          ],
+          "read_note": [
+            "read me my shopping note",
+            "what does my note about the car say"
+          ],
+          "add_note": [
+            "make a new note called Garden ideas: plant tomatoes by the fence",
+            "start a note for the trip packing list"
+          ],
+          "add_to_note": [
+            "add milk to the shopping note",
+            "put call the plumber on my to do note"
+          ],
+          "change_note": [
+            "pin the shopping note",
+            "move the garden ideas note to the Home notebook"
+          ],
+          "tick_item": [
+            "tick off milk on the shopping note",
+            "mark eggs as done on my shopping note"
+          ],
+          "list_notebooks_and_tags": [
+            "what notebooks do I have in my notes",
+            "what tags do my notes use"
+          ],
+          "remove_note": [
+            "delete my packing list note"
+          ]
+        }
+      },
+      "verified_by": "Cypher Sisters (own package)",
+      "levels": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "id": "plain-reader",
+      "kind": "skill",
+      "name": "Plain Reader",
+      "description": "Teaches the brain to explain a contract, lease, bill, medical bill, explanation of benefits, official letter or terms of service in plain words: what it asks of you, dates, money, one-sided terms and questions to ask, each point quoting the document, with a fixed line that it is not legal, medical or financial advice. It adds no tools of its own and fetches nothing.",
+      "version": "1.0.0",
+      "author": "Cypher Sisters",
+      "license": "Apache-2.0",
+      "repo": "https://github.com/CypherSisters/puffpai-packages",
+      "path": "plain-reader",
+      "commit": "5b3bb3982a73a8c02b40ea31b0a51c04d2f759ae",
+      "tier": "verified",
+      "icon": "https://raw.githubusercontent.com/CypherSisters/puffpai-packages/5b3bb3982a73a8c02b40ea31b0a51c04d2f759ae/plain-reader/icons/document.svg",
+      "verified_by": "Cypher Sisters (own package)",
+      "levels": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "id": "plant-keeper",
+      "kind": "agent",
+      "name": "Plant Keeper",
+      "description": "An agent that knows the household's plants and tells you what needs doing. It keeps each plant (kind, where it lives, pot, light, how often to water and feed) and a care log, and works out what is due today or this week from your own intervals. The bot's own brain suggests a starting care plan for a new plant, which you can accept or ignore, and answers questions about one plant from your description and its log. It does not identify plants from photos, does not send reminders on its own, and its advice is not checked by anyone.",
+      "version": "1.0.0",
+      "author": "Cypher Sisters",
+      "license": "Apache-2.0",
+      "repo": "https://github.com/CypherSisters/puffpai-packages",
+      "path": "plant-keeper",
+      "commit": "5b3bb3982a73a8c02b40ea31b0a51c04d2f759ae",
+      "tier": "verified",
+      "icon": "https://raw.githubusercontent.com/CypherSisters/puffpai-packages/5b3bb3982a73a8c02b40ea31b0a51c04d2f759ae/plant-keeper/icons/plant.svg",
+      "abilities": {
+        "tools": {
+          "plants_due": "When the owner asks what the plants need: which plants are due for water or feed today, or this week, worked out from each plant's own interval and the care log.",
+          "add_plant": "When the owner has a new plant to keep track of: adds it by name with its kind and where it lives, and asks the bot's brain for a suggested starting care plan that the owner can accept later.",
+          "log_care": "When a plant was watered, fed, repotted, pruned or moved, log it by the plant's name, no need to look it up first. Also takes a short note about the plant, or all for every plant.",
+          "plant_history": "When the owner asks when a plant was last watered, fed, repotted or pruned, or for its care log: one plant by name, no need to look it up first.",
+          "change_plant": "When a plant's details or care intervals change: change one plant by name, no need to look it up first. Also accepts the brain's suggested plan for it.",
+          "ask_about_plant": "When the owner asks what is wrong with a plant or how to care for it, ask about it by the plant's name, no need to look it up first. The bot's brain answers from the owner's words and that plant's care log.",
+          "list_plants": "Only when the owner asks to see the whole list of their plants: every plant with where it lives and its intervals. The other plant tools take a name, so this is not needed first.",
+          "remove_plant": "When a plant has died or gone, remove it by name, no need to look it up first: deletes the plant and its care log."
+        },
+        "examples": {
+          "plants_due": [
+            "what do my plants need today",
+            "which plants need watering this week"
+          ],
+          "add_plant": [
+            "add my new peace lily in the living room to my plants",
+            "I bought a rosemary for the back bed, keep track of it"
+          ],
+          "log_care": [
+            "I watered the fern",
+            "I fed the tomatoes yesterday"
+          ],
+          "plant_history": [
+            "when did I last repot the snake plant",
+            "show me the care history of the basil"
+          ],
+          "change_plant": [
+            "change the fern's watering to every 5 days",
+            "accept the suggested plan for the peace lily"
+          ],
+          "ask_about_plant": [
+            "the basil's leaves are going yellow, what is wrong with it",
+            "why is my fern dropping leaves"
+          ],
+          "list_plants": [
+            "which plants do I have",
+            "list my plants"
+          ],
+          "remove_plant": [
+            "remove the basil from my plants, it died"
+          ]
+        }
+      },
+      "verified_by": "Cypher Sisters (own package)",
+      "levels": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "id": "prep-calculator",
+      "kind": "tool",
+      "name": "Prep Calculator",
+      "description": "Emergency preparedness sums done in plain code, not guessed: water to store and how long it lasts, food energy for a household, battery runtime, a power and solar budget, rough generator fuel, bleach drops for drinking water, and the unit conversions a prepper needs. Answers give US and metric units and name every planning figure used. It works with no internet and stores nothing. Planning figures only, not medical, electrical or engineering advice.",
+      "version": "1.0.0",
+      "author": "Cypher Sisters",
+      "license": "Apache-2.0",
+      "repo": "https://github.com/CypherSisters/puffpai-packages",
+      "path": "prep-calculator",
+      "commit": "5b3bb3982a73a8c02b40ea31b0a51c04d2f759ae",
+      "tier": "verified",
+      "icon": "https://raw.githubusercontent.com/CypherSisters/puffpai-packages/5b3bb3982a73a8c02b40ea31b0a51c04d2f759ae/prep-calculator/icons/water-drop.svg",
+      "abilities": {
+        "tools": {
+          "water_needed": "Work out how much drinking and hygiene water to store for a number of people (and pets) for a number of days, in US gallons and liters, and how many jugs or cans that is.",
+          "water_on_hand": "Work out how many days the water you have will last for a number of people (and pets).",
+          "food_needed": "Work out the food energy in kilocalories that adults, children and heavy workers need for a number of days, and roughly how much of one shelf food (rice, dried beans, oats, peanut butter, canned beans) gives that.",
+          "battery_runtime": "Work out how many hours a battery runs a load, from its watt-hours (or amp-hours and volts), its type and whether the load runs through an inverter.",
+          "power_budget": "Add up the watt-hours a day for a list of devices, and the battery size and solar panel watts that would cover it.",
+          "generator_fuel": "Give a rough range of the fuel a small gasoline or propane generator burns for a load and a number of hours, with the carbon monoxide safety line.",
+          "bleach_for_water": "Work out how many drops of plain unscented household bleach (5 to 9 percent) make clear or cloudy water safer to drink, per public guidance, with the steps that follow.",
+          "unit_convert": "Convert gallons, liters and quarts; pounds, kilograms, ounces and grams; Fahrenheit and Celsius; miles and kilometers; and watt-hours and amp-hours at a given voltage."
+        },
+        "examples": {
+          "water_needed": [
+            "how much water do 4 people need for 2 weeks",
+            "water to store for a family of 3 and a dog for 7 days"
+          ],
+          "water_on_hand": [
+            "how long will 20 gallons of water last 2 people"
+          ],
+          "food_needed": [
+            "how much rice feeds 2 adults for a month",
+            "calories for 2 adults and 2 kids for 14 days"
+          ],
+          "battery_runtime": [
+            "how long will a 1280 watt-hour lithium battery run a 100 watt load"
+          ],
+          "power_budget": [
+            "what battery and solar do I need for a 60 watt fridge all day and 10 watt lights for 5 hours"
+          ],
+          "generator_fuel": [
+            "how much gas does a generator use running 2000 watts for 10 hours"
+          ],
+          "bleach_for_water": [
+            "how much bleach for 5 gallons of water",
+            "drops of 8.25 percent bleach for 10 liters of cloudy water"
+          ],
+          "unit_convert": [
+            "convert 5 gallons to liters",
+            "how many amp-hours is 1280 watt-hours at 12.8 volts"
+          ]
+        }
+      },
+      "verified_by": "Cypher Sisters (own package)",
+      "levels": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
       "id": "prep-supplies",
       "kind": "app",
       "name": "Prep Supplies",
@@ -1188,6 +1847,69 @@
       ],
       "not_checked": [
         "12"
+      ]
+    },
+    {
+      "id": "radio-plan",
+      "kind": "app",
+      "name": "Radio Plan",
+      "description": "The household's plan for staying in touch by radio when phones fail, kept on this computer: the radios you own, the channels and what each is for, each person's call sign, the check-in times and what to do if no one answers, the weather alert and broadcast stations to listen to, a message log and a practice log. It prints the plan and a pocket card for each person, shows when the next check-in is, and the bot can answer from it with no internet. It stores what you type: it ships no frequency lists, does not say what is legal to transmit where you live, and does not control a radio.",
+      "version": "1.0.0",
+      "author": "Cypher Sisters",
+      "license": "Apache-2.0",
+      "repo": "https://github.com/CypherSisters/puffpai-packages",
+      "path": "radio-plan",
+      "commit": "5b3bb3982a73a8c02b40ea31b0a51c04d2f759ae",
+      "tier": "verified",
+      "icon": "https://raw.githubusercontent.com/CypherSisters/puffpai-packages/5b3bb3982a73a8c02b40ea31b0a51c04d2f759ae/radio-plan/icons/radio.svg",
+      "abilities": {
+        "tools": {
+          "show_radio_plan": "Use to read out the household radio plan for when phones fail: the whole plan, or one section (radios, channels, people and call signs, check-in times, listen-only stations, practice). For the message log, use list_messages.",
+          "next_check_in": "Use when someone asks when the next radio check-in is: says from the clock when it is, on which channel, how long to listen, and what to do if no one answers.",
+          "which_channel": "Use when someone asks which radio channel to use, by name; no need to look it up first: for a purpose (primary, backup, neighbors, emergency, listen only, weather) or for a person (their call sign, primary and backup channel).",
+          "update_radio_plan": "Use when the owner tells you to set or change something in the radio plan, by name; no need to look it up first: a radio, a channel, a person's call sign or license, a check-in time, or a listen-only station. Something not there yet is added. Kinds can be everyday words, like walkie-talkie.",
+          "log_message": "Use when someone says a radio message came in or went out: adds it to the radio message log with the time, who it was from and to, the channel, the words, and whether it was acted on.",
+          "list_messages": "Use to read back the radio message log: the latest messages, or those from or to one person, or on one channel, newest first.",
+          "log_radio_practice": "Use when the household did a radio drill or test: logs the date, what was practiced and what to fix.",
+          "remove_radio_item": "Use when the owner asks to take something out of the radio plan, by its name as they said it; no need to look it up or show the plan first, the app finds it: a radio, a channel, a person's radio details, a check-in, a listen-only station, a message or a practice entry. It deletes it."
+        },
+        "examples": {
+          "show_radio_plan": [
+            "read me our radio plan",
+            "what does our radio plan say about the radios we have"
+          ],
+          "next_check_in": [
+            "when is our next radio check-in",
+            "what time do we check in on the radio next"
+          ],
+          "which_channel": [
+            "which radio channel do we use to reach the neighbors",
+            "what radio channel is Sam on"
+          ],
+          "update_radio_plan": [
+            "set Sam's call sign in the radio plan to Bluebird",
+            "add Jo's walkie-talkie to the radio plan, kept in the hall closet"
+          ],
+          "log_message": [
+            "log a radio message from Jo to Alex on Family 1: home safe, the bridge is flooded"
+          ],
+          "list_messages": [
+            "read me the radio messages from Jo",
+            "what radio messages came in on Family 2"
+          ],
+          "log_radio_practice": [
+            "we did a radio drill this morning; Sam's handheld battery was flat"
+          ],
+          "remove_radio_item": [
+            "remove the scanner from the radio plan"
+          ]
+        }
+      },
+      "verified_by": "Cypher Sisters (own package)",
+      "levels": [
+        1,
+        2,
+        3
       ]
     },
     {
@@ -1247,6 +1969,60 @@
       ],
       "not_checked": [
         "12"
+      ]
+    },
+    {
+      "id": "reviewer",
+      "kind": "agent",
+      "name": "Reviewer",
+      "description": "An agent that reads something you made and comments on it. Paste a letter, an essay, a plan, a how-to or a block of code, say what kind it is and who it is for, and the bot's own brain reads it (in parts when it is long) and fills a fixed report: what it is, what works well, the problems ranked must fix, should fix and could fix (each with the quoted words, why and a fix), questions for you, and what was not checked. It can compare two versions and say whether the must-fix problems were fixed. It never changes your text, never runs code, and does not check facts. It keeps its review reports, which quote short passages of what you pasted so the comments make sense. It does not keep the whole text.",
+      "version": "1.0.0",
+      "author": "Cypher Sisters",
+      "license": "Apache-2.0",
+      "repo": "https://github.com/CypherSisters/puffpai-packages",
+      "path": "reviewer",
+      "commit": "5b3bb3982a73a8c02b40ea31b0a51c04d2f759ae",
+      "tier": "verified",
+      "icon": "https://raw.githubusercontent.com/CypherSisters/puffpai-packages/5b3bb3982a73a8c02b40ea31b0a51c04d2f759ae/reviewer/icons/review.svg",
+      "abilities": {
+        "tools": {
+          "review_text": "When the owner pastes something they wrote and asks for a review or comments: the bot's brain reads it as the kind of thing it is, for the reader named, and a report is saved. The text is never changed.",
+          "list_reviews": "Only when the owner asks to see the list of saved reviews, never to remove or read one: the review reports, newest first. The other review tools take a few words of a title, so this is not needed first.",
+          "read_review": "When the owner asks to see a saved review again: one report by its title, no need to look it up first, or latest.",
+          "compare_versions": "When the owner pastes an earlier and a newer version of the same text: what changed, line by line, and whether the earlier review's must-fix problems were fixed.",
+          "review_checklist": "When the owner asks what the reviewer checks, or how a kind of text is judged: the reviewer's checklist for general writing, a formal letter, a plan or proposal, instructions, or code.",
+          "remove_review": "When the owner no longer wants a saved review, remove it by a few words of what it was about or latest, no need to look it up or list the reviews first: deletes that report."
+        },
+        "examples": {
+          "review_text": [
+            "review this cover letter for a hiring manager: Dear Sam, I am writing to apply for the job of shop manager. I have run a shop for five years.",
+            "give me comments on this plan for the school fair: we hold it on the first Saturday in May and ask each family for two cakes"
+          ],
+          "list_reviews": [
+            "list my saved reviews",
+            "which reviews have you done for me"
+          ],
+          "read_review": [
+            "read me the review of my cover letter again",
+            "show the latest review"
+          ],
+          "compare_versions": [
+            "compare these two versions of my note and tell me what changed. Old: We meet at 5. New: We meet at 6 by the gate."
+          ],
+          "review_checklist": [
+            "what does the reviewer check in a plan or proposal",
+            "how do you judge code"
+          ],
+          "remove_review": [
+            "remove my saved review of the cover letter"
+          ]
+        }
+      },
+      "verified_by": "Cypher Sisters (own package)",
+      "levels": [
+        1,
+        2,
+        3
       ]
     },
     {

@@ -1,0 +1,10 @@
+{
+  "id": "local-map",
+  "kind": "app",
+  "repo": "https://github.com/CypherSisters/puffpai-packages",
+  "path": "local-map",
+  "commit": "5b3bb3982a73a8c02b40ea31b0a51c04d2f759ae",
+  "tier": "verified",
+  "verified_by": "Cypher Sisters (own package)",
+  "verified_commit": "5b3bb3982a73a8c02b40ea31b0a51c04d2f759ae"
+}
