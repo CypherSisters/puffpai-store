@@ -1445,14 +1445,14 @@
       "kind": "app",
       "name": "Local Map",
       "description": "An offline street map of one region you choose, with its emergency places from OpenStreetMap: fire stations, police, hospitals, clinics, pharmacies, shelters, food banks, drinking water, fuel and more. You pick the region and press Download once; after that the map, the list of places, straight-line distances from home and your own points (meeting places, water, a neighbor who can help) work with no internet. It does not give directions by road, does not update by itself, and OpenStreetMap does not list every shelter or food bank.",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "author": "Cypher Sisters",
       "license": "Apache-2.0",
       "repo": "https://github.com/CypherSisters/puffpai-packages",
       "path": "local-map",
-      "commit": "5b3bb3982a73a8c02b40ea31b0a51c04d2f759ae",
+      "commit": "91192b067fb36731251ce627f1dcb1646a437bb6",
       "tier": "verified",
-      "icon": "https://raw.githubusercontent.com/CypherSisters/puffpai-packages/5b3bb3982a73a8c02b40ea31b0a51c04d2f759ae/local-map/icons/map.svg",
+      "icon": "https://raw.githubusercontent.com/CypherSisters/puffpai-packages/91192b067fb36731251ce627f1dcb1646a437bb6/local-map/icons/map.svg",
       "abilities": {
         "tools": {
           "nearest": "Use when asked for the nearest or closest place of a kind, like the nearest hospital or water: finds the nearest emergency places of one kind (or of any kind) from home or from a named point on the offline map, with name, kind, straight-line distance and direction, phone and address.",
