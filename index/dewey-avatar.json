@@ -1,0 +1,10 @@
+{
+  "id": "dewey-avatar",
+  "kind": "avatar",
+  "repo": "https://github.com/CypherSisters/puffpai-packages",
+  "path": "dewey-avatar",
+  "commit": "6287990e45766b92dcde2b312798ac6f548a6353",
+  "tier": "verified",
+  "verified_by": "Cypher Sisters (own package)",
+  "verified_commit": "6287990e45766b92dcde2b312798ac6f548a6353"
+}

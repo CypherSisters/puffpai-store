@@ -660,6 +660,26 @@
       ]
     },
     {
+      "id": "dewey-avatar",
+      "kind": "avatar",
+      "name": "Dewey",
+      "description": "Dewey, your editor: a warm, sharp-eyed editor-in-chief with a silver bob and round glasses, in ink and wash. Her mouth moves while the bot answers in chat.",
+      "version": "1.0.0",
+      "author": "Cypher Sisters",
+      "license": "Apache-2.0",
+      "repo": "https://github.com/CypherSisters/puffpai-packages",
+      "path": "dewey-avatar",
+      "commit": "6287990e45766b92dcde2b312798ac6f548a6353",
+      "tier": "verified",
+      "icon": "https://raw.githubusercontent.com/CypherSisters/puffpai-packages/6287990e45766b92dcde2b312798ac6f548a6353/dewey-avatar/preview.png",
+      "verified_by": "Cypher Sisters (own package)",
+      "levels": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
       "id": "document-convert",
       "kind": "tool",
       "name": "Document convert",
