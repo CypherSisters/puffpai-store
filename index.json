@@ -683,32 +683,42 @@
       "id": "document-convert",
       "kind": "tool",
       "name": "Document convert",
-      "description": "Turns Word, Excel, PowerPoint and OpenDocument files into PDFs with LibreOffice on this computer, and reads the plain text out of a .docx, .xlsx or .pptx without it. It does not edit documents, convert to any format but PDF, or read PDFs, and making a PDF needs LibreOffice installed.",
-      "version": "1.0.0",
+      "description": "Turns a PDF of a book into a Word file with real chapter headings, turns Word, Excel, PowerPoint and OpenDocument files into PDFs with LibreOffice on this computer, and reads the plain text out of a PDF, .docx, .xlsx or .pptx. Only making a PDF needs LibreOffice. It does not edit documents, and it cannot read a PDF that is only pictures of pages.",
+      "version": "1.1.0",
       "author": "Cypher Sisters",
       "license": "Apache-2.0",
       "repo": "https://github.com/CypherSisters/puffpai-packages",
       "path": "document-convert",
-      "commit": "3c90ea6b4a98382d2e9980abf310582f3e39750d",
+      "commit": "7652dceb28fd65109077e255162169f38e73ac7a",
       "tier": "verified",
-      "icon": "https://raw.githubusercontent.com/CypherSisters/puffpai-packages/3c90ea6b4a98382d2e9980abf310582f3e39750d/document-convert/icons/page-arrow.svg",
+      "icon": "https://raw.githubusercontent.com/CypherSisters/puffpai-packages/7652dceb28fd65109077e255162169f38e73ac7a/document-convert/icons/page-arrow.svg",
       "abilities": {
         "tools": {
           "convert_to_pdf": "Turn a document (Word .docx, Excel .xlsx, PowerPoint .pptx, .odt, .ods, .odp, .txt or .md) into a PDF with LibreOffice on this computer, and say where the PDF is.",
-          "read_document_text": "Read the plain text out of a Word .docx, Excel .xlsx or PowerPoint .pptx (or a .txt or .md) without changing it.",
-          "list_converted": "List the PDFs this tool has made, newest first."
+          "read_document_text": "Read the plain text out of a Word .docx, Excel .xlsx, PowerPoint .pptx or a PDF (or a .txt or .md) without changing it.",
+          "pdf_to_word": "Turn a PDF of a book into a Word file with real chapter headings, saved in the Converted folder in My files. Line wraps are joined, running heads and page numbers come out, and no word is changed. It says what it found and where the file is. It needs no LibreOffice.",
+          "list_converted": "List the PDFs this tool has made, newest first, and the Word files it made from PDFs."
         },
         "examples": {
           "convert_to_pdf": [
+            "turn report.docx into a PDF",
             "turn this Word document into a PDF",
             "make a PDF of my spreadsheet"
           ],
           "read_document_text": [
+            "read me the text of notes.docx",
             "read me what is in this Word doc",
-            "what does this PowerPoint say"
+            "what does this PowerPoint say",
+            "read me what is in this PDF"
+          ],
+          "pdf_to_word": [
+            "convert chapters.pdf to a Word file",
+            "convert this PDF of my novel to Word",
+            "turn my PDF into a Word file with chapters"
           ],
           "list_converted": [
-            "which PDFs have you made"
+            "which PDFs have you made",
+            "which Word files did you make from PDFs"
           ]
         }
       },
@@ -717,9 +727,6 @@
         1,
         2,
         3
-      ],
-      "not_checked": [
-        "12"
       ]
     },
     {
@@ -856,6 +863,125 @@
         1,
         2,
         3
+      ]
+    },
+    {
+      "id": "editors-desk",
+      "kind": "app",
+      "name": "Editor's Desk",
+      "description": "Your whole book as one page you just type in, like Word, with notes from your editor in the margin beside the words they are about. It saves as you type and keeps earlier versions. Select any words and ask your editor how they read. Behind it is a publishing house's stages of editing, big to small: the story, the facts, the prose, the polish, and getting it out. It finds plot holes and inconsistencies across the whole book and shows each at its exact words, with why it matters and one way to fix it. Mark each Fixed, Not a problem or Later. Study a book puts your book beside a book you admire: the numbers at once, and your editor's pointers on matched passages. Save a Word copy of your book any time. Your editor-in-chief runs a small staff, one person for each kind of editing: she tells you what is new, what each desk found and what to do next, and a whole desk goes over your book on your one Yes. Your editor works in the background with your bot's brain on this computer, and only when you say so. Your bot never writes your book.",
+      "version": "0.4.3",
+      "author": "Cypher Sisters",
+      "license": "Apache-2.0",
+      "repo": "https://github.com/CypherSisters/puffpai-packages",
+      "path": "editors-desk",
+      "commit": "7652dceb28fd65109077e255162169f38e73ac7a",
+      "tier": "community",
+      "icon": "https://raw.githubusercontent.com/CypherSisters/puffpai-packages/7652dceb28fd65109077e255162169f38e73ac7a/editors-desk/icons/editors-desk.svg",
+      "abilities": {
+        "tools": {
+          "desk_run": "Runs one editing check in the background. It starts only after the writer said yes; asked without her yes it only tells your bot what to ask her. A check can take a long time.",
+          "desk_mark": "Marks one finding Open, Fixed, Not a problem or Later, and keeps a note of the writer's on it, by its number among the open ones or its id.",
+          "desk_stop": "Stops the check running for one manuscript, after the call in progress. Pressed again, it goes on from where it was.",
+          "desk_assign": "Sends one desk of the staff over the whole book: every check on that desk, in order, in the background. who all is the full edit, big to small, then the letter. It starts only after the writer said yes; asked without her yes it only tells your bot what to ask her, with the plan and the time. It never writes her text.",
+          "desk_study": "Compares the writer's manuscript with a book she admires, on the shelf: your editor reads matched passages of each, one pair at a time, in the background, and gives pointers on style and flow. Without theirs it lists the books she could compare with. It starts only after the writer said yes; asked without her yes it only tells your bot what to ask her. It never writes her text.",
+          "desk_storyboard": "Draws the writer's book as storyboard panels: what a picture would show, where, who, the mood and the shot, each with her own words under it. Panels are notes for pictures, never words for her book. It starts only after the writer said yes; asked without her yes it only tells your bot what to ask her.",
+          "desk_checks": "The stages of editing for one manuscript and every check in them, when each last ran, what it found, and which comes next.",
+          "desk_status": "What the writer's editor is doing now for one manuscript, how far along, and about how long is left.",
+          "desk_findings": "What the checks found in one manuscript: each with what is wrong, the section and its exact quote, why it matters and one way to fix it, biggest first.",
+          "desk_letter": "The Editor's letter for one manuscript: what the book is, what is working, its biggest problems, what to do first, and the revision plan as it stands now.",
+          "desk_ask": "Answers a question about a change the writer is planning, from what Future plans and changes found and the story bible. who picks which of her staff answers.",
+          "desk_documents": "The documents made for one manuscript: the style sheet, length note, synopsis, query letter, submission copy. Gives one by name, or the list.",
+          "desk_study_report": "How the writer's manuscript compares with a book she admires: the style numbers at once, where the two differ most and where she already matches, and, once her editor compared passages, what to try first and the notes on each pair of passages.",
+          "desk_storyboard_report": "The storyboard of the writer's book as plain lines, panel by panel.",
+          "desk_staff": "The editor-in-chief's staff for one manuscript: each one's name, role and what they do for the book, what they are doing now, and what they have open.",
+          "desk_meeting": "The editor-in-chief's meeting for one manuscript, built by code: what changed since the writer was last here, what each staff member finished and found, what is running, what is waiting, and what comes next. Call it when she says hello, sits down, or asks what is new."
+        },
+        "examples": {
+          "desk_run": [
+            "yes, run the continuity check on my book now",
+            "run the continuity check on my book",
+            "check my plot for holes",
+            "run the continuity check",
+            "what if Elias survives"
+          ],
+          "desk_mark": [
+            "mark finding 1 fixed",
+            "mark the first one fixed",
+            "that one is not a problem",
+            "come back to that one later"
+          ],
+          "desk_stop": [
+            "stop the check"
+          ],
+          "desk_assign": [
+            "send the story editor over my whole book",
+            "have the story editor go over my book",
+            "do the full edit",
+            "ask the copy editor to go through it"
+          ],
+          "desk_study": [
+            "compare my book to The Salt Road",
+            "have my editor study that book with mine",
+            "what can I learn from that book"
+          ],
+          "desk_storyboard": [
+            "yes, draw chapter three of my book as a storyboard now",
+            "draw chapter three of my book as a storyboard",
+            "storyboard my book",
+            "draw chapter three as a storyboard"
+          ],
+          "desk_checks": [
+            "what editing checks are there",
+            "what should I do next on my book"
+          ],
+          "desk_status": [
+            "how far has my editor got",
+            "is the check done yet"
+          ],
+          "desk_findings": [
+            "show me the open findings",
+            "what plot holes did you find"
+          ],
+          "desk_letter": [
+            "read me the editor's letter",
+            "what should I fix first"
+          ],
+          "desk_ask": [
+            "I have a question about a change I am planning: if Elias lives, who else is affected",
+            "what would that change do to the ending",
+            "if Elias lives, who else is affected"
+          ],
+          "desk_documents": [
+            "show me the style sheet my editor made for my book",
+            "show me the style sheet",
+            "where is my synopsis"
+          ],
+          "desk_study_report": [
+            "show me the report comparing my book with The Salt Road",
+            "how does my style compare",
+            "what can I learn from that book",
+            "what did my editor say about the book I admire"
+          ],
+          "desk_storyboard_report": [
+            "show me the storyboard panels drawn for my book",
+            "show me the storyboard",
+            "what panels did you draw"
+          ],
+          "desk_staff": [
+            "who is on my staff",
+            "what is everyone working on"
+          ],
+          "desk_meeting": [
+            "give me my editor's meeting",
+            "hello",
+            "what is new with my book",
+            "I'm sitting down to work"
+          ]
+        }
+      },
+      "levels": [
+        1
       ]
     },
     {
@@ -1582,6 +1708,157 @@
       ]
     },
     {
+      "id": "manuscript",
+      "kind": "app",
+      "name": "Manuscript",
+      "description": "Your novel and stories, from a Word, PDF, text or Markdown file, with your italics and bold kept, read by your bot section by section into a story bible, on eight tabs beside your own notes: characters, plot and subplots, timeline, structure, world, science, themes and voice. Each tab opens with a short brief of what it adds up to. Correct any fact on any tab, in your own words or by hand, undo any correction, and it stays corrected when the book is read again. Ask it to show you something and it makes a view on the right tab, drawn in Maps too when it is a drawing, or points at the passage in your text. It keeps track of the book; editing is in the Editor's Desk app. This app never changes your text; you can, in Editor's Desk.",
+      "version": "0.6.0",
+      "author": "Cypher Sisters",
+      "license": "Apache-2.0",
+      "repo": "https://github.com/CypherSisters/puffpai-packages",
+      "path": "manuscript",
+      "commit": "7652dceb28fd65109077e255162169f38e73ac7a",
+      "tier": "community",
+      "icon": "https://raw.githubusercontent.com/CypherSisters/puffpai-packages/7652dceb28fd65109077e255162169f38e73ac7a/manuscript/icons/manuscript.svg",
+      "abilities": {
+        "tools": {
+          "manuscript_list": "The writer's manuscripts on this computer, each with its sections, word counts and how far her bot has read it, and which are books to study (books she admires, kept to compare with hers, never read).",
+          "manuscript_read": "The text of one section of one of the writer's manuscripts, by its number or heading.",
+          "manuscript_status": "How far her bot has read one manuscript into its story bible, in one line.",
+          "manuscript_analyze": "If you do not know the exact title, call manuscript_list first. Start your bot reading one manuscript again to rebuild its story bible. It starts only after you said yes; asked without your yes it only tells your bot what to ask you.",
+          "manuscript_ask": "An answer to a question about one manuscript, from its story bible and the sections that match the question best, citing sections by number.",
+          "manuscript_show": "Makes a view on one tab of the Manuscript page, such as a character's arc, a timeline or a family tree, from the story bible, and keeps it on that tab.",
+          "manuscript_point": "Points the Manuscript page at a passage: it opens the section, scrolls to the words and highlights them.",
+          "manuscript_correct": "Corrects any fact in a manuscript's story bible, on any tab, in the writer's words: how a character looks, a fact on the wrong character, two names that are one person, when something happens, a wrong fact to remove, a missing one to add. It says exactly what changed, and it stays when the book is read again.",
+          "manuscript_correct_undo": "Takes one correction back when the writer says it was wrong, by its id or the last one. The story bible goes back as it was.",
+          "manuscript_corrections": "Every correction on one manuscript, with its id, what the writer said and what it came to.",
+          "manuscript_notes_read": "The writer's notes for one manuscript on characters, plot and subplots, timeline, structure, world building, science, themes or voice.",
+          "manuscript_notes_append": "Adds a dated section to the end of the writer's notes for one manuscript on one subject. Her manuscript stays as it is.",
+          "manuscript_remove": "Put one manuscript away into a Removed folder inside Manuscripts, with its original file, bible, views, notes and pictures. Nothing is deleted.",
+          "manuscript_add_file": "Adds a file from My files as a new manuscript: a Word file, PDF, text or Markdown file, by its name or its path inside My files. The reading waits for the writer's yes."
+        },
+        "examples": {
+          "manuscript_list": [
+            "which manuscripts do I have",
+            "how many words is my novel so far"
+          ],
+          "manuscript_read": [
+            "read chapter 3 of my novel",
+            "what happens in the chapter called The Storm"
+          ],
+          "manuscript_status": [
+            "has my bot finished reading my novel",
+            "how far along is the reading"
+          ],
+          "manuscript_analyze": [
+            "read my novel again",
+            "start reading my new story"
+          ],
+          "manuscript_ask": [
+            "what does the story say about the tide",
+            "is the timeline in chapter four consistent"
+          ],
+          "manuscript_show": [
+            "show me the character arc of Jennifer",
+            "show me a family tree for the Hales",
+            "show me all the supporting characters and whether any of them interact"
+          ],
+          "manuscript_point": [
+            "show me where the ferry is first mentioned",
+            "show me where she first meets Tom"
+          ],
+          "manuscript_correct": [
+            "Tom is her cousin, not her brother",
+            "Mara has grey eyes, not green",
+            "that scar belongs to Tom, not Elias",
+            "the storm is in chapter 4, not chapter 2",
+            "Anna and Annie are the same person"
+          ],
+          "manuscript_correct_undo": [
+            "that correction was wrong, take it back",
+            "undo the last correction"
+          ],
+          "manuscript_corrections": [
+            "what have I corrected so far",
+            "did that correction go through"
+          ],
+          "manuscript_notes_read": [
+            "what are my character notes for my novel",
+            "show my world building notes"
+          ],
+          "manuscript_notes_append": [
+            "add to my science notes that the moon's orbit takes 40 days",
+            "put a note in my structure notes that chapter 2 drags in the middle"
+          ],
+          "manuscript_remove": [
+            "put the test story away",
+            "remove Salt Moon from Manuscript"
+          ],
+          "manuscript_add_file": [
+            "load the converted book into Manuscript",
+            "add Converted/My Novel.docx to Manuscript"
+          ]
+        }
+      },
+      "levels": [
+        1
+      ]
+    },
+    {
+      "id": "maps",
+      "kind": "app",
+      "name": "Maps",
+      "description": "An illustrated atlas of your novel, from what Manuscript has read: the cast as a gallery of portraits, the world as a painted map with its places pinned on it, the family tree with faces, the story as a strip of painted scenes, and a cover mock. A picture program on another computer on your home network paints the pictures; Maps puts the names, pins and lines on top. Illustrate paints everything a book needs, one picture at a time, and Paint again takes a note from you. The eight drawn charts are still there under Charts: a family tree, a relationship map, a timeline, character touchpoints, arcs, the story structure, a world map and a thread board. Click anything and the manuscript pane opens that passage. It also paints the storyboard panels you ask for in Editor's Desk. It never reads or changes your manuscript text.",
+      "version": "2.2.0",
+      "author": "Cypher Sisters",
+      "license": "Apache-2.0",
+      "repo": "https://github.com/CypherSisters/puffpai-packages",
+      "path": "maps",
+      "commit": "7652dceb28fd65109077e255162169f38e73ac7a",
+      "tier": "verified",
+      "icon": "https://raw.githubusercontent.com/CypherSisters/puffpai-packages/7652dceb28fd65109077e255162169f38e73ac7a/maps/icons/maps.svg",
+      "abilities": {
+        "tools": {
+          "maps_list": "The boards Maps can draw for each manuscript her bot has read: the eight standard ones and the ones drawn from earlier asks.",
+          "maps_draw": "A drawing of one manuscript in Maps, made from its story bible and saved with the ask: a family tree, a relationship map, a timeline, character touchpoints, arcs, the story structure, a world map or a thread board.",
+          "maps_point": "Points the Manuscript page at the passage behind one item on a board, such as a character, an event or a setup.",
+          "maps_picture": "A picture painted from the story bible by the picture program on the owner's home network: a character portrait, a place, a painted world map, a scene from one event or a cover mock, with an optional note from the writer.",
+          "maps_illustrate": "Every picture one manuscript needs, painted one at a time by the picture program on the owner's home network, skipping what is already painted."
+        },
+        "examples": {
+          "maps_list": [
+            "which maps are there for my novel",
+            "what boards have I made"
+          ],
+          "maps_draw": [
+            "draw the family tree",
+            "show me who interacts with whom",
+            "draw the timeline of Short story"
+          ],
+          "maps_point": [
+            "show me where Quill is on the touchpoints",
+            "take me to the badge setup on the thread board"
+          ],
+          "maps_picture": [
+            "paint a portrait of Tamsin",
+            "make a cover mock for Salt Moon",
+            "paint the world map",
+            "paint the scene where the Lantern goes dark"
+          ],
+          "maps_illustrate": [
+            "illustrate Salt Moon",
+            "paint pictures for my whole book"
+          ]
+        }
+      },
+      "verified_by": "Cypher Sisters (own package)",
+      "levels": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
       "id": "my-papers",
       "kind": "app",
       "name": "My Papers",
@@ -1854,6 +2131,26 @@
           ]
         }
       },
+      "verified_by": "Cypher Sisters (own package)",
+      "levels": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "id": "novel-mode",
+      "kind": "skill",
+      "name": "Novel mode",
+      "description": "Teaches your bot to be the writer's editor-in-chief for a whole novel or short story with the Manuscript, Maps and Editor's Desk apps: ask for the book, read it, walk the eight tabs, take corrections and notes, go through what Editor's Desk found, one finding at a time, study a book she admires beside hers, run the editing house with a staff (a meeting when she sits down, a whole desk over the book on her yes, a storyboard on her yes), show and draw on request, and never write the book itself. It adds no tools of its own and fetches nothing itself.",
+      "version": "1.0.8",
+      "author": "Cypher Sisters",
+      "license": "Apache-2.0",
+      "repo": "https://github.com/CypherSisters/puffpai-packages",
+      "path": "novel-mode",
+      "commit": "7652dceb28fd65109077e255162169f38e73ac7a",
+      "tier": "verified",
+      "icon": "https://raw.githubusercontent.com/CypherSisters/puffpai-packages/7652dceb28fd65109077e255162169f38e73ac7a/novel-mode/icons/novel.svg",
       "verified_by": "Cypher Sisters (own package)",
       "levels": [
         1,

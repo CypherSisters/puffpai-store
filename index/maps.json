@@ -1,0 +1,11 @@
+{
+  "id": "maps",
+  "kind": "app",
+  "repo": "https://github.com/CypherSisters/puffpai-packages",
+  "path": "maps",
+  "commit": "7652dceb28fd65109077e255162169f38e73ac7a",
+  "tier": "verified",
+  "verified_by": "Cypher Sisters (own package)",
+  "verified_commit": "7652dceb28fd65109077e255162169f38e73ac7a",
+  "notes": "Needs the Manuscript app; without it Maps has nothing to show. Its pictures need a picture program you run on your home network."
+}

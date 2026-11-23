@@ -1,0 +1,11 @@
+{
+  "id": "novel-mode",
+  "kind": "skill",
+  "repo": "https://github.com/CypherSisters/puffpai-packages",
+  "path": "novel-mode",
+  "commit": "7652dceb28fd65109077e255162169f38e73ac7a",
+  "tier": "verified",
+  "verified_by": "Cypher Sisters (own package)",
+  "verified_commit": "7652dceb28fd65109077e255162169f38e73ac7a",
+  "notes": "Only useful with the Manuscript, Maps and Editor's Desk apps."
+}

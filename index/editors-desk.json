@@ -1,0 +1,9 @@
+{
+  "id": "editors-desk",
+  "kind": "app",
+  "repo": "https://github.com/CypherSisters/puffpai-packages",
+  "path": "editors-desk",
+  "commit": "7652dceb28fd65109077e255162169f38e73ac7a",
+  "tier": "community",
+  "notes": "Our own package, listed as Community because on a small local model (about 9B) it passes puffpai check Level 1, not Level 3: the bot often picks the wrong tool. Built for a model of about 30B. It asks for \"as written\", so a PuffPAI that does not know that setting (test 16 and older) refuses to add it. Needs the Manuscript app."
+}

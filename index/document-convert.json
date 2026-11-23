@@ -3,8 +3,9 @@
   "kind": "tool",
   "repo": "https://github.com/CypherSisters/puffpai-packages",
   "path": "document-convert",
-  "commit": "3c90ea6b4a98382d2e9980abf310582f3e39750d",
+  "commit": "7652dceb28fd65109077e255162169f38e73ac7a",
   "tier": "verified",
   "verified_by": "Cypher Sisters (own package)",
-  "verified_commit": "3c90ea6b4a98382d2e9980abf310582f3e39750d"
+  "verified_commit": "7652dceb28fd65109077e255162169f38e73ac7a",
+  "notes": "Adding it downloads Python parts from pypi.org, so the bot must be allowed online while you add it."
 }
